@@ -1,0 +1,12 @@
+{
+  "name": "danielpixelstudio-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portafolio profesional de Daniel Aldana con asistente IA para reclutadores.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

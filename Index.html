@@ -1,0 +1,1924 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio profesional de Daniel Aldana, Performance Marketing Specialist con experiencia en Google Ads, Meta Ads, GA4, GTM, Marketing Automation e IA aplicada a marketing." />
+  <title>Daniel Aldana | Performance Marketing Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.plot.ly/plotly-3.6.0.min.js"></script>
+
+  <style>
+    :root {
+      --green: #1B4332;
+      --green-2: #2D6A4F;
+      --green-3: #40916C;
+      --ink: #17211C;
+      --muted: #5F6F66;
+      --line: #DDE7E1;
+      --line-soft: rgba(27, 67, 50, 0.1);
+      --paper: #FFFFFF;
+      --paper-2: #F7FAF8;
+      --paper-3: #EEF5F1;
+      --shadow: 0 22px 70px rgba(27, 67, 50, 0.11);
+      --radius: 8px;
+    }
+  
+    * { box-sizing: border-box; }
+  
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+  
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Inter", Arial, sans-serif;
+      background:
+        linear-gradient(var(--line-soft) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line-soft) 1px, transparent 1px),
+        var(--paper);
+      background-size: 32px 32px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+  
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.74)),
+        radial-gradient(circle at 78% 8%, rgba(64, 145, 108, 0.12), transparent 34%);
+    }
+  
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+  
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(18px);
+    }
+  
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--green);
+      white-space: nowrap;
+    }
+  
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--green);
+      border-radius: 7px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      box-shadow: 0 10px 24px rgba(27, 67, 50, 0.18);
+    }
+  
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.91rem;
+      font-weight: 600;
+    }
+  
+    .nav-links a:hover {
+      color: var(--green);
+    }
+  
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  
+    .section {
+      padding: 76px 0;
+    }
+  
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: center;
+      padding: 64px 0 58px;
+    }
+  
+    .hero-grid {
+      display: grid;
+      gap: 42px;
+      align-items: center;
+    }
+  
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--green);
+    }
+  
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+  
+    h1 {
+      max-width: 780px;
+      margin-bottom: 22px;
+      color: var(--ink);
+      font-size: clamp(2.55rem, 8vw, 5.25rem);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+    }
+  
+    h1 span,
+    .section-title span {
+      color: var(--green);
+    }
+  
+    .hero-copy {
+      max-width: 650px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2.6vw, 1.2rem);
+    }
+  
+    .hero-ctas,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      padding: 0 18px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+  
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+  
+    .btn-primary {
+      color: #fff;
+      background: var(--green);
+      box-shadow: 0 15px 36px rgba(27, 67, 50, 0.21);
+    }
+  
+    .btn-primary:hover {
+      background: #143627;
+    }
+  
+    .btn-secondary {
+      color: var(--green);
+      background: rgba(255,255,255,0.72);
+      border-color: var(--line);
+    }
+  
+    .btn-secondary:hover {
+      border-color: rgba(27, 67, 50, 0.28);
+      box-shadow: 0 12px 30px rgba(27, 67, 50, 0.08);
+    }
+  
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 34px;
+      max-width: 720px;
+    }
+  
+    .proof-item {
+      padding: 16px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+  
+    .proof-value {
+      display: block;
+      color: var(--green);
+      font-size: 1.28rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+  
+    .proof-label {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+  
+    .analytics-card {
+      position: relative;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.88);
+      box-shadow: var(--shadow);
+    }
+  
+    .portrait-card {
+      display: grid;
+      gap: 18px;
+    }
+  
+    .portrait-frame {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #ffffff, var(--paper-3));
+      aspect-ratio: 1 / 1;
+    }
+  
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+  
+    .analytics-card::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(27, 67, 50, 0.08);
+      border-radius: 6px;
+      pointer-events: none;
+    }
+  
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+  
+    .card-top div {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card-kicker {
+      margin-bottom: 2px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  
+    .card-title {
+      margin: 0;
+      color: var(--green);
+      font-size: 1rem;
+      font-weight: 800;
+    }
+  
+    .status {
+      align-self: flex-start;
+      padding: 6px 12px;
+      color: var(--green);
+      background: var(--paper-3);
+      border: 1px solid rgba(27,67,50,0.12);
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+  
+    .card-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 22px;
+    }
+  
+    .mini-metric {
+      padding: 13px;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+  
+    .mini-metric strong {
+      display: block;
+      color: var(--green);
+      font-size: 1rem;
+      letter-spacing: -0.03em;
+    }
+  
+    .mini-metric span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      line-height: 1.25;
+    }
+  
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+  
+    .section-title {
+      margin-bottom: 14px;
+      color: var(--ink);
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+    }
+  
+    .section-title span {
+      color: var(--green);
+    }
+  
+    .section-copy {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+  
+    .services-grid,
+    .case-grid,
+    .tech-grid {
+      display: grid;
+      gap: 14px;
+    }
+  
+    .service-card,
+    .case-card,
+    .tech-card {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+  
+    .service-card {
+      padding: 24px;
+    }
+  
+    .service-index {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--green);
+      background: var(--paper-3);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+  
+    .service-card h3,
+    .case-card h3 {
+      margin-bottom: 9px;
+      font-size: 1.12rem;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+  
+    .service-card p,
+    .case-card p,
+    .about-copy p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  
+    .band {
+      background: rgba(247, 250, 248, 0.86);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+  
+    .case-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      color: inherit;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+  
+    .case-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(27, 67, 50, 0.24);
+      box-shadow: 0 18px 48px rgba(27, 67, 50, 0.1);
+    }
+  
+    .case-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      background: var(--paper-3);
+      border-bottom: 1px solid var(--line);
+    }
+  
+    .case-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  
+    .case-action {
+      margin-top: 18px;
+      color: var(--green);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+  
+    .case-card-body {
+      padding: 24px;
+      flex: 1;
+    }
+  
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+  
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      color: var(--green);
+      background: var(--paper-3);
+      border: 1px solid rgba(27,67,50,0.12);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+  
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+    }
+  
+    .case-metric {
+      padding: 18px 20px;
+      background: var(--paper);
+      border-right: 1px solid var(--line);
+    }
+  
+    .case-metric:last-child {
+      border-right: 0;
+    }
+  
+    .case-metric strong {
+      display: block;
+      color: var(--green);
+      font-size: 1.35rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+  
+    .case-metric span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.25;
+    }
+  
+    .company-strip {
+      margin-top: 22px;
+      padding: 42px 28px;
+      border: 2px solid var(--green-3);
+      border-radius: var(--radius);
+      background: var(--paper-2);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+  
+    .company-strip p {
+      margin-bottom: 22px;
+      color: var(--green);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  
+    .marquee-container {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    }
+  
+    .company-list {
+      display: flex;
+      gap: 20px;
+      animation: infiniteScroll 25s linear infinite;
+      white-space: nowrap;
+      width: max-content;
+    }
+  
+    .company-list span {
+      display: inline-flex;
+      min-height: 58px;
+      align-items: center;
+      padding: 0 28px;
+      color: #ffffff;
+      background: var(--green);
+      border: 1px solid var(--green-2);
+      border-radius: 999px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      box-shadow: 0 6px 14px rgba(27,67,50,0.12);
+    }
+  
+    @keyframes infiniteScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 10px)); }
+    }
+  
+    .tech-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .tech-card {
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: center;
+      background: rgba(255,255,255,0.9);
+      transition: all 200ms ease;
+    }
+    
+    .tech-card:hover {
+      background: var(--paper-3);
+      border-color: var(--green-2);
+      transform: translateY(-2px);
+    }
+  
+    .tech-card svg {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  
+    .faq-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 30px;
+    }
+  
+    .faq-item {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+  
+    .faq-question {
+      margin: 0 0 10px 0;
+      color: var(--green);
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+  
+    .faq-answer {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+  
+    .about-grid {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+    }
+  
+    .profile-panel {
+      padding: 26px;
+      color: #fff;
+      background: var(--green);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+  
+    .profile-photo {
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.12);
+      aspect-ratio: 4 / 3;
+    }
+  
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+  
+    .workana-panel {
+      margin-top: 24px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.76);
+    }
+  
+    .workana-panel h3 {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+    }
+  
+    .workana-panel p {
+      margin-bottom: 16px;
+    }
+
+    .experience-timeline,
+    .cert-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .experience-item,
+    .cert-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.82);
+    }
+
+    .experience-item {
+      display: grid;
+      gap: 12px;
+    }
+
+    .experience-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .experience-item h3,
+    .cert-card h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 1.08rem;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+    }
+
+    .experience-item p,
+    .cert-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .experience-item ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .cert-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .cert-logo {
+      width: fit-content;
+      min-height: 34px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      color: var(--green);
+      background: var(--paper-3);
+      border: 1px solid rgba(27,67,50,0.12);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .ai-chat-widget {
+      position: fixed;
+      right: 18px;
+      bottom: 20px;
+      z-index: 40;
+      width: min(360px, calc(100vw - 36px));
+      border: 1px solid rgba(27,67,50,0.18);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 18px 48px rgba(27,67,50,0.18);
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .ai-chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      color: #fff;
+      background: var(--green);
+      font-weight: 800;
+    }
+
+    .ai-chat-header span {
+      display: block;
+      color: rgba(255,255,255,0.78);
+      font-size: 0.72rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .ai-chat-toggle {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 999px;
+      color: #fff;
+      background: transparent;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .ai-chat-body {
+      display: grid;
+      gap: 12px;
+      padding: 14px;
+    }
+
+    .ai-chat-widget.is-collapsed .ai-chat-body {
+      display: none;
+    }
+
+    .ai-chat-messages {
+      display: grid;
+      gap: 8px;
+      max-height: 260px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .ai-chat-message {
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .ai-chat-message.user {
+      color: #fff;
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .ai-chat-form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    .ai-chat-form input {
+      min-width: 0;
+      min-height: 42px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .ai-chat-form button {
+      min-height: 42px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: var(--radius);
+      color: #fff;
+      background: var(--green);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .ai-chat-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.74rem;
+      line-height: 1.35;
+    }
+  
+    .strategy-panel {
+      display: grid;
+      gap: 18px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.82);
+      box-shadow: var(--shadow);
+    }
+  
+    .strategy-steps {
+      display: grid;
+      gap: 12px;
+    }
+  
+    .strategy-step {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper-2);
+    }
+  
+    .strategy-step strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--green);
+      font-size: 0.94rem;
+    }
+  
+    .strategy-step span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  
+    .profile-name {
+      margin-bottom: 5px;
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+  
+    .profile-role {
+      margin-bottom: 22px;
+      color: rgba(255,255,255,0.76);
+    }
+  
+    .profile-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    .profile-list li {
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.16);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.94rem;
+    }
+  
+    .contact {
+      padding-bottom: 34px;
+    }
+  
+    .contact-panel {
+      display: grid;
+      gap: 28px;
+      padding: 28px;
+      color: #fff;
+      background: var(--green);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+  
+    .contact-panel .eyebrow,
+    .contact-panel .section-title,
+    .contact-panel .section-copy {
+      color: #fff;
+    }
+  
+    .contact-panel .section-copy {
+      color: rgba(255,255,255,0.75);
+    }
+  
+    .contact-panel .eyebrow::before {
+      background: #fff;
+    }
+  
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    .contact-list a {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      color: rgba(255,255,255,0.86);
+      font-weight: 700;
+      word-break: break-word;
+    }
+  
+    .contact-list span {
+      color: rgba(255,255,255,0.56);
+      font-weight: 600;
+      flex: 0 0 auto;
+    }
+  
+    .contact .btn-primary {
+      color: var(--green);
+      background: #fff;
+      box-shadow: none;
+    }
+  
+    .contact .btn-secondary {
+      color: #fff;
+      border-color: rgba(255,255,255,0.28);
+      background: transparent;
+    }
+  
+    .footer {
+      padding: 26px 0 34px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+  
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+  
+    .footer-links a {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    /* --- ESTILOS DEL CARRUSEL DE DASHBOARDS CORREGIDO CON RUTAS ASSETS --- */
+    .dashboard-carousel-block {
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-top: 24px;
+    }
+
+    .carousel-viewframe {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #ffffff;
+    }
+
+    .carousel-inner-track {
+      display: flex;
+      width: 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .carousel-view-slide {
+      min-width: 100%;
+      flex: 0 0 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 16px;
+    }
+
+    @media (min-width: 760px) {
+      .carousel-view-slide { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+    }
+
+    .slide-graphic-container {
+      width: 100%;
+      min-height: 240px;
+      max-height: 380px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-graphic-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .carousel-selectors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .latam-map-block {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: center;
+      background: #ffffff;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    @media (min-width: 760px) {
+      .latam-map-block { grid-template-columns: 1fr 1fr; }
+    }
+
+    #latam-map-render {
+      width: 100%;
+      height: 400px;
+      background: var(--paper-2);
+      border-radius: var(--radius);
+    }
+  
+    @media (min-width: 720px) {
+      .container { width: min(1120px, calc(100% - 64px)); }
+      .nav-links, .nav-actions { display: flex; }
+      .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.72fr); }
+      .hero-proof { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .case-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .tech-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .experience-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .experience-item:first-child { grid-column: 1 / -1; }
+      .cert-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .about-grid, .contact-panel { grid-template-columns: 0.78fr 1fr; }
+      .strategy-panel { grid-template-columns: 0.78fr 1fr; align-items: start; }
+      .strategy-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .footer-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+  
+    @media (max-width: 520px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .hero { padding-top: 42px; }
+      .nav-actions .btn-secondary { display: none; }
+      .nav-actions .btn-primary { min-height: 40px; padding: 0 12px; font-size: 0.82rem; }
+      .hero-proof, .card-metrics, .case-metrics { grid-template-columns: 1fr; }
+      .case-metric { border-right: 0; border-bottom: 1px solid var(--line); }
+      .case-metric:last-child { border-bottom: 0; }
+      .contact-list a { flex-direction: column; gap: 2px; }
+      .ai-chat-widget { right: 14px; bottom: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio de DanielPixelStudio">
+        <span class="brand-mark">DP</span>
+        <span>DanielPixelStudio</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#competencias">Competencias</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#casos">Casos</a>
+        <a href="#tecnologias">Infraestructura</a>
+        <a href="#certificaciones">Certificaciones</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
+        <a class="btn btn-primary" href="DANIEL(MKT-ANALYST.2026).pdf" download>Descargar CV</a>
+      </div>
+    </div>
+  </header>
+  
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Disponible para roles full-time · híbrido · remoto</p>
+          <h1>Daniel Aldana — <span>Performance Marketing Specialist.</span></h1>
+          <p class="hero-copy">Especialista en Performance Marketing con experiencia gestionando presupuestos de $15M-40M COP mensuales. Combino ejecución de pauta, analítica de datos y automatización con IA para convertir inversión publicitaria en resultados medibles dentro de equipos de marketing, growth o analytics.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="DANIEL(MKT-ANALYST.2026).pdf" download>Descargar CV (PDF)</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
+            <a class="btn btn-secondary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20profesional%20y%20quiero%20agendar%20una%20entrevista%20o%20conversacion%20sobre%20una%20vacante" target="_blank" rel="noopener noreferrer">Agendar entrevista</a>
+          </div>
+          <div class="hero-proof" aria-label="Indicadores de experiencia">
+            <div class="proof-item">
+              <span class="proof-value">$15M-40M</span>
+              <span class="proof-label">COP mensuales gestionados en pauta</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-value">8K+</span>
+              <span class="proof-label">leads trabajados en remarketing</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-value">-35%</span>
+              <span class="proof-label">reducción de CAC en e-commerce</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-value">+30%</span>
+              <span class="proof-label">leads calificados generados</span>
+            </div>
+          </div>
+        </div>
+  
+        <aside class="analytics-card portrait-card" aria-label="Perfil profesional de Daniel Aldana">
+          <div class="portrait-frame">
+            <img src="assets/daniel-murcia.png" alt="Daniel Aldana, Performance Marketing Specialist" />
+          </div>
+          <div class="card-top">
+            <div>
+              <p class="card-kicker">Daniel Aldana</p>
+              <p class="card-title">GA4 · GTM · Google Ads · Meta Ads</p>
+            </div>
+            <span class="status">Open to Work</span>
+          </div>
+          <div class="card-metrics">
+            <div class="mini-metric">
+              <strong>Paid Media</strong>
+              <span>Meta Ads y Google Ads</span>
+            </div>
+            <div class="mini-metric">
+              <strong>Data Layer</strong>
+              <span>GA4, GTM y dashboards</span>
+            </div>
+            <div class="mini-metric">
+              <strong>AI Ops</strong>
+              <span>Auditoría y automatización</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  
+    <section class="section" id="competencias">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Competencias</p>
+          <h2 class="section-title">Áreas de especialización para equipos de marketing, growth y analytics.</h2>
+          <p class="section-copy">Este portafolio muestra capacidades técnicas aplicables a un rol interno: ejecución de pauta, medición, automatización CRM, dashboards e IA aplicada para tomar mejores decisiones de negocio.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-index">01</span>
+            <h3>Meta Ads</h3>
+            <p>Estructura, testing y optimización de campañas para adquisición, remarketing, generación de demanda y mejora de eficiencia.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">02</span>
+            <h3>Google Ads</h3>
+            <p>Campañas orientadas a intención de búsqueda, control presupuestal, calidad de tráfico y lectura de conversiones.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">03</span>
+            <h3>Google Analytics 4</h3>
+            <p>Configuración de medición, eventos y reportes para entender qué canales generan oportunidades reales.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">04</span>
+            <h3>Google Tag Manager</h3>
+            <p>Implementación y validación de etiquetas para medir formularios, clics, conversiones y acciones clave.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">05</span>
+            <h3>CRM Automation</h3>
+            <p>Flujos comerciales, seguimiento de leads y automatizaciones en herramientas como HubSpot, Kommo y Bitrix24.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">06</span>
+            <h3>IA para Marketing</h3>
+            <p>Uso práctico de inteligencia artificial para copies, análisis, segmentaciones y mejora continua de campañas.</p>
+          </article>
+        </div>
+
+        <div class="latam-map-block">
+          <div>
+            <p class="eyebrow" style="color: var(--green-3);">Interacción Latinoamericana</p>
+            <h3 style="font-size: 1.8rem; font-weight:800; color: var(--ink); margin-bottom:12px;">Alcance Regional Estratégico</h3>
+            <p style="color:var(--muted); font-size:0.98rem; margin-bottom:10px;">Experiencia conectando campañas, analítica y automatización para equipos que operan en Colombia, Latinoamérica y mercados digitales de Estados Unidos.</p>
+            <p style="color:var(--muted); font-size:0.98rem; margin-bottom:10px;">El foco no es vender servicios, sino demostrar criterio técnico para construir sistemas de adquisición medibles dentro de una empresa.</p>
+            <p style="color:var(--muted); font-size:0.98rem;">La combinación de datos, tecnología y optimización continua permite priorizar inversión, detectar fugas y mejorar decisiones comerciales.</p>
+          </div>
+          <div>
+            <div id="latam-map-render"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  
+    <section class="section band" id="experiencia">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Experiencia</p>
+          <h2 class="section-title">Trayectoria profesional verificable en marketing, datos y automatización.</h2>
+          <p class="section-copy">Resumen orientado a reclutadores y líderes de marketing. La experiencia está organizada para conectar cargos, empresas, fechas, herramientas y logros clave.</p>
+        </div>
+        <div class="experience-timeline">
+          <article class="experience-item">
+            <div>
+              <div class="experience-meta">
+                <span class="pill">2025 - Actualidad</span>
+                <span class="pill">Nases Colombia</span>
+                <span class="pill">Performance Marketing</span>
+              </div>
+              <h3>Performance Marketing Specialist / Growth Marketing</h3>
+              <p>Gestión de campañas Google Ads y Meta Ads con presupuestos de $15M-40M COP mensuales, implementación de GA4, GTM, CAPI, CRM y automatizaciones con Python e IA.</p>
+            </div>
+            <ul>
+              <li>Optimización de CPL, remarketing y calidad de leads.</li>
+              <li>Diseño de dashboards y reportes accionables para toma de decisiones.</li>
+              <li>Integraciones con CRM y flujos de seguimiento comercial.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span class="pill">2024</span>
+              <span class="pill">Coltanques SAS</span>
+            </div>
+            <h3>Analista de Eficiencia Operativa y Datos</h3>
+            <p>Automatización de reportes, análisis de indicadores operativos y mejora de procesos con Excel avanzado y lectura de datos.</p>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span class="pill">2023</span>
+              <span class="pill">Naturevital-Style</span>
+            </div>
+            <h3>Digital Marketing & E-commerce Specialist</h3>
+            <p>Email marketing, automatización en Bitrix24, campañas SMS vía Twilio, analítica con GA4 y seguimiento de comportamiento digital.</p>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span class="pill">2022</span>
+              <span class="pill">Aluminios y Acabados</span>
+            </div>
+            <h3>Analista de Comunicaciones</h3>
+            <p>Estrategias de comunicación y marketing digital para posicionamiento de marca, contenido y soporte a canales comerciales.</p>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span class="pill">2021</span>
+              <span class="pill">AMP</span>
+            </div>
+            <h3>Marketing / Comunicaciones</h3>
+            <p>Primeras responsabilidades profesionales en comunicación digital, apoyo operativo de marketing y gestión de contenidos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="casos">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Portafolio técnico</p>
+          <h2 class="section-title">Casos aplicados que demuestran capacidad para un rol interno.</h2>
+          <p class="section-copy">Los proyectos están presentados como evidencia profesional para reclutadores: algunos corresponden a experiencia laboral, otros son demostrativos o personales. La intención es mostrar criterio técnico, no vender servicios freelance.</p>
+        </div>
+        <div class="case-grid">
+          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
+            <div class="case-image">
+              <img src="assets/portfolio-cover.png" alt="Portafolio digital de DanielPixelStudio" />
+            </div>
+            <div class="case-card-body">
+              <div class="case-meta">
+                <span class="pill">Meta Ads</span>
+                <span class="pill">Remarketing</span>
+                <span class="pill">Nases Colombia</span>
+              </div>
+              <h3>Optimización de CPL y recuperación de leads — Nases Colombia</h3>
+              <p>Proyecto laboral enfocado en testing de audiencias, creativos, copies y remarketing sobre bases de leads no convertidos.</p>
+              <div class="case-action">Ver portafolio en Behance</div>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>$15M-40M</strong>
+                <span>COP mensuales gestionados</span>
+              </div>
+              <div class="case-metric">
+                <strong>8K+</strong>
+                <span>leads en audiencias</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
+            <div class="case-image">
+              <img src="assets/tracking-ga4-gtm.png" alt="Caso de tracking con Google Analytics 4 y Google Tag Manager" />
+            </div>
+            <div class="case-card-body">
+              <div class="case-meta">
+                <span class="pill">GA4</span>
+                <span class="pill">GTM</span>
+                <span class="pill">Proyecto laboral</span>
+              </div>
+              <h3>Diagnóstico de funnel y tracking — GA4/GTM</h3>
+              <p>Auditoría de medición para detectar fricciones, eventos mal configurados y puntos críticos de abandono en el embudo.</p>
+              <div class="case-action">Ver caso en portafolio</div>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>55%</strong>
+                <span>abandono identificado</span>
+              </div>
+              <div class="case-metric">
+                <strong>100%</strong>
+                <span>eventos críticos validados</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
+            <div class="case-image">
+              <img src="assets/turning-data-revenue.png" alt="Dashboard de performance Turning Data into Revenue" />
+            </div>
+            <div class="case-card-body">
+              <div class="case-meta">
+                <span class="pill">E-commerce</span>
+                <span class="pill">IA</span>
+                <span class="pill">Naturevital-Style</span>
+              </div>
+              <h3>Reducción de CAC y escalamiento comercial — E-commerce</h3>
+              <p>Proyecto vinculado a e-commerce, automatización CRM, campañas digitales y mejora de mensajes para captación.</p>
+              <div class="case-action">Ver evidencia visual</div>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>-35%</strong>
+                <span>costo de adquisición</span>
+              </div>
+              <div class="case-metric">
+                <strong>+30%</strong>
+                <span>leads calificados</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="case-card" href="assets/dashboard_meta_ads.html" target="_blank" rel="noopener noreferrer">
+            <div class="case-image">
+              <img src="assets/advertising-analytics.png" alt="Sistema de advertising analytics para auditoría de campañas" />
+            </div>
+            <div class="case-card-body">
+              <div class="case-meta">
+                <span class="pill">Proyecto 7</span>
+                <span class="pill">IA + Data</span>
+                <span class="pill">Proyecto personal</span>
+              </div>
+              <h3>Marketing Intelligence Engine para Meta Ads</h3>
+              <p>Proyecto demostrativo de automatización con datos: calcula CPA, ROAS simulado, score de campaña y recomendaciones para pausar, revisar, escalar o mantener.</p>
+              <div class="case-action">Abrir dashboard interactivo</div>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>5</strong>
+                <span>campañas auditadas</span>
+              </div>
+              <div class="case-metric">
+                <strong>4</strong>
+                <span>decisiones automatizadas</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="case-card" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">
+            <div class="case-image">
+              <img src="assets/informe-rendimiento-semanal.png" alt="Informe de rendimiento semanal de marketing" />
+            </div>
+            <div class="case-card-body">
+              <div class="case-meta">
+                <span class="pill">Reporting</span>
+                <span class="pill">BI</span>
+                <span class="pill">Coltanques SAS</span>
+              </div>
+              <h3>Informes ejecutivos para decisiones semanales — Datos</h3>
+              <p>Experiencia aplicada a reporting, seguimiento de indicadores y lectura ejecutiva para decisiones operativas y comerciales.</p>
+              <div class="case-action">Validar trayectoria en LinkedIn</div>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>Semanal</strong>
+                <span>ritmo de seguimiento</span>
+              </div>
+              <div class="case-metric">
+                <strong>KPI</strong>
+                <span>lectura ejecutiva</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
+            <div class="case-image">
+              <img src="assets/data-agency-dashboard.png" alt="Arquitectura de data flow para marketing automation" />
+            </div>
+            <div class="case-card-body">
+              <div class="case-meta">
+                <span class="pill">CRM</span>
+                <span class="pill">Data Flow</span>
+                <span class="pill">Arquitectura demo</span>
+              </div>
+              <h3>Arquitectura de automatización comercial</h3>
+              <p>Diseño demostrativo de flujos entre fuentes de datos, CRM, dashboards y alertas para acelerar respuesta comercial.</p>
+              <div class="case-action">Ver portafolio técnico</div>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>CRM</strong>
+                <span>automatización</span>
+              </div>
+              <div class="case-metric">
+                <strong>Data</strong>
+                <span>pipeline operativo</span>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="company-strip" aria-label="Empresas y contextos de experiencia">
+          <p>Empresas, verticales y contextos trabajados</p>
+          <div class="marquee-container">
+            <div class="company-list">
+              <span>Nases Colombia</span>
+              <span>Naturevital Style</span>
+              <span>Coltanques SAS</span>
+              <span>Aluminios y Acabados</span>
+              <span>E-commerce Moda LATAM</span>
+              <span>Agencias B2B</span>
+              <span>Proyectos personales IA/Data</span>
+              <span>Nases Colombia</span>
+              <span>Naturevital Style</span>
+              <span>Coltanques SAS</span>
+              <span>Aluminios y Acabados</span>
+              <span>E-commerce Moda LATAM</span>
+              <span>Agencias B2B</span>
+              <span>Proyectos personales IA/Data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section" id="tecnologias">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Stack</p>
+          <h2 class="section-title">Infraestructura Digital & Stack Conectado</h2>
+          <p class="section-copy">La tecnología es un medio: sirve para medir mejor, responder más rápido y tomar decisiones con mayor confianza basados en datos puros.</p>
+        </div>
+        <div class="tech-grid" aria-label="Tecnologias y plataformas">
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="#0064E0"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            Meta Ads
+          </div>
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 2L2 8h4L6 2z" fill="#4285F4"/><path d="M2 8l8 14h4L2 8z" fill="#FBBC05"/><path d="M22 8L14 22h-4L22 8z" fill="#34A853"/></svg>
+            Google Ads
+          </div>
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="#E37400"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 16H9v-6h2v6zm4 0h-2V6h2v12z"/></svg>
+            Google Analytics 4
+          </div>
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="#246FDB"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Google Tag Manager
+          </div>
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="#FF7A59"><path d="M21.4 11.6c-.4-.4-.9-.6-1.4-.6h-3.2c-.4-1.8-1.7-3.2-3.4-3.7V4.4c.6-.3 1-.9 1-1.6 0-1-.8-1.8-1.8-1.8-1.8 0-1.8.8-1.8 1.8 0 .7.4 1.3 1 1.6v2.9c-1.7.5-3 1.9-3.4 3.7H5.2c-.7-.7-1.7-1.1-2.7-1.1C1.1 9.9 0 11 0 12.4s1.1 2.5 2.5 2.5c1 0 2-.4 2.7-1.1h3.2c.4 1.8 1.7 3.2 3.4 3.7v2.9c-.6.3-1 .9-1 1.6 0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8c0-.7-.4-1.3-1-1.6v-2.9c1.7-.5 3-1.9 3.4-3.7h3.2c.5 0 1-.2 1.4-.6.6-.6.6-1.6 0-2.2z"/></svg>
+            HubSpot
+          </div>
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="#313564"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10B10 10 0 0 0 12 2zm0 4a6 6 0 1 1-6 6 6 6 0 0 1 6-6z"/></svg>
+            Kommo CRM
+          </div>
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="#00AEEF"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 14.5h-2v-5h2v5zm0-6.5h-2V8h2v2z"/></svg>
+            Bitrix24
+          </div>
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="#0078D4"><path d="M12 2L2 22h20L12 2zm0 5l6.5 11h-13L12 7z"/></svg>
+            Microsoft Clarity
+          </div>
+        </div>
+
+        <div class="dashboard-carousel-block">
+          <p class="eyebrow">Visualización Automatizada</p>
+          <h3 style="font-size: 1.6rem; font-weight:800; margin-top:0; margin-bottom:18px; color:var(--green);">Módulos de Control de Datos</h3>
+          
+          <div class="carousel-viewframe">
+            <div class="carousel-inner-track" id="main-track-carousel">
+              
+              <div class="carousel-view-slide">
+                <div class="slide-graphic-container">
+                  <img src="assets/1.PNG" alt="Dashboard Meta Ads Performance" />
+                </div>
+                <div>
+                  <h4 style="font-size:1.2rem; margin:0 0 8px; color:var(--ink);">B1 Meta Ads Audi Engine</h4>
+                  <p style="color:var(--muted); font-size:0.92rem; margin:0;">Visualización en tiempo real del rendimiento de campañas. Calcula de forma integrada el ROAS real, el CPA global y analiza la atribución multinivel para evitar fugas de presupuesto en audiencias inactivas.</p>
+                </div>
+              </div>
+
+              <div class="carousel-view-slide">
+                <div class="slide-graphic-container">
+                  <img src="assets/2.PNG" alt="Dashboard de Ventas por Producto" />
+                </div>
+                <div>
+                  <h4 style="font-size:1.2rem; margin:0 0 8px; color:var(--ink);">Análisis de Ventas por Producto & Lotes</h4>
+                  <p style="color:var(--muted); font-size:0.92rem; margin:0;">Control y segmentación avanzada del comportamiento de compra de productos. Mide la recurrencia del cliente, analiza la rotación del inventario y conecta tendencias para optimizar ofertas automáticas de remarketing.</p>
+                </div>
+              </div>
+
+              <div class="carousel-view-slide">
+                <div class="slide-graphic-container">
+                  <img src="assets/3.PNG" alt="Dashboard Consolidado General" />
+                </div>
+                <div>
+                  <h4 style="font-size:1.2rem; margin:0 0 8px; color:var(--ink);">Consolidado General de Operaciones</h4>
+                  <p style="color:var(--muted); font-size:0.92rem; margin:0;">El núcleo del sistema de control. Cruza el rendimiento total combinando ingresos por sucursales, ventas por empleados y conversiones de canales comerciales para una lectura ejecutiva y toma de decisiones sin fricción.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="carousel-selectors">
+            <button class="btn btn-secondary" style="min-height:34px; padding:0 12px; font-size:0.85rem;" onclick="switchDashboardSlide(0)">Módulo 1: Meta Ads</button>
+            <button class="btn btn-secondary" style="min-height:34px; padding:0 12px; font-size:0.85rem;" onclick="switchDashboardSlide(1)">Módulo 2: Productos</button>
+            <button class="btn btn-secondary" style="min-height:34px; padding:0 12px; font-size:0.85rem;" onclick="switchDashboardSlide(2)">Módulo 3: Consolidado Total</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  
+    <section class="section">
+      <div class="container strategy-panel">
+        <div>
+          <p class="eyebrow">Visión de rol</p>
+          <h2 class="section-title">Cómo estructuraría un área de marketing analítico dentro de una empresa.</h2>
+          <p class="section-copy">Mi enfoque para aportar valor en un equipo interno es operar marketing como un sistema medible: datos limpios, reglas de negocio, alertas inteligentes y decisiones comerciales más rápidas.</p>
+        </div>
+        <div class="strategy-steps">
+          <div class="strategy-step">
+            <strong>1. Captura y medición</strong>
+            <span>Meta Ads, Google Ads, GA4, GTM y CRM conectados a eventos reales del negocio.</span>
+          </div>
+          <div class="strategy-step">
+            <strong>2. Auditoría automática</strong>
+            <span>Scores de campaña, alertas de desperdicio, lectura de CPA y recomendaciones accionables.</span>
+          </div>
+          <div class="strategy-step">
+            <strong>3. Acción comercial</strong>
+            <span>Automatizaciones para priorizar leads, activar remarketing y escalar lo que ya demuestra tracción.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="certificaciones">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Certificaciones</p>
+          <h2 class="section-title">Formación verificable en marketing digital, e-commerce e internacionalización.</h2>
+          <p class="section-copy">Credenciales relevantes para validar fundamentos técnicos y criterio profesional frente a procesos de selección.</p>
+        </div>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div>
+              <span class="cert-logo">Coursera</span>
+              <h3>Google Digital Marketing and E-Commerce Professional Certificate</h3>
+              <p>Formación en fundamentos de marketing digital, e-commerce, analítica y optimización de canales digitales.</p>
+            </div>
+            <span class="btn btn-secondary" aria-disabled="true">Agregar enlace verificable</span>
+          </article>
+          <article class="cert-card">
+            <div>
+              <span class="cert-logo">CCB</span>
+              <h3>Marketing Internacional</h3>
+              <p>Certificación de Cámara de Comercio de Bogotá orientada a estrategia comercial, mercados y crecimiento.</p>
+            </div>
+            <span class="btn btn-secondary" aria-disabled="true">Agregar enlace verificable</span>
+          </article>
+          <article class="cert-card">
+            <div>
+              <span class="cert-logo">Google</span>
+              <h3>AI Powered Shopping Ads</h3>
+              <p>Aplicación de inteligencia artificial y automatización publicitaria en campañas de Shopping y performance.</p>
+            </div>
+            <span class="btn btn-secondary" aria-disabled="true">Agregar enlace verificable</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section" id="preguntas">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Para recruiters</p>
+          <h2 class="section-title">Preguntas frecuentes para <span>reclutadores y líderes de marketing.</span></h2>
+          <p class="section-copy">Respuestas directas sobre disponibilidad, experiencia técnica, herramientas y tipo de rol donde puedo aportar más valor.</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué tipo de rol estoy buscando?</h3>
+            <p class="faq-answer">Roles full-time, híbridos o remotos en Performance Marketing, Paid Media, Growth Marketing, Marketing Analytics o Marketing Automation, idealmente en equipos donde la pauta, el CRM y los datos trabajen conectados.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué presupuesto de pauta he gestionado?</h3>
+            <p class="faq-answer">He trabajado con presupuestos de $15M-40M COP mensuales, conectando ejecución en Meta Ads y Google Ads con medición, reportes y optimización orientada a resultados de negocio.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué herramientas manejo?</h3>
+            <p class="faq-answer">Meta Ads, Google Ads, GA4, Google Tag Manager, CRM Automation, HubSpot, Kommo, Bitrix24, Microsoft Clarity, Excel avanzado, dashboards y automatizaciones con Python e IA aplicada a marketing.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué me diferencia frente a un perfil solo operativo?</h3>
+            <p class="faq-answer">Además de ejecutar campañas, puedo auditar tracking, interpretar datos, construir reportes, automatizar flujos y traducir hallazgos en acciones para marketing y ventas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section band" id="sobre-mi">
+      <div class="container about-grid">
+        <div class="profile-panel">
+          <div class="profile-photo">
+            <img src="assets/daniel-murcia.png" alt="Daniel Aldana" />
+          </div>
+          <p class="profile-name">Daniel Aldana</p>
+          <p class="profile-role">Performance Marketing Specialist | Disponible para roles full-time, híbridos o remotos.</p>
+          <ul class="profile-list">
+            <li>Enfoque de analítica avanzada: diagnóstico, ejecución y mejora continua.</li>
+            <li>Experiencia en pauta, medición, CRM e IA aplicada.</li>
+            <li>Trabajo orientado a indicadores de negocio, no solo a métricas de plataforma.</li>
+          </ul>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">Sobre mí</p>
+          <h2 class="section-title">DanielPixelStudio es mi portafolio profesional para mostrar experiencia real en <span>performance, datos y automatización.</span></h2>
+          <p>Soy Daniel Aldana, Performance Marketing Specialist con experiencia en la planificación, ejecución y optimización de campañas en Google Ads y Meta Ads para contextos B2B y B2C. He trabajado con presupuestos de $15M-40M COP mensuales, ecosistemas de medición con GA4/GTM y automatizaciones que ayudan a mejorar decisiones comerciales.</p>
+          <div class="workana-panel">
+            <h3>Objetivo profesional actual</h3>
+            <p>Busco sumarme a un equipo de marketing, growth o analytics donde pueda aportar ejecución de pauta, lectura de datos, CRM automation e IA aplicada con foco en resultados medibles.</p>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver trayectoria completa en LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section contact" id="contacto">
+      <div class="container contact-panel">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section-title">Contacto para procesos de selección y entrevistas.</h2>
+          <p class="section-copy">Si estás evaluando un perfil de Performance Marketing, Paid Media, Growth o Marketing Analytics, puedes revisar mi CV, validar mi trayectoria en LinkedIn o escribirme por WhatsApp.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="DANIEL(MKT-ANALYST.2026).pdf" download>Descargar CV</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
+            <a class="btn btn-secondary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20profesional%20y%20quiero%20agendar%20una%20entrevista%20o%20conversacion%20sobre%20una%20vacante" target="_blank" rel="noopener noreferrer">Agendar entrevista</a>
+            <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com">Enviar correo</a>
+          </div>
+        </div>
+        <ul class="contact-list">
+          <li><a href="https://wa.me/573214169100" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span> +57 321 416 9100</a></li>
+          <li><a href="mailto:marketingdanielm@gmail.com"><span>Correo</span> marketingdanielm@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span> /in/ddanielmurcia</a></li>
+          <li><a href="DANIEL(MKT-ANALYST.2026).pdf" download><span>CV</span> Descargar PDF</a></li>
+          <li><a href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer"><span>Behance</span> Ver portfolio</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="ai-chat-widget" id="aiChatWidget" aria-label="Asistente de IA para reclutadores">
+    <div class="ai-chat-header">
+      <div>
+        Asistente IA para recruiters
+        <span>Pregunta por experiencia, stack o disponibilidad</span>
+      </div>
+      <button class="ai-chat-toggle" type="button" id="aiChatToggle" aria-label="Minimizar chat">−</button>
+    </div>
+    <div class="ai-chat-body">
+      <div class="ai-chat-messages" id="aiChatMessages">
+        <div class="ai-chat-message">Hola. Puedo responder preguntas sobre la experiencia profesional de Daniel Aldana, stack técnico, presupuesto gestionado, disponibilidad y casos del portafolio.</div>
+      </div>
+      <form class="ai-chat-form" id="aiChatForm">
+        <input id="aiChatInput" type="text" autocomplete="off" placeholder="Ej: ¿Tiene experiencia con GA4 y GTM?" />
+        <button type="submit">Enviar</button>
+      </form>
+      <p class="ai-chat-note">Versión embebida de bajo costo. La respuesta se genera desde el backend; la API key no se expone en el navegador.</p>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 DanielPixelStudio. Portafolio profesional de Daniel Aldana.</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://www.workana.com/freelancer/7578a70259b7c015c09f195538bbc898" target="_blank" rel="noopener noreferrer">Workana secundario</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const aiChatWidget = document.getElementById('aiChatWidget');
+    const aiChatToggle = document.getElementById('aiChatToggle');
+    const aiChatForm = document.getElementById('aiChatForm');
+    const aiChatInput = document.getElementById('aiChatInput');
+    const aiChatMessages = document.getElementById('aiChatMessages');
+
+    function addChatMessage(text, type = 'assistant') {
+      const msg = document.createElement('div');
+      msg.className = `ai-chat-message ${type === 'user' ? 'user' : ''}`;
+      msg.textContent = text;
+      aiChatMessages.appendChild(msg);
+      aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+      return msg;
+    }
+
+    aiChatToggle.addEventListener('click', function() {
+      aiChatWidget.classList.toggle('is-collapsed');
+      aiChatToggle.textContent = aiChatWidget.classList.contains('is-collapsed') ? '+' : '−';
+    });
+
+    aiChatForm.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const question = aiChatInput.value.trim();
+      if (!question) return;
+
+      addChatMessage(question, 'user');
+      aiChatInput.value = '';
+      aiChatInput.disabled = true;
+      const pending = addChatMessage('Pensando con el contexto profesional de Daniel...');
+
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question })
+        });
+        const data = await response.json();
+        pending.textContent = data.answer || 'No pude generar una respuesta en este momento.';
+      } catch (error) {
+        pending.textContent = 'El asistente necesita que el backend local esté activo. Mientras tanto, puedes revisar el CV o LinkedIn de Daniel.';
+      } finally {
+        aiChatInput.disabled = false;
+        aiChatInput.focus();
+      }
+    });
+
+    // Control dinámico del carrusel ajustado a 3 slides
+    function switchDashboardSlide(idx) {
+      document.getElementById('main-track-carousel').style.transform = `translateX(-${idx * 100}%)`;
+    }
+
+    // Inicialización nativa del mapa utilizando Plotly (Excluyendo Canadá)
+    document.addEventListener("DOMContentLoaded", function() {
+      const countries = [
+        'USA', 'MEX', 'COL', 'BRA', 'ARG', 'PER', 'CHL', 'VEN', 
+        'ECU', 'GTM', 'BOL', 'PAN', 'CRI', 'HND', 'NIC', 'SLV', 'DOM', 'CAN'
+      ];
+      const greenThemeValues = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0];
+
+      const mapData = [{
+        type: 'choropleth',
+        locationmode: 'ISO-3',
+        locations: countries,
+        z: greenThemeValues,
+        text: ['Estados Unidos', 'México', 'Colombia', 'Brasil', 'Argentina', 'Perú', 'Chile', 'Venezuela', 'Ecuador', 'Guatemala', 'Bolivia', 'Panamá', 'Costa Rica', 'Honduras', 'Nicaragua', 'El Salvador', 'República Dominicana', 'Canadá'],
+        hoverinfo: 'text',
+        colorscale: [
+          [0, '#EBF2EE'],  
+          [1, '#2D6A4F']   
+        ],
+        showscale: false,
+        marker: { line: { color: '#FFFFFF', width: 1.2 } }
+      }];
+
+      const mapLayout = {
+        geo: {
+          scope: 'world',
+          projection: { type: 'mercator' },
+          lonaxis: { range: [-122, -32] }, 
+          lataxis: { range: [-56, 52] },
+          bgcolor: 'rgba(0,0,0,0)',
+          showframe: false,
+          showcoastlines: false,
+          showland: true,
+          landcolor: '#F7FAF8'
+        },
+        margin: { l: 0, r: 0, t: 0, b: 0 },
+        paper_bgcolor: 'rgba(0,0,0,0)'
+      };
+
+      Plotly.newPlot('latam-map-render', mapData, mapLayout, {responsive: true, displayModeBar: false});
+    });
+  </script>
+</body>
+</html>
+
