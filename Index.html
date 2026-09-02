@@ -489,7 +489,147 @@
         grid-template-columns: 1fr auto;
       }
     }
-  
+
+    /* Bento Grid para Servicios con IA */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    @media (min-width: 720px) {
+      .bento-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    .bento-card {
+      position: relative;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 14px;
+      padding: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: all 280ms ease;
+      cursor: pointer;
+      min-height: 340px;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 51, 255, 0.4);
+      box-shadow: 0 18px 48px rgba(0, 51, 255, 0.15);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .bento-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .bento-card-num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--ai-purple);
+      line-height: 1;
+    }
+
+    .bento-card-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      font-size: 1.2rem;
+    }
+
+    .bento-card h3 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .bento-content {
+      display: grid;
+      gap: 12px;
+    }
+
+    .bento-section {
+      display: grid;
+      gap: 6px;
+    }
+
+    .bento-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+
+    .bento-text {
+      font-size: 0.90rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .bento-highlight {
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 3px solid var(--ai-purple);
+      background: rgba(157, 78, 221, 0.08);
+    }
+
+    .bento-highlight p {
+      font-size: 0.90rem;
+      color: var(--ink);
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .bento-result {
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 3px solid var(--ai-yellow);
+      background: rgba(255, 215, 0, 0.08);
+    }
+
+    .bento-result-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--ai-yellow);
+      letter-spacing: -0.02em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .bento-result p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .bento-cta {
+      font-size: 0.80rem;
+      color: var(--ai-yellow);
+      font-weight: 700;
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
     .services-grid,
     .case-grid,
     .tech-grid {
@@ -1536,38 +1676,167 @@
     <section class="section" id="servicios">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Servicios</p>
-          <h2 class="section-title">Para empresas que necesitan un especialista externo en pauta y analítica.</h2>
-          <p class="section-copy">Disponible en paralelo a la búsqueda de rol interno, para proyectos puntuales o gestión mensual de cuentas.</p>
+          <p class="eyebrow">Servicios con IA</p>
+          <h2 class="section-title">Soluciones de Performance Marketing y Automatización inteligente.</h2>
+          <p class="section-copy">Desde gestión de pauta hasta automatización de operaciones — cada servicio usa IA para resultados medibles.</p>
         </div>
-        <div class="services-grid">
-          <article class="service-card">
-            <span class="service-index">01</span>
+
+        <div class="bento-grid">
+          <!-- Servicio 1: Gestión de Google Ads / Meta Ads -->
+          <article class="bento-card">
+            <div class="bento-card-header">
+              <span class="bento-card-num">01</span>
+              <div class="bento-card-icon">📊</div>
+            </div>
             <h3>Gestión de Google Ads / Meta Ads</h3>
-            <p>Setup y optimización de campañas, segmentación de audiencias, testing A/B de creativos y copies, reportes periódicos con métricas de negocio.</p>
+            <div class="bento-content">
+              <div class="bento-section">
+                <div class="bento-label">Problema</div>
+                <p class="bento-text">Bajo ROAS, presupuesto disperso, audiencias ineficientes.</p>
+              </div>
+              <div class="bento-highlight">
+                <div class="bento-label">Solución IA</div>
+                <p>Estructura inteligente de campañas + testing automático + segmentación de audiencias con machine learning.</p>
+              </div>
+              <div class="bento-result">
+                <span class="bento-result-value">+30%</span>
+                <p>incremento en ROAS promedio</p>
+              </div>
+            </div>
+            <a href="https://wa.me/573214169100" class="bento-cta">Iniciar proyecto →</a>
           </article>
-          <article class="service-card">
-            <span class="service-index">02</span>
-            <h3>Auditoría de cuenta</h3>
-            <p>Revisión completa de estructura, keywords, pujas y tracking para identificar fugas de presupuesto y oportunidades de eficiencia — como el caso de Aroma Café documentado en esta web.</p>
+
+          <!-- Servicio 2: Auditoría Inteligente -->
+          <article class="bento-card">
+            <div class="bento-card-header">
+              <span class="bento-card-num">02</span>
+              <div class="bento-card-icon">🔍</div>
+            </div>
+            <h3>Auditoría Inteligente de Campañas</h3>
+            <div class="bento-content">
+              <div class="bento-section">
+                <div class="bento-label">Problema</div>
+                <p class="bento-text">Fugas de presupuesto ocultas, keywords sin rentabilidad.</p>
+              </div>
+              <div class="bento-highlight">
+                <div class="bento-label">Solución IA</div>
+                <p>Análisis profundo de estructura, CPC anómalos, pujas ineficientes. Identifica $$$  a recuperar en 2 horas.</p>
+              </div>
+              <div class="bento-result">
+                <span class="bento-result-value">$50K-200K</span>
+                <p>COP recuperables por mesidentificados</p>
+              </div>
+            </div>
+            <a href="https://wa.me/573214169100" class="bento-cta">Auditoría 20min →</a>
           </article>
-          <article class="service-card">
-            <span class="service-index">03</span>
-            <h3>Implementación de medición (GA4/GTM)</h3>
-            <p>Configuración de eventos, data layer, medición server-side y diagnóstico de funnel para tomar decisiones con datos confiables.</p>
+
+          <!-- Servicio 3: GA4/GTM -->
+          <article class="bento-card">
+            <div class="bento-card-header">
+              <span class="bento-card-num">03</span>
+              <div class="bento-card-icon">📈</div>
+            </div>
+            <h3>Implementación GA4/GTM</h3>
+            <div class="bento-content">
+              <div class="bento-section">
+                <div class="bento-label">Problema</div>
+                <p class="bento-text">Tracking incompleto, conversiones mal atribuidas.</p>
+              </div>
+              <div class="bento-highlight">
+                <div class="bento-label">Solución IA</div>
+                <p>Setup end-to-end con data layer, eventos críticos + validación automática con IA. Diagnóstico de funnel.</p>
+              </div>
+              <div class="bento-result">
+                <span class="bento-result-value">100%</span>
+                <p>eventos críticos validados y funcionando</p>
+              </div>
+            </div>
+            <a href="https://wa.me/573214169100" class="bento-cta">Implementar →</a>
+          </article>
+
+          <!-- Servicio 4: Agentes de Prospección -->
+          <article class="bento-card">
+            <div class="bento-card-header">
+              <span class="bento-card-num">04</span>
+              <div class="bento-card-icon">🤖</div>
+            </div>
+            <h3>Agentes de Prospección IA</h3>
+            <div class="bento-content">
+              <div class="bento-section">
+                <div class="bento-label">Problema</div>
+                <p class="bento-text">Prospección manual lenta, leads sin calificar.</p>
+              </div>
+              <div class="bento-highlight">
+                <div class="bento-label">Solución IA</div>
+                <p>Agentes autónomos que encuentran, califican y contactan leads 24/7. Integración con CRM automática.</p>
+              </div>
+              <div class="bento-result">
+                <span class="bento-result-value">+300%</span>
+                <p>leads generados + clasificados por semana</p>
+              </div>
+            </div>
+            <a href="https://wa.me/573214169100" class="bento-cta">Configurar agente →</a>
+          </article>
+
+          <!-- Servicio 5: Automatización de Operaciones -->
+          <article class="bento-card">
+            <div class="bento-card-header">
+              <span class="bento-card-num">05</span>
+              <div class="bento-card-icon">⚙️</div>
+            </div>
+            <h3>Automatización de Operaciones</h3>
+            <div class="bento-content">
+              <div class="bento-section">
+                <div class="bento-label">Problema</div>
+                <p class="bento-text">Procesos manuales, errores operativos, lentitud.</p>
+              </div>
+              <div class="bento-highlight">
+                <div class="bento-label">Solución IA</div>
+                <p>Workflows inteligentes en N8N: sincronización de datos, reportes automáticos, alertas en tiempo real.</p>
+              </div>
+              <div class="bento-result">
+                <span class="bento-result-value">-20h</span>
+                <p>horas de trabajo manual por semana</p>
+              </div>
+            </div>
+            <a href="https://wa.me/573214169100" class="bento-cta">Automatizar →</a>
+          </article>
+
+          <!-- Servicio 6: Análisis Predictivo -->
+          <article class="bento-card">
+            <div class="bento-card-header">
+              <span class="bento-card-num">06</span>
+              <div class="bento-card-icon">🧠</div>
+            </div>
+            <h3>Análisis Predictivo + ML</h3>
+            <div class="bento-content">
+              <div class="bento-section">
+                <div class="bento-label">Problema</div>
+                <p class="bento-text">No predices comportamiento, decisiones basadas en intuición.</p>
+              </div>
+              <div class="bento-highlight">
+                <div class="bento-label">Solución IA</div>
+                <p>Modelos de ML que predicen conversiones, churn, LTV. Decisiones data-driven con confianza estadística.</p>
+              </div>
+              <div class="bento-result">
+                <span class="bento-result-value">0.92</span>
+                <p>R² en predicción de conversiones</p>
+              </div>
+            </div>
+            <a href="https://wa.me/573214169100" class="bento-cta">Implementar modelo →</a>
           </article>
         </div>
 
-        <div class="audit-cta-panel">
+        <div class="audit-cta-panel" style="margin-top: 40px;">
           <div>
             <p class="eyebrow" style="margin-bottom:8px;">Punto de entrada sin compromiso</p>
-            <h3 style="font-size:1.3rem; font-weight:800; color:var(--ink); margin:0 0 8px;">Auditoría gratuita de 20 minutos</h3>
-            <p style="color:var(--muted); font-size:0.94rem; margin:0;">Reviso rápido tu cuenta de Google Ads o Meta Ads y te doy 3 recomendaciones accionables — sin costo, sin compromiso.</p>
+            <h3 style="font-size:1.3rem; font-weight:800; color:var(--ink); margin:0 0 8px;">Consultoría de 20 minutos GRATIS</h3>
+            <p style="color:var(--muted); font-size:0.94rem; margin:0;">Conversamos sobre tu reto actual, identifico rápido las oportunidades y te doy 3 acciones inmediatas. Sin costo, sin compromiso.</p>
           </div>
-          <a class="btn btn-primary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20y%20quiero%20agendar%20la%20auditor%C3%ADa%20gratuita%20de%2020%20minutos%20para%20mi%20cuenta%20de%20Google%20Ads%2FMeta%20Ads" target="_blank" rel="noopener noreferrer">Agendar por WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20quiero%20agendar%20la%20consultoría%20gratuita%20de%2020%20minutos%20para%20hablar%20sobre%20mi%20reto%20de%20marketing" target="_blank" rel="noopener noreferrer">Agendar por WhatsApp</a>
         </div>
 
-        <p style="color:var(--muted); font-size:0.9rem; margin-top:20px;">Tarifas y alcance se definen según el proyecto — escríbeme por WhatsApp para conversarlo.</p>
+        <p style="color:var(--muted); font-size:0.9rem; margin-top:20px; text-align:center;">Tarifas personalizadas según alcance y complejidad del proyecto. Escribeme directamente por WhatsApp para una propuesta sin presión.</p>
       </div>
     </section>
 
@@ -1762,29 +2031,37 @@
 
 
   
-    <section class="section" id="preguntas">
+    <section class="section" id="faq">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Para recruiters</p>
-          <h2 class="section-title">Preguntas frecuentes para <span>reclutadores y líderes de marketing.</span></h2>
-          <p class="section-copy">Respuestas directas sobre disponibilidad, experiencia técnica, herramientas y tipo de rol donde puedo aportar más valor.</p>
+          <p class="eyebrow">Preguntas Frecuentes</p>
+          <h2 class="section-title">Sobre IA, automatización y cómo es trabajar con <span>especialistas en marketing inteligente.</span></h2>
+          <p class="section-copy">Resuelve dudas sobre cómo la IA mejora ROAS, si sustituye tu equipo o lo potencia, y qué te diferencia de una agencia tradicional.</p>
         </div>
         <div class="faq-grid">
           <div class="faq-item">
-            <h3 class="faq-question">¿Qué tipo de rol estoy buscando?</h3>
-            <p class="faq-answer">Roles full-time, híbridos o remotos en Performance Marketing, Paid Media, Growth Marketing, Marketing Analytics o Marketing Automation, idealmente en equipos donde la pauta, el CRM y los datos trabajen conectados.</p>
+            <h3 class="faq-question">¿Cómo la IA mejora el ROAS de mi negocio?</h3>
+            <p class="faq-answer">La IA optimiza en 3 frentes: (1) Segmentación inteligente de audiencias reduce desperdicio, (2) Testing automático en creativos identifica lo que vende, (3) Puja dinámica y escalado predictivo aplica presupuesto solo donde convierte. Resultado: +30% ROAS en 60-90 días.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">¿Qué presupuesto de pauta he gestionado?</h3>
-            <p class="faq-answer">He trabajado con presupuestos de $15M COP mensuales, conectando ejecución en Meta Ads y Google Ads con medición, reportes y optimización orientada a resultados de negocio.</p>
+            <h3 class="faq-question">¿Sustituye la IA a mi equipo de marketing actual?</h3>
+            <p class="faq-answer">No. La IA potencia tu equipo. Automatiza lo repetitivo (reportes, seguimiento, alertas), libera tiempo para análisis estratégico, y trae datos que antes tardaban horas en ser conectados. Tu equipo va de "ejecutor" a "estratega" — más valor, menos ruido.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">¿Qué herramientas manejo?</h3>
-            <p class="faq-answer">Meta Ads, Google Ads, GA4, Google Tag Manager, CRM Automation, HubSpot, Kommo, Bitrix24, Microsoft Clarity, Excel avanzado, dashboards y automatizaciones con Python e IA aplicada a marketing.</p>
+            <h3 class="faq-question">¿Cuál es la diferencia con una agencia tradicional?</h3>
+            <p class="faq-answer">Una agencia gestiona pauta. Yo construyo sistemas: auditoría de eficiencia, flujos automatizados, análisis predictivo, y modelos que aprenden de tu negocio. Enfoque: resultados medibles y sostenibles, no rotación de campañas. Costo: 40-60% menos que agencia, con más transparencia.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">¿Qué me diferencia frente a un perfil solo operativo?</h3>
-            <p class="faq-answer">Además de ejecutar campañas, puedo auditar tracking, interpretar datos, construir reportes, automatizar flujos y traducir hallazgos en acciones para marketing y ventas.</p>
+            <h3 class="faq-question">¿Cuándo ves los primeros resultados?</h3>
+            <p class="faq-answer">Auditoría: en 20 minutos tienes 3 focos de mejora. Setup de IA: primeros cambios en 7 días (pausar keywords, adjustar pujas, nuevas audiencias). Impacto medible en ROAS: 30-60 días. Automatización full: 90-120 días de implementación y optimización.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué rol busco para trabajar en una empresa?</h3>
+            <p class="faq-answer">Growth Marketing, Performance Marketing, Marketing Analytics o cualquier rol donde pauta, datos y automatización trabajen juntos. Idealmente full-time, híbrido o remoto. Mi aporte: auditoría de eficiencia, optimización con IA, dashboards accionables y decisiones más rápidas.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué herramientas y lenguajes domino?</h3>
+            <p class="faq-answer">Plataformas: Meta Ads, Google Ads, GA4, GTM, HubSpot, Kommo, Bitrix24, N8N. Técnico: Python, SQL, GSheets APIs, webhooks, machine learning (scikit-learn). IA: Claude, Gemini. Especialidad: integración de sistemas, automatización end-to-end, análisis predictivo.</p>
           </div>
         </div>
       </div>
@@ -1820,20 +2097,20 @@
     <section class="section contact" id="contacto">
       <div class="container contact-panel">
         <div>
-          <p class="eyebrow">Contacto</p>
-          <h2 class="section-title">Contacto para procesos de selección y entrevistas.</h2>
-          <p class="section-copy">Si estás evaluando un perfil de Performance Marketing para tu equipo, o buscas un especialista externo para tu cuenta de pauta, puedes validar mi trayectoria en LinkedIn o escribirme por WhatsApp — con gusto envío el CV o conversamos sobre el proyecto.</p>
+          <p class="eyebrow">Contacto Directo</p>
+          <h2 class="section-title">¿Quieres hablar de tu reto de marketing o una oportunidad de rol?</h2>
+          <p class="section-copy">Estoy disponible para consultoría estratégica, auditorías de campañas, o conversaciones sobre oportunidades de crecimiento profesional. Escríbeme directamente por WhatsApp — respondo en menos de 2 horas durante horario laboral.</p>
           <div class="contact-actions">
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
-            <a class="btn btn-primary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20profesional%20y%20quiero%20agendar%20una%20entrevista%20o%20conversacion%20sobre%20una%20vacante" target="_blank" rel="noopener noreferrer">Agendar entrevista</a>
-            <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com">Enviar correo</a>
+            <a class="btn btn-primary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20..." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Conectar en LinkedIn</a>
+            <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Consultoría o propuesta de rol">Enviar correo</a>
           </div>
         </div>
         <ul class="contact-list">
           <li><a href="https://wa.me/573214169100" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span> +57 321 416 9100</a></li>
           <li><a href="mailto:marketingdanielm@gmail.com"><span>Correo</span> marketingdanielm@gmail.com</a></li>
           <li><a href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span> /in/ddanielmurcia</a></li>
-          <li><a href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer"><span>Behance</span> Ver portfolio</a></li>
+          <li><a href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer"><span>Portafolio</span> Ver proyectos técnicos</a></li>
         </ul>
       </div>
     </section>
