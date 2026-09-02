@@ -192,130 +192,8 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      z-index: -1;
-      opacity: 0.55;
+      z-index: 1;
       pointer-events: none;
-    }
-
-    /* ---- Titular principal con degradado animado ---- */
-    .hero-title {
-      font-size: clamp(2.6rem, 6vw, 4.4rem);
-      line-height: 1.04;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-      margin: 0 0 18px;
-    }
-
-    .hero-title .title-shift {
-      background: linear-gradient(90deg, #A6FF00, #00E5FF, #9D4EDD, #FFD700, #A6FF00);
-      background-size: 300% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-      animation: titleShift 8s linear infinite;
-    }
-
-    @keyframes titleShift {
-      0%   { background-position: 0% 50%; }
-      100% { background-position: 300% 50%; }
-    }
-
-    .hero-lead {
-      font-size: 1.18rem;
-      max-width: 620px;
-      color: var(--muted);
-    }
-
-    /* ---- Boton principal que cambia de color ---- */
-    .btn-cta-shift {
-      background: linear-gradient(90deg, #A6FF00, #00E5FF, #9D4EDD, #A6FF00);
-      background-size: 300% 100%;
-      color: #06070F;
-      border: none;
-      font-weight: 800;
-      animation: ctaShift 6s linear infinite;
-      box-shadow: 0 0 24px rgba(166, 255, 0, 0.25);
-    }
-
-    .btn-cta-shift:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 34px rgba(0, 229, 255, 0.45);
-    }
-
-    @keyframes ctaShift {
-      0%   { background-position: 0% 50%; }
-      100% { background-position: 300% 50%; }
-    }
-
-    /* ---- Muñeco 3D en el hero ---- */
-    .gru-frame {
-      position: relative;
-      min-height: 320px;
-      background: radial-gradient(circle at 50% 45%, rgba(157, 78, 221, 0.18) 0%, transparent 68%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .gru-frame #gru-canvas {
-      width: 100%;
-      height: 320px;
-      display: block;
-    }
-
-    /* ---- Selector de chat: WhatsApp o Talk to AI ---- */
-    .chat-picker {
-      margin: 22px 0 24px;
-    }
-
-    .chat-picker-label {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #00E5FF;
-      margin: 0 0 12px;
-    }
-
-    .chat-picker-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-    }
-
-    .chat-option {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      text-align: left;
-      padding: 18px;
-      border-radius: 8px;
-      border: 1px solid rgba(157, 78, 221, 0.3);
-      background: rgba(18, 24, 41, 0.72);
-      color: var(--ink);
-      text-decoration: none;
-      cursor: pointer;
-      font: inherit;
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .chat-option:hover {
-      transform: translateY(-4px);
-      border-color: #A6FF00;
-      box-shadow: 0 0 22px rgba(166, 255, 0, 0.28);
-    }
-
-    .chat-option-title {
-      font-weight: 800;
-      font-size: 1.05rem;
-      color: #A6FF00;
-    }
-
-    .chat-option-copy {
-      font-size: 0.9rem;
-      color: #94A3B8;
-      line-height: 1.45;
     }
 
     .hero {
@@ -938,9 +816,9 @@
     .company-strip {
       margin-top: 22px;
       padding: 42px 28px;
-      border: 1px solid rgba(157, 78, 221, 0.25);
-      border-radius: 8px;
-      background: rgba(18, 24, 41, 0.6);
+      border: 2px solid var(--green-3);
+      border-radius: var(--radius);
+      background: var(--paper-2);
       overflow: hidden;
       position: relative;
       box-shadow: var(--shadow);
@@ -948,7 +826,7 @@
   
     .company-strip p {
       margin-bottom: 22px;
-      color: #00E5FF;
+      color: var(--green);
       font-size: 1.05rem;
       font-weight: 800;
       letter-spacing: 0.1em;
@@ -973,41 +851,18 @@
       width: max-content;
     }
   
-    .company-logo {
+    .company-list span {
       display: inline-flex;
+      min-height: 58px;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 64px;
-      padding: 0 30px;
-      border: 1px solid rgba(157, 78, 221, 0.35);
-      border-radius: 8px;
-      background: rgba(10, 14, 39, 0.75);
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .company-logo:hover {
-      border-color: #A6FF00;
-      box-shadow: 0 0 18px rgba(166, 255, 0, 0.22);
-    }
-
-    .company-logo img {
-      max-height: 34px;
-      width: auto;
-      display: block;
-      filter: grayscale(1) brightness(1.6);
-      opacity: 0.9;
-    }
-
-    /* el nombre queda como respaldo: se oculta cuando hay logo cargado */
-    .company-logo img + span { display: none; }
-
-    .company-logo span {
-      color: #E2E8F0;
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      white-space: nowrap;
+      padding: 0 28px;
+      color: #ffffff;
+      background: var(--green);
+      border: 1px solid var(--green-2);
+      border-radius: 999px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      box-shadow: 0 6px 14px rgba(0,51,255,0.25);
     }
   
     @keyframes infiniteScroll {
@@ -1778,12 +1633,13 @@
         <span>DanielPixelStudio</span>
       </a>
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#servicios">SERVICES</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#casos">Casos</a>
         <a href="#faq">FAQ</a>
-        <a href="#contacto">CONTACT</a>
+        <a href="#contacto">Contactar</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agenda tu llamada</a>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
       </div>
     </div>
   </header>
@@ -1794,11 +1650,12 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow eyebrow-status">Disponible para roles full-time · híbrido · remoto · y proyectos freelance</p>
-          <h1 class="hero-title">THE MARKETING SYSTEM OF <span class="title-shift">TOMORROW</span></h1>
-          <p class="hero-copy hero-lead">Ai-powered performance marketing built to learn, adapt and grow.</p>
+          <h1>Daniel Aldana — <span>Performance Marketing Specialist.</span></h1>
+          <p class="hero-copy">Especialista en Performance Marketing con experiencia gestionando presupuestos de $15M COP mensuales. Combino ejecución de pauta, analítica de datos y automatización con IA para convertir inversión publicitaria en resultados medibles — como parte de tu equipo interno, o como consultor externo para tu cuenta.</p>
           <div class="hero-ctas">
-            <a class="btn btn-cta-shift" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agenda tu llamada</a>
-            <a class="btn btn-secondary" href="#servicios">SERVICES</a>
+            <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agendar llamada</a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios para clientes</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
           </div>
           <div class="hero-proof" aria-label="Indicadores de experiencia">
             <div class="proof-item">
@@ -1821,8 +1678,8 @@
         </div>
   
         <aside class="analytics-card portrait-card" aria-label="Perfil profesional de Daniel Aldana">
-          <div class="portrait-frame gru-frame">
-            <canvas id="gru-canvas" aria-label="Modelo 3D de mascota DanielPixelStudio"></canvas>
+          <div class="portrait-frame">
+            <img src="assets/daniel-murcia.png" alt="Daniel Aldana, Performance Marketing Specialist" />
           </div>
           <div class="card-top">
             <div>
@@ -1853,7 +1710,7 @@
     <section class="section" id="servicios">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">SERVICES</p>
+          <p class="eyebrow">Servicios con IA</p>
           <h2 class="section-title">Soluciones de Performance Marketing y Automatización inteligente.</h2>
           <p class="section-copy">Desde gestión de pauta hasta automatización de operaciones — cada servicio usa IA para resultados medibles.</p>
         </div>
@@ -1863,6 +1720,7 @@
           <article class="bento-card">
             <div class="bento-card-header">
               <span class="bento-card-num">01</span>
+              <div class="bento-card-icon">📊</div>
             </div>
             <h3>Gestión de Google Ads / Meta Ads</h3>
             <div class="bento-content">
@@ -1886,6 +1744,7 @@
           <article class="bento-card">
             <div class="bento-card-header">
               <span class="bento-card-num">02</span>
+              <div class="bento-card-icon">🔍</div>
             </div>
             <h3>Auditoría Inteligente de Campañas</h3>
             <div class="bento-content">
@@ -1909,6 +1768,7 @@
           <article class="bento-card">
             <div class="bento-card-header">
               <span class="bento-card-num">03</span>
+              <div class="bento-card-icon">📈</div>
             </div>
             <h3>Implementación GA4/GTM</h3>
             <div class="bento-content">
@@ -1932,6 +1792,7 @@
           <article class="bento-card">
             <div class="bento-card-header">
               <span class="bento-card-num">04</span>
+              <div class="bento-card-icon">🤖</div>
             </div>
             <h3>Agentes de Prospección IA</h3>
             <div class="bento-content">
@@ -1955,6 +1816,7 @@
           <article class="bento-card">
             <div class="bento-card-header">
               <span class="bento-card-num">05</span>
+              <div class="bento-card-icon">⚙️</div>
             </div>
             <h3>Automatización de Operaciones</h3>
             <div class="bento-content">
@@ -1978,6 +1840,7 @@
           <article class="bento-card">
             <div class="bento-card-header">
               <span class="bento-card-num">06</span>
+              <div class="bento-card-icon">🧠</div>
             </div>
             <h3>Análisis Predictivo + ML</h3>
             <div class="bento-content">
@@ -2021,138 +1884,6 @@
           <p class="section-copy">Los proyectos están presentados como evidencia profesional para reclutadores: algunos corresponden a experiencia laboral, otros son demostrativos o personales. La intención es mostrar criterio técnico, no vender servicios freelance.</p>
         </div>
         <div class="case-grid">
-          <a class="case-card" href="docs/diagnostico-meta-ads-ecommerce.pptx" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-auditoria-meta-ads.png" alt="Auditoría de Performance y Diagnóstico de Meta Ads para E-commerce" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Facebook Ads</span>
-                <span class="pill">Google Analytics</span>
-                <span class="pill">Comercio Electrónico</span>
-                <span class="pill">Publicidad en Google y Facebook</span>
-              </div>
-              <h3>Auditoría de Performance y Diagnóstico de Meta Ads para E-commerce</h3>
-              <p>Realicé una auditoría integral de una cuenta de Meta Ads para e-commerce, evaluando 5 campañas activas (TOFU y BOFU) para diagnosticar salud de cuenta, fatiga creativa y oportunidades de escalamiento. Detecté una campaña con saturación crítica de audiencia (ROAS 0.00x, +290% de frecuencia y caída de -79% en CTR) y diseñé un plan de acción en 3 fases: remediación inmediata de creativos agotados, escalamiento rentable de retargeting con ROAS de 32.6x, y automatización de reglas de alerta y rebalanceo de presupuesto vía n8n conectado a Shopify y Meta API. El resultado fue una hoja de ruta clara para frenar la fuga de presupuesto y priorizar la inversión en las campañas de mejor desempeño.</p>
-              <div class="case-action">Ver diagnóstico completo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>32.6x</strong>
-                <span>ROAS en retargeting escalable</span>
-              </div>
-              <div class="case-metric">
-                <strong>5</strong>
-                <span>campañas auditadas (TOFU y BOFU)</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="docs/automatizacion-n8n-hubspot.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-n8n-hubspot.png" alt="Automatización de captura de leads con n8n y HubSpot CRM" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">n8n</span>
-                <span class="pill">HubSpot CRM</span>
-                <span class="pill">Automatización</span>
-                <span class="pill">Webhooks</span>
-              </div>
-              <h3>Automatización de captura de leads con n8n y HubSpot CRM</h3>
-              <p>Diseñé y construí un flujo de automatización en n8n que conecta formularios web con HubSpot CRM en tiempo real. El sistema captura cada lead mediante un webhook, valida y normaliza los datos, y crea o actualiza el contacto y el deal correspondiente en HubSpot sin duplicados. Cuando un caso requiere revisión o se gana un deal, dispara una alerta automática a Telegram/Slack, así el equipo se entera sin abrir el CRM. La autenticación se maneja con Private App Token (sin claves compartidas) y el cliente se queda con el workflow exportado en JSON, portable a cualquier instancia de n8n, más documentación de cada nodo. Resultado: cero captura manual, pipeline siempre sincronizado y respuesta inmediata a cada lead.</p>
-              <div class="case-action">Ver presentación del flujo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>Cero</strong>
-                <span>captura manual de leads</span>
-              </div>
-              <div class="case-metric">
-                <strong>Tiempo real</strong>
-                <span>pipeline siempre sincronizado</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="performance-marketing-engineering-ia-datos.html" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-performance-engineering.png" alt="Performance Marketing Engineering: IA, datos y crecimiento" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Data Integration</span>
-                <span class="pill">AI & Automation</span>
-                <span class="pill">Growth</span>
-              </div>
-              <h3>Performance Marketing Engineering: IA, datos y crecimiento</h3>
-              <p>Integración de datos de publicidad, analítica, CRM y ventas. Automatización de reportes, monitoreo y modelos predictivos.</p>
-              <div class="case-action">Leer artículo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>5 capacidades</strong>
-                <span>Integración, automatización, predictivos</span>
-              </div>
-              <div class="case-metric">
-                <strong>ROI+</strong>
-                <span>Crecimiento escalable y medible</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="google-marketing-live-2026-novedades-publicidad-digital.html" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-google-marketing-live.png" alt="Google Marketing Live 2026: tendencias en publicidad digital" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Google Ads</span>
-                <span class="pill">IA en Publicidad</span>
-                <span class="pill">2026</span>
-              </div>
-              <h3>Google Marketing Live 2026: tendencias en publicidad digital</h3>
-              <p>IA en creación de anuncios, automatización predictiva y énfasis en calidad de conversiones sobre volumen.</p>
-              <div class="case-action">Leer artículo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>IA Generativa</strong>
-                <span>Creación y optimización de activos</span>
-              </div>
-              <div class="case-metric">
-                <strong>Automatización</strong>
-                <span>Campañas, ofertas y creativos</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="por-que-meta-suspende-cuentas-publicitarias.html" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-meta-suspensiones.png" alt="Meta Ads: por qué se suspenden cuentas y cómo prevenirlo" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Meta Ads</span>
-                <span class="pill">Compliance</span>
-                <span class="pill">Prevención</span>
-              </div>
-              <h3>Meta Ads: por qué se suspenden cuentas y cómo prevenirlo</h3>
-              <p>7 motivos principales de suspensión en Meta Ads y guía de prevención con mejores prácticas.</p>
-              <div class="case-action">Leer artículo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>7 riesgos</strong>
-                <span>Identificados y prevenibles</span>
-              </div>
-              <div class="case-metric">
-                <strong>100%</strong>
-                <span>Evitar suspensión de cuenta</span>
-              </div>
-            </div>
-          </a>
-
           <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
             <div class="case-image">
               <img src="assets/portfolio-cover.png" alt="Portafolio digital de DanielPixelStudio" />
@@ -2233,7 +1964,7 @@
 
           <a class="case-card" href="assets/dashboard_meta_ads.html" target="_blank" rel="noopener noreferrer">
             <div class="case-image">
-              <img src="assets/2.PNG" alt="Sistema de advertising analytics para auditoría de campañas" />
+              <img src="assets/advertising-analytics.png" alt="Sistema de advertising analytics para auditoría de campañas" />
             </div>
             <div class="case-card-body">
               <div class="case-meta">
@@ -2279,6 +2010,32 @@
               <div class="case-metric">
                 <strong>-$54,720</strong>
                 <span>COP/semana en riesgo</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="case-card" href="https://github.com/DanielMCol/danielpixelstudio-ai" target="_blank" rel="noopener noreferrer">
+            <div class="case-image">
+              <img src="assets/2.PNG" alt="N8N Workflow: Captura de Leads + CRM Automation" />
+            </div>
+            <div class="case-card-body">
+              <div class="case-meta">
+                <span class="pill">N8N</span>
+                <span class="pill">Automatización</span>
+                <span class="pill">Proyecto técnico</span>
+              </div>
+              <h3>Automatización de Captura de Leads + CRM Integration</h3>
+              <p>Workflow inteligente que captura leads desde formularios, enriquece datos, y hace sync automático con HubSpot. Incluye webhooks, validación de emails y alertas en tiempo real.</p>
+              <div class="case-action">Ver en GitHub</div>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>-20h</strong>
+                <span>manual trabajo por semana</span>
+              </div>
+              <div class="case-metric">
+                <strong>100%</strong>
+                <span>lead capture + CRM sync</span>
               </div>
             </div>
           </a>
@@ -2337,80 +2094,28 @@
 
         </div>
   
-        <div class="company-strip" aria-label="Empresas con las que he trabajado">
-          <p>Empresas con las que he trabajado</p>
+        <div class="company-strip" aria-label="Empresas y contextos de experiencia">
+          <p>Empresas, verticales y contextos trabajados</p>
           <div class="marquee-container">
             <div class="company-list">
-              <div class="company-logo">
-                <img src="assets/logos/nases-colombia.png" alt="Nases Colombia" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Nases Colombia</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/naturevital-style.png" alt="Naturevital-Style" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Naturevital-Style</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/coltanques.png" alt="Coltanques SAS" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Coltanques SAS</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/aluminios-y-acabados.png" alt="Aluminios y Acabados" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Aluminios y Acabados</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/aroma-cafe.png" alt="Aroma Café" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Aroma Café</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/amp.png" alt="AMP" loading="lazy"
-                     onerror="this.remove();" />
-                <span>AMP</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/ecoclean-hogar.png" alt="EcoClean Hogar" loading="lazy"
-                     onerror="this.remove();" />
-                <span>EcoClean Hogar</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/nases-colombia.png" alt="Nases Colombia" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Nases Colombia</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/naturevital-style.png" alt="Naturevital-Style" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Naturevital-Style</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/coltanques.png" alt="Coltanques SAS" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Coltanques SAS</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/aluminios-y-acabados.png" alt="Aluminios y Acabados" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Aluminios y Acabados</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/aroma-cafe.png" alt="Aroma Café" loading="lazy"
-                     onerror="this.remove();" />
-                <span>Aroma Café</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/amp.png" alt="AMP" loading="lazy"
-                     onerror="this.remove();" />
-                <span>AMP</span>
-              </div>
-              <div class="company-logo">
-                <img src="assets/logos/ecoclean-hogar.png" alt="EcoClean Hogar" loading="lazy"
-                     onerror="this.remove();" />
-                <span>EcoClean Hogar</span>
-              </div>
+              <span>Nases Colombia</span>
+              <span>Naturevital-Style</span>
+              <span>Coltanques SAS</span>
+              <span>Aluminios y Acabados</span>
+              <span>Aroma Café</span>
+              <span>AMP</span>
+              <span>EcoClean Hogar</span>
+              <span>N8N Workflows</span>
+              <span>E-commerce LATAM</span>
+              <span>Nases Colombia</span>
+              <span>Naturevital-Style</span>
+              <span>Coltanques SAS</span>
+              <span>Aluminios y Acabados</span>
+              <span>Aroma Café</span>
+              <span>AMP</span>
+              <span>EcoClean Hogar</span>
+              <span>N8N Workflows</span>
+              <span>E-commerce LATAM</span>
             </div>
           </div>
         </div>
@@ -2512,23 +2217,10 @@
         <div>
           <p class="eyebrow">Contacto Directo</p>
           <h2 class="section-title">¿Quieres hablar de tu reto de marketing o una oportunidad de rol?</h2>
-          <p class="section-copy">Estoy disponible para consultoría estratégica, auditorías de campañas, o conversaciones sobre oportunidades de crecimiento profesional.</p>
-          <div class="chat-picker" role="group" aria-label="Elige cómo quieres hablar">
-            <p class="chat-picker-label">Elige cómo quieres hablar</p>
-            <div class="chat-picker-options">
-              <a class="chat-option" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20..." target="_blank" rel="noopener noreferrer">
-                <span class="chat-option-title">WhatsApp</span>
-                <span class="chat-option-copy">Hablas directo conmigo. Respondo en menos de 2 horas en horario laboral.</span>
-              </a>
-              <button class="chat-option" type="button" id="openAiChat">
-                <span class="chat-option-title">Talk to AI</span>
-                <span class="chat-option-copy">Asistente disponible 24/7 para resolver dudas sobre servicios y casos.</span>
-              </button>
-            </div>
-          </div>
+          <p class="section-copy">Estoy disponible para consultoría estratégica, auditorías de campañas, o conversaciones sobre oportunidades de crecimiento profesional. Escríbeme directamente por WhatsApp — respondo en menos de 2 horas durante horario laboral.</p>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agenda tu llamada</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-primary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20..." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Conectar en LinkedIn</a>
             <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Consultoría o propuesta de rol">Enviar correo</a>
           </div>
         </div>
@@ -2542,6 +2234,53 @@
     </section>
   </main>
 
+  <section class="ai-chat-widget" id="auditWidget" aria-label="Simulador de auditoría de pauta">
+    <div class="ai-chat-header">
+      <div>
+        Simulador de Auditoría de Pauta
+        <span>🐾 Axel</span>
+      </div>
+      <button class="ai-chat-toggle" type="button" id="auditToggle" aria-label="Minimizar simulador">−</button>
+    </div>
+    <div class="ai-chat-body">
+      <form class="audit-form" id="auditForm">
+        <div class="audit-field">
+          <label for="auditGasto">Gasto invertido ($)</label>
+          <input id="auditGasto" type="number" min="0" step="1" placeholder="Ej: 18800" required />
+        </div>
+        <div class="audit-field">
+          <label for="auditConversiones">Conversiones</label>
+          <input id="auditConversiones" type="number" min="0" step="1" placeholder="Ej: 280" required />
+        </div>
+        <div class="audit-field">
+          <label for="auditIngresos">Ingresos generados ($) <span class="audit-optional">opcional, para ROAS</span></label>
+          <input id="auditIngresos" type="number" min="0" step="1" placeholder="Ej: 71440" />
+        </div>
+        <div class="audit-field">
+          <label for="auditCpaMax">CPA máximo aceptable ($)</label>
+          <input id="auditCpaMax" type="number" min="0" step="1" placeholder="Ej: 60" required />
+        </div>
+        <button type="submit" class="btn btn-primary audit-submit">Auditar campaña</button>
+      </form>
+      <div class="audit-result" id="auditResult" hidden>
+        <div class="audit-result-row">
+          <span>CPA calculado</span>
+          <strong id="auditCpaOut">—</strong>
+        </div>
+        <div class="audit-result-row">
+          <span>ROAS</span>
+          <strong id="auditRoasOut">—</strong>
+        </div>
+        <div class="audit-result-row">
+          <span>Gap vs. CPA máximo</span>
+          <strong id="auditGapOut">—</strong>
+        </div>
+        <div class="audit-status" id="auditStatusOut">—</div>
+        <p class="audit-recommendation" id="auditRecOut"></p>
+      </div>
+      <p class="ai-chat-note">Cálculo 100% en tu navegador — sin envío de datos a ningún servidor. Misma lógica de CPA/ROAS que Daniel aplica en sus auditorías reales.</p>
+    </div>
+  </section>
   
   <footer class="footer">
     <div class="container footer-inner">
@@ -2556,6 +2295,7 @@
 
   <script>
     const auditWidget = document.getElementById('auditWidget');
+    const auditToggle = document.getElementById('auditToggle');
     const auditForm = document.getElementById('auditForm');
     const auditResult = document.getElementById('auditResult');
     const auditCpaOut = document.getElementById('auditCpaOut');
@@ -2791,82 +2531,6 @@
 
     initParticles();
     animate();
-  </script>
-
-  <!-- Modelo 3D del muñeco (gru.glb) -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js"></script>
-  <script>
-    window.addEventListener('load', function () {
-      var canvas = document.getElementById('gru-canvas');
-      if (!canvas || typeof THREE === 'undefined' || !THREE.GLTFLoader) return;
-
-      var w = canvas.clientWidth || 400;
-      var h = canvas.clientHeight || 320;
-
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
-      camera.position.set(0, 0.6, 3.2);
-
-      var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-      renderer.setSize(w, h, false);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-      scene.add(new THREE.AmbientLight(0xffffff, 0.85));
-      var key = new THREE.DirectionalLight(0xffffff, 1.1);
-      key.position.set(3, 5, 4);
-      scene.add(key);
-      var rim = new THREE.PointLight(0x9D4EDD, 1.4, 20);
-      rim.position.set(-4, 1, 3);
-      scene.add(rim);
-
-      var model = null;
-      var pointerX = 0;
-
-      new THREE.GLTFLoader().load('gru.glb', function (gltf) {
-        model = gltf.scene;
-
-        var box = new THREE.Box3().setFromObject(model);
-        var size = box.getSize(new THREE.Vector3());
-        var center = box.getCenter(new THREE.Vector3());
-        var scale = 2.1 / Math.max(size.x, size.y, size.z);
-
-        model.scale.setScalar(scale);
-        model.position.sub(center.multiplyScalar(scale));
-        scene.add(model);
-      });
-
-      window.addEventListener('mousemove', function (e) {
-        pointerX = (e.clientX / window.innerWidth) * 2 - 1;
-      });
-
-      (function loop() {
-        requestAnimationFrame(loop);
-        if (model) {
-          model.rotation.y += (pointerX * 0.6 - model.rotation.y) * 0.05 + 0.003;
-        }
-        renderer.render(scene, camera);
-      })();
-
-      window.addEventListener('resize', function () {
-        var nw = canvas.clientWidth || 400;
-        var nh = canvas.clientHeight || 320;
-        camera.aspect = nw / nh;
-        camera.updateProjectionMatrix();
-        renderer.setSize(nw, nh, false);
-      });
-    });
-
-    // Boton "Talk to AI" -> abre el chat de Voiceflow
-    (function () {
-      var aiBtn = document.getElementById('openAiChat');
-      if (!aiBtn) return;
-      aiBtn.addEventListener('click', function () {
-        if (window.voiceflow && window.voiceflow.chat && window.voiceflow.chat.open) {
-          window.voiceflow.chat.open();
-        }
-      });
-    })();
   </script>
 
   <!-- Voiceflow Chatbot Assistant -->
