@@ -1,0 +1,14 @@
+*.pdf
+*.xlsx
+*.csv
+*.xls
+*.doc
+*.docx
+blog.css
+google-marketing-live-*.html
+performance-marketing-*.html
+por-que-meta-*.html
+.DS_Store
+node_modules/
+.env
+.env.local
