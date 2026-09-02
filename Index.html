@@ -1653,7 +1653,7 @@
           <h1>Daniel Aldana — <span>Performance Marketing Specialist.</span></h1>
           <p class="hero-copy">Especialista en Performance Marketing con experiencia gestionando presupuestos de $15M COP mensuales. Combino ejecución de pauta, analítica de datos y automatización con IA para convertir inversión publicitaria en resultados medibles — como parte de tu equipo interno, o como consultor externo para tu cuenta.</p>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20profesional%20y%20quiero%20agendar%20una%20entrevista%20o%20conversacion%20sobre%20una%20vacante" target="_blank" rel="noopener noreferrer">Agendar entrevista</a>
+            <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agendar llamada</a>
             <a class="btn btn-secondary" href="#servicios">Ver servicios para clientes</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
           </div>
@@ -1737,7 +1737,7 @@
                 <p>incremento en ROAS promedio</p>
               </div>
             </div>
-            <a href="https://wa.me/573214169100" class="bento-cta">Iniciar proyecto →</a>
+            <a href="https://cal.com/danielpixelstudiocall" target="_blank" class="bento-cta">Agendar →</a>
           </article>
 
           <!-- Servicio 2: Auditoría Inteligente -->
@@ -1867,7 +1867,7 @@
             <h3 style="font-size:1.3rem; font-weight:800; color:var(--ink); margin:0 0 8px;">Consultoría de 20 minutos GRATIS</h3>
             <p style="color:var(--muted); font-size:0.94rem; margin:0;">Conversamos sobre tu reto actual, identifico rápido las oportunidades y te doy 3 acciones inmediatas. Sin costo, sin compromiso.</p>
           </div>
-          <a class="btn btn-primary" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20quiero%20agendar%20la%20consultoría%20gratuita%20de%2020%20minutos%20para%20hablar%20sobre%20mi%20reto%20de%20marketing" target="_blank" rel="noopener noreferrer">Agendar por WhatsApp</a>
+          <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agendar consultoría</a>
         </div>
 
         <p style="color:var(--muted); font-size:0.9rem; margin-top:20px; text-align:center;">Tarifas personalizadas según alcance y complejidad del proyecto. Escribeme directamente por WhatsApp para una propuesta sin presión.</p>
@@ -2447,6 +2447,23 @@
 
     initParticles();
     animate();
+  </script>
+
+  <!-- Voiceflow Chatbot Assistant -->
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '6a98541374ee1752cb9a459f' },
+            url: 'https://general-runtime.voiceflow.com',
+            voice: {
+              url: "https://runtime-api.voiceflow.com"
+            }
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
   </script>
 </body>
 </html>
