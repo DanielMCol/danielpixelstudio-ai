@@ -2091,7 +2091,7 @@
               description: "Auditoría completa y modelo de análisis predictivo en Google Ads para redistribuir presupuesto hacia los segmentos con mejor desempeño real.",
               tags: ["Google Ads", "Análisis predictivo", "Optimización de pujas"],
               metrics: [
-                { value: "ROAS en aumento", label: "Redistribución hacia segmentos de mejor desempeño" },
+                { value: "2.87X", label: "ROAS global actual (auditoría real)" },
                 { value: "CPA más bajo", label: "Reducción gradual en áreas de bajo retorno" },
                 { value: "Mismo presupuesto", label: "Cada peso invertido rinde más, sin gastar más" }
               ],
@@ -2692,16 +2692,14 @@
         });
       }
 
-      window.addEventListener('load', function () {
-        loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js')
-          .then(function () {
-            return loadScript('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js');
-          })
-          .then(initGru)
-          .catch(function (err) {
-            console.warn('No se pudo cargar el modelo 3D (gru.glb):', err);
-          });
-      });
+      loadScript('assets/vendor/three.min.js')
+        .then(function () {
+          return loadScript('assets/vendor/GLTFLoader.js');
+        })
+        .then(initGru)
+        .catch(function (err) {
+          console.warn('No se pudo cargar el modelo 3D (gru.glb):', err);
+        });
 
       function initGru() {
         if (typeof THREE === 'undefined' || !THREE.GLTFLoader) return;
