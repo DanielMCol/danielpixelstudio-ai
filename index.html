@@ -948,14 +948,6 @@
       margin: 0 0 18px;
     }
 
-    .step-image {
-      position: relative;
-      aspect-ratio: 16 / 10;
-      border-radius: 6px;
-      border: 1px dashed var(--line);
-      background: rgba(255, 255, 255, 0.02);
-    }
-
     .case-card {
       overflow: hidden;
       display: flex;
@@ -1876,19 +1868,16 @@
             <span class="step-num">01</span>
             <h3 class="step-title">Diagnóstico gratis en 20 minutos</h3>
             <p class="step-desc">Reviso tus campañas y tu tracking, y te doy 3 focos de mejora — sin costo, sin compromiso.</p>
-            <div class="step-image" data-todo="captura-paso-1"></div>
           </div>
           <div class="step-card">
             <span class="step-num">02</span>
             <h3 class="step-title">Plan de acción claro</h3>
             <p class="step-desc">Qué se optimiza primero, qué se automatiza y qué resultado esperar en cada etapa.</p>
-            <div class="step-image" data-todo="captura-paso-2"></div>
           </div>
           <div class="step-card">
             <span class="step-num">03</span>
             <h3 class="step-title">Ejecución con datos, no con suposiciones</h3>
             <p class="step-desc">Implemento los cambios, mido el impacto real y ajusto hasta escalar los resultados.</p>
-            <div class="step-image" data-todo="captura-paso-3"></div>
           </div>
         </div>
       </div>
@@ -2159,10 +2148,11 @@
 
             function goTo(index, behavior) {
               markActive(index);
-              cards[activeIndex].scrollIntoView({
-                behavior: prefersReducedMotion ? "auto" : (behavior || "smooth"),
-                inline: "center",
-                block: "nearest"
+              var card = cards[activeIndex];
+              var targetLeft = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+              track.scrollTo({
+                left: targetLeft,
+                behavior: prefersReducedMotion ? "auto" : (behavior || "smooth")
               });
             }
 
