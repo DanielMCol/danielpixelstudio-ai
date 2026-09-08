@@ -1288,14 +1288,33 @@
 
     .region-map {
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 420px;
+    }
+
+    .region-map::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 340px;
+      height: 340px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, var(--ai-purple-glow), transparent 70%);
+      pointer-events: none;
     }
 
     .americas-map {
+      position: relative;
       width: 100%;
-      max-width: 360px;
+      max-width: 440px;
       height: auto;
       display: block;
       margin: 0 auto;
+      filter: drop-shadow(0 12px 32px rgba(157, 78, 221, 0.35));
     }
 
     .americas-map .country {
