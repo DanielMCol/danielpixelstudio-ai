@@ -326,18 +326,18 @@
 
     /* ---- Boton principal que cambia de color ---- */
     .btn-cta-shift {
-      background: linear-gradient(90deg, #2E7D32, #0277BD, #C1502E, #2E7D32);
+      background: linear-gradient(90deg, #8B3A1F, #C1502E, #E08E6D, #C1502E, #8B3A1F);
       background-size: 300% 100%;
       color: #06070F;
       border: none;
       font-weight: 800;
       animation: ctaShift 6s linear infinite;
-      box-shadow: 0 0 24px rgba(46, 125, 50, 0.25);
+      box-shadow: 0 0 24px rgba(193, 80, 43, 0.25);
     }
 
     .btn-cta-shift:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 34px rgba(2, 119, 189, 0.45);
+      box-shadow: 0 0 34px rgba(193, 80, 43, 0.45);
     }
 
     @keyframes ctaShift {
@@ -376,7 +376,7 @@
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #0277BD;
+      color: #fff;
       margin: 0 0 12px;
     }
 
@@ -411,7 +411,7 @@
     .chat-option-title {
       font-weight: 800;
       font-size: 1.05rem;
-      color: #2E7D32;
+      color: var(--ai-purple);
     }
 
     .chat-option-copy {
@@ -534,13 +534,13 @@
     }
   
     .btn-primary {
-      color: var(--li-void-navy);
-      background: var(--li-acid-lime);
-      box-shadow: 0 15px 36px rgba(46, 125, 50, 0.25);
+      color: #fff;
+      background: var(--ai-purple);
+      box-shadow: 0 15px 36px rgba(193, 80, 43, 0.25);
     }
 
     .btn-primary:hover {
-      background: #388E3C;
+      background: var(--ai-purple-dark);
     }
   
     .btn-secondary {
@@ -1095,9 +1095,9 @@
       align-items: center;
       min-height: 28px;
       padding: 0 10px;
-      color: var(--li-electric-cyan);
+      color: var(--ai-purple);
       background: var(--paper-3);
-      border: 1px solid rgba(2,119,189,0.25);
+      border: 1px solid rgba(193,80,43,0.25);
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 800;
@@ -1153,7 +1153,7 @@
   
     .company-strip p {
       margin-bottom: 22px;
-      color: #0277BD;
+      color: var(--ai-purple);
       font-size: 1.05rem;
       font-weight: 800;
       letter-spacing: 0.1em;
@@ -1658,9 +1658,13 @@
     }
   
     .contact .btn-primary {
-      color: var(--li-void-navy);
-      background: var(--li-acid-lime);
+      color: var(--ai-purple);
+      background: #fff;
       box-shadow: none;
+    }
+
+    .contact .btn-primary:hover {
+      background: var(--paper-2);
     }
   
     .contact .btn-secondary {
