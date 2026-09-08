@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyecto de portafolio (datos ficticios): plataforma de analítica y predicción para Google Ads construida en Python con Machine Learning y visualización 2D/3D." />
+  <meta name="keywords" content="Python, Machine Learning, Google Ads, analítica predictiva, Plotly, Scikit-Learn" />
+  <link rel="canonical" href="https://danielpixelstudio.com/caso-ecoclean-google-ads-ia.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+  <title>Analítica y predicción con IA para Google Ads (proyecto de portafolio)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <nav class="blog-nav">
+    <div class="wrap">
+      <a href="index.html">← Volver al portafolio</a>
+      <a href="index.html#casos">Todos los casos</a>
+    </div>
+  </nav>
+
+  <article class="blog-article">
+    <p class="blog-kicker">Proyecto de portafolio · Python + IA (datos ficticios)</p>
+    <h1>De datos de campañas a decisiones que suben el ROAS</h1>
+    <p class="blog-lead"><strong>Nota de transparencia:</strong> "EcoClean Hogar" es una empresa ficticia, usada para construir de punta a punta esta plataforma de analítica y predicción de Google Ads. No es un cliente real — es el mismo tipo de trabajo técnico que aplico sobre cuentas reales.</p>
+
+    <p>Plataforma de analítica y predicción para campañas de Google Ads, construida en Python con Machine Learning y visualización 2D/3D.</p>
+
+    <h2>El problema que resuelve</h2>
+    <p>Los reportes de Google Ads dicen qué pasó. No dicen qué va a pasar. Cuando el análisis se queda en una hoja de cálculo, siempre hay una fuga:</p>
+    <ul>
+      <li>La campaña ineficiente que sigue recibiendo presupuesto por costumbre.</li>
+      <li>El cruce que nadie hace a mano: CTR vs. CPC vs. ROAS al mismo tiempo.</li>
+      <li>La decisión de escalar gasto basada en intuición, no en un modelo entrenado con los propios datos.</li>
+      <li>El dataset que crece (10K, 1M filas) y el Excel que ya no aguanta.</li>
+    </ul>
+
+    <h2>Qué hace la plataforma: medir, ver y predecir</h2>
+    <h3>KPIs — panel ejecutivo en consola</h3>
+    <p><code>dashboard.py</code> calcula CTR, CPC, CPA, ROAS, costo, conversiones e ingresos agregados, y ofrece un menú para disparar cualquier gráfico.</p>
+    <h3>Visualización — 10 gráficos 2D/3D</h3>
+    <p><code>graficos3d.py</code>: scatter3D, heatmap, funnel, treemap, sunburst y más — cada uno cruza variables que un Excel no cruza.</p>
+    <h3>Predicción IA — conversiones futuras</h3>
+    <p><code>modelo_ads.py</code> entrena una red neuronal (MLPRegressor) que predice conversiones a partir de impresiones, clics, CTR, CPC y costo.</p>
+
+    <h2>Cómo funciona: de un dataset a una predicción, en 4 pasos</h2>
+    <ol>
+      <li><strong>Datos:</strong> se carga el dataset — 300, 10.000 o 1.000.000 de filas, mismas columnas, mismo código sin modificar.</li>
+      <li><strong>KPIs:</strong> se agregan las métricas (CTR, CPC, CPA, ROAS, costo, conversiones, ingresos), listas en el panel ejecutivo.</li>
+      <li><strong>Visualizar:</strong> se cruzan variables — 10 gráficos 2D/3D bajo demanda, por campaña, canal, dispositivo, hora o fecha.</li>
+      <li><strong>Predecir:</strong> el modelo estima conversiones con una red neuronal entrenada con los datos reales del cliente, y reporta R² y MSE.</li>
+    </ol>
+
+    <h2>Stack técnico: todo corre local, sin nube ni APIs externas</h2>
+    <ul>
+      <li><strong>Python 3</strong> — lenguaje base de toda la plataforma.</li>
+      <li><strong>Pandas / NumPy</strong> — carga, limpieza y agregación de los datasets (300 a 1M filas).</li>
+      <li><strong>Matplotlib</strong> — gráficos estáticos para el panel ejecutivo y reportes.</li>
+      <li><strong>Plotly</strong> — las 10 visualizaciones interactivas 2D/3D.</li>
+      <li><strong>Scikit-Learn</strong> — red neuronal (MLPRegressor) que predice conversiones.</li>
+      <li><strong>OpenPyXL</strong> — lectura de los datasets .xlsx sin depender de una base de datos.</li>
+    </ul>
+
+    <h2>Resultados: el modelo probado en tres escalas</h2>
+    <table>
+      <thead>
+        <tr><th>Dataset</th><th>Filas para entrenar</th><th>R²</th><th>MSE</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>300 filas</td><td>300</td><td>0.64</td><td>92.5</td></tr>
+        <tr><td>10.000 filas</td><td>10.000</td><td>0.58</td><td>7,118.9</td></tr>
+        <tr><td>1.000.000 filas</td><td>50.000 (muestra)</td><td>0.59</td><td>20,220.8</td></tr>
+      </tbody>
+    </table>
+    <p>El dataset de 1.000.000 de filas se muestrea a 50.000 para mantener el entrenamiento rápido, sin tocar el código.</p>
+
+    <h2>Cómo trabajo</h2>
+    <ul>
+      <li>Documento de arquitectura que fija objetivo, alcance y reglas antes de escribir código.</li>
+      <li>Código modular: IA, gráficos y panel ejecutivo en archivos separados, cada función con una sola responsabilidad.</li>
+      <li>Funciona igual con 300, 10.000 o 1.000.000 de filas — probado en las tres escalas.</li>
+      <li>100% local: sin base de datos, sin API externa, sin nube — control total de los datos del cliente.</li>
+    </ul>
+
+    <div class="blog-cta">
+      <h3>¿Tus datos de Google Ads viven solo en una hoja de cálculo?</h3>
+      <p>Puedo construir el mismo tipo de plataforma de analítica y predicción sobre los datos reales de tu cuenta.</p>
+      <a class="btn-cta" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20le%C3%AD%20tu%20proyecto%20de%20anal%C3%ADtica%20predictiva%20para%20Google%20Ads%20y%20quiero%20conversar" target="_blank" rel="noopener noreferrer">Hablar con Daniel por WhatsApp</a>
+    </div>
+
+    <div class="blog-footer-nav">
+      <a href="index.html#casos">← Ver todos los casos</a>
+    </div>
+  </article>
+</body>
+</html>

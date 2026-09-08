@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automatización de captura de leads y sincronización de pipeline entre tu web y HubSpot, construida sobre n8n: captura, pipeline y alertas en un solo flujo, sin intervención manual." />
+  <meta name="keywords" content="n8n, HubSpot, automatización de leads, CRM, webhooks, pipeline de ventas" />
+  <link rel="canonical" href="https://danielpixelstudio.com/caso-automatizacion-n8n-hubspot.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+  <title>Cada lead entra a tu CRM solo, sin que nadie lo escriba a mano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <nav class="blog-nav">
+    <div class="wrap">
+      <a href="index.html">← Volver al portafolio</a>
+      <a href="index.html#casos">Todos los casos</a>
+    </div>
+  </nav>
+
+  <article class="blog-article">
+    <p class="blog-kicker">Caso de estudio · Automatización n8n + HubSpot</p>
+    <h1>Cada lead entra a tu CRM solo, en segundos, sin que nadie lo escriba a mano</h1>
+    <p class="blog-lead">Automatización de captura de leads y sincronización de pipeline entre tu web y HubSpot, construida sobre n8n.</p>
+
+    <h2>El problema: el costo real de un lead que se queda en una hoja de cálculo</h2>
+    <p>Cuando la captura depende de que alguien revise el correo o copie datos a mano, siempre hay una fuga:</p>
+    <ul>
+      <li>El lead que se contesta un día tarde.</li>
+      <li>El contacto duplicado en el CRM.</li>
+      <li>El deal que nunca se llegó a crear.</li>
+      <li>El seguimiento que depende de que alguien se acuerde.</li>
+    </ul>
+
+    <h2>Qué automatizo: tres piezas que resuelven el 80% de la fuga de leads</h2>
+    <p>Se contratan por separado, o como flujo completo.</p>
+    <h3>Captura — formulario → contacto en HubSpot</h3>
+    <p>Un webhook crea o actualiza el contacto al instante: nombre, correo, teléfono y origen del lead.</p>
+    <h3>Pipeline — deals que se actualizan solos</h3>
+    <p>Cuando el lead avanza, el deal se crea o mueve de etapa en HubSpot, ya vinculado al contacto.</p>
+    <h3>Alertas — tu equipo se entera sin abrir el CRM</h3>
+    <p>Casos que necesitan revisión o deals ganados disparan un aviso directo a Telegram o Slack.</p>
+
+    <h2>Cómo funciona: un flujo, cuatro pasos, cero intervención manual</h2>
+    <ol>
+      <li><strong>Trigger:</strong> formulario enviado, evento disparado, o un horario que revisa una fuente.</li>
+      <li><strong>Transformar:</strong> nombres, precios y estados se normalizan antes de tocar el CRM.</li>
+      <li><strong>Validar:</strong> ¿lead nuevo o existente? ¿deal ya sincronizado? Se revisa antes de escribir.</li>
+      <li><strong>Acción CRM:</strong> contacto y deal se crean o actualizan vía API, con Private App Token.</li>
+    </ol>
+
+    <h2>Stack técnico: herramientas reales, sin caja negra</h2>
+    <ul>
+      <li><strong>n8n</strong> — motor de automatización: orquesta cada flujo, transformación de datos y llamadas a APIs.</li>
+      <li><strong>HubSpot (CRM)</strong> — contactos y deals se crean o actualizan vía Private App Token, sin claves compartidas.</li>
+      <li><strong>Google Sheets</strong> — fuente de datos o bitácora de control cuando el negocio ya trabaja en hojas.</li>
+      <li><strong>Telegram / Slack</strong> — canal de alertas directo al equipo, sin depender de abrir el CRM.</li>
+      <li><strong>Webhooks</strong> — cualquier formulario, landing o sistema externo puede disparar el flujo.</li>
+      <li><strong>Autenticación segura</strong> — App Token explícito por nodo, nunca credenciales genéricas o compartidas.</li>
+    </ul>
+
+    <h2>Cómo trabajo</h2>
+    <ul>
+      <li>Se verifica creando datos reales en tu HubSpot — no se entrega "en teoría".</li>
+      <li>Autenticación por Private App Token de HubSpot, no API keys viejas ni compartidas.</li>
+      <li>Te quedas con el workflow exportado en JSON: es tuyo, se mueve a cualquier instancia de n8n.</li>
+      <li>Documentación clara de cada nodo, para que tu equipo no dependa de mí para entenderlo.</li>
+    </ul>
+    <p>Enfoque consultivo y técnico: primero entender dónde se pierde el lead, después construir el flujo que lo resuelve — no automatizaciones genéricas.</p>
+
+    <div class="blog-cta">
+      <h3>Agenda una auditoría gratuita de 15 minutos</h3>
+      <p>Te muestro exactamente dónde se pierden tus leads hoy, y qué flujo de n8n + HubSpot lo resuelve — sin compromiso.</p>
+      <a class="btn-cta" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20le%C3%AD%20tu%20caso%20de%20automatizaci%C3%B3n%20n8n%20%2B%20HubSpot%20y%20quiero%20conversar%20sobre%20mis%20leads" target="_blank" rel="noopener noreferrer">Hablar con Daniel por WhatsApp</a>
+    </div>
+
+    <div class="blog-footer-nav">
+      <a href="index.html#casos">← Ver todos los casos</a>
+    </div>
+  </article>
+</body>
+</html>

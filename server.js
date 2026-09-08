@@ -4,7 +4,7 @@ const path = require("path");
 
 const PORT = Number(process.env.PORT || 3000);
 const ANTHROPIC_API_KEY = process.env.CLAUDE_API_KEY || process.env.ANTHROPIC_API_KEY;
-const CLAUDE_MODEL = process.env.CLAUDE_MODEL || "claude-sonnet-4-6";
+const CLAUDE_MODEL = process.env.CLAUDE_MODEL || "claude-sonnet-5";
 
 const SITE_ROOT = __dirname;
 
@@ -55,7 +55,11 @@ const MIME_TYPES = {
   ".jpeg": "image/jpeg",
   ".jfif": "image/jpeg",
   ".pdf": "application/pdf",
-  ".svg": "image/svg+xml"
+  ".svg": "image/svg+xml",
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
+  ".glb": "model/gltf-binary",
+  ".mtl": "text/plain; charset=utf-8"
 };
 
 function sendJson(res, status, payload) {
@@ -135,7 +139,7 @@ async function handleChat(req, res) {
 
 function serveStatic(req, res) {
   const requestUrl = new URL(req.url, `http://${req.headers.host}`);
-  const requestedPath = requestUrl.pathname === "/" ? "/Index.html" : decodeURIComponent(requestUrl.pathname);
+  const requestedPath = requestUrl.pathname === "/" ? "/index.html" : decodeURIComponent(requestUrl.pathname);
   const filePath = path.normalize(path.join(SITE_ROOT, requestedPath));
 
   if (!filePath.startsWith(SITE_ROOT)) {

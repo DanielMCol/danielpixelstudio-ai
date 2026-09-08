@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio profesional de Daniel Aldana, Performance Marketing Specialist con experiencia en Google Ads, Meta Ads, GA4, GTM, Marketing Automation e IA aplicada a marketing." />
-  <meta name="keywords" content="Performance Marketing Specialist, Google Ads, Meta Ads, GA4, Google Tag Manager, Marketing Analytics, Marketing Automation, Colombia" />
+  <meta name="description" content="DanielPixelStudio: Performance Marketing y automatización con IA para escalar campañas, recuperar presupuesto y tomar decisiones con datos reales." />
+  <meta name="keywords" content="Google Ads, Meta Ads, GA4, Google Tag Manager, Marketing Analytics, Marketing Automation, Colombia" />
   <link rel="canonical" href="https://danielpixelstudio.com/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png" />
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Daniel Aldana | Performance Marketing Specialist" />
-  <meta property="og:description" content="Performance Marketing Specialist con experiencia gestionando presupuestos de $15M COP mensuales en Google Ads y Meta Ads. Casos reales con métricas verificables." />
+  <meta property="og:title" content="DanielPixelStudio | Performance Marketing + IA" />
+  <meta property="og:description" content="Performance Marketing y automatización con IA: campañas que escalan con datos reales, no con suposiciones." />
   <meta property="og:image" content="https://danielpixelstudio.com/assets/portfolio-cover.png" />
   <meta property="og:url" content="https://danielpixelstudio.com/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Daniel Aldana | Performance Marketing Specialist" />
-  <meta name="twitter:description" content="Performance Marketing Specialist con experiencia gestionando presupuestos de $15M COP mensuales en Google Ads y Meta Ads." />
+  <meta name="twitter:title" content="DanielPixelStudio | Performance Marketing + IA" />
+  <meta name="twitter:description" content="Performance Marketing y automatización con IA: campañas que escalan con datos reales, no con suposiciones." />
   <meta name="twitter:image" content="https://danielpixelstudio.com/assets/portfolio-cover.png" />
-  <title>Daniel Aldana | Performance Marketing Specialist</title>
+  <title>DanielPixelStudio | Performance Marketing + IA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -55,9 +58,8 @@
 
   <style>
     :root {
-      --green: #FFD700;
+      --green: #9D4EDD;
       --green-2: #9D4EDD;
-      --green-3: #7209B7;
       --ink: #F0F0F0;
       --muted: #B0B0B0;
       --line: #3A3A4A;
@@ -76,7 +78,7 @@
       --ai-muted: #B0B0B0;
       --ai-purple: #9D4EDD;
       --ai-purple-dark: #7209B7;
-      --ai-yellow: #FFD700;
+      --ai-yellow: #9D4EDD;
       --ai-purple-glow: rgba(157, 78, 221, 0.3);
 
       --li-acid-lime: #A6FF00;
@@ -136,36 +138,39 @@
     }
   
     .nav-inner {
+      position: relative;
       min-height: 72px;
-      display: flex;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
     }
-  
+
     .brand {
       display: inline-flex;
       align-items: center;
       gap: 11px;
       font-weight: 800;
       letter-spacing: -0.03em;
-      color: var(--green);
+      color: var(--ink);
       white-space: nowrap;
+      justify-self: start;
     }
-  
-    .brand-mark {
+
+    .brand-avatar {
       width: 34px;
       height: 34px;
-      display: grid;
-      place-items: center;
-      color: white;
-      background: var(--green);
-      border-radius: 7px;
-      font-weight: 800;
-      font-size: 0.82rem;
-      box-shadow: 0 10px 24px rgba(0, 51, 255, 0.25);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      display: block;
+      flex: none;
     }
-  
+
+    .brand-name {
+      font-size: 0.98rem;
+    }
+
     .nav-links {
       display: none;
       align-items: center;
@@ -173,18 +178,101 @@
       color: var(--muted);
       font-size: 0.91rem;
       font-weight: 600;
+      justify-self: center;
     }
-  
+
     .nav-links a:hover {
-      color: var(--green);
+      color: var(--ai-purple);
     }
-  
+
     .nav-actions {
       display: flex;
       align-items: center;
       gap: 12px;
+      justify-self: end;
     }
-  
+
+    .btn-nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.86rem;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid rgba(157, 78, 221, 0.45);
+      white-space: nowrap;
+      transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, color 220ms ease;
+    }
+
+    .btn-nav-cta:hover {
+      border-color: var(--ai-purple);
+      box-shadow: 0 0 24px rgba(157, 78, 221, 0.35);
+    }
+
+    .nav--scrolled .btn-nav-cta {
+      background: var(--ai-purple);
+      border-color: var(--ai-purple);
+      color: #fff;
+    }
+
+    .nav-toggle {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 38px;
+      height: 38px;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      width: 18px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform 200ms ease, opacity 200ms ease;
+    }
+
+    .nav-toggle.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.is-active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 719.98px) {
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(8, 11, 20, 0.97);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0;
+      }
+
+      .nav-links.is-open { display: flex; }
+
+      .nav-links a { padding: 14px 24px; }
+    }
+
+    @media (min-width: 720px) {
+      .nav-toggle { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn-nav-cta, .nav-toggle span { transition: none; }
+    }
+
     .section {
       padding: 76px 0;
     }
@@ -196,27 +284,29 @@
       width: 100%;
       height: 100vh;
       z-index: -1;
-      opacity: 0.55;
+      opacity: 0.35;
       pointer-events: none;
     }
 
     /* ---- Titular principal con degradado animado ---- */
     .hero-title {
-      font-size: clamp(2.6rem, 6vw, 4.4rem);
-      line-height: 1.04;
-      letter-spacing: -0.02em;
+      font-size: clamp(2.1rem, 9vw, 5.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
       text-transform: uppercase;
-      margin: 0 0 18px;
+      margin: 0 0 24px;
+      overflow-wrap: break-word;
     }
 
     .hero-title .title-shift {
-      background: linear-gradient(90deg, #A6FF00, #00E5FF, #9D4EDD, #FFD700, #A6FF00);
+      background: linear-gradient(90deg, #7209B7, #9D4EDD, #C77DFF, #9D4EDD, #7209B7);
       background-size: 300% 100%;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
       animation: titleShift 8s linear infinite;
+      filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.65));
     }
 
     @keyframes titleShift {
@@ -254,8 +344,13 @@
     /* ---- Muñeco 3D en el hero ---- */
     .gru-frame {
       position: relative;
-      min-height: 320px;
-      background: radial-gradient(circle at 50% 45%, rgba(157, 78, 221, 0.18) 0%, transparent 68%);
+      width: 220px;
+      height: 220px;
+      max-width: 220px;
+      margin: 0 auto 28px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: radial-gradient(circle at 50% 45%, rgba(157, 78, 221, 0.28) 0%, transparent 68%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -264,7 +359,7 @@
 
     .gru-frame #gru-canvas {
       width: 100%;
-      height: 320px;
+      height: 100%;
       display: block;
     }
 
@@ -322,10 +417,7 @@
     }
 
     .hero {
-      min-height: calc(100vh - 72px);
-      display: grid;
-      align-items: center;
-      padding: 64px 0 58px;
+      padding: 64px 0 64px;
       position: relative;
       z-index: 2;
     }
@@ -334,6 +426,29 @@
       display: grid;
       gap: 42px;
       align-items: center;
+    }
+
+    .hero-col {
+      text-align: center;
+    }
+
+    .hero-col .eyebrow,
+    .hero-col .hero-title,
+    .hero-col .hero-lead {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-col .eyebrow {
+      justify-content: center;
+    }
+
+    .hero-col .hero-ctas {
+      justify-content: center;
+    }
+
+    .hero-col .hero-proof {
+      text-align: left;
     }
   
     .eyebrow {
@@ -438,9 +553,9 @@
     .hero-proof {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: 16px;
       margin-top: 34px;
-      max-width: 720px;
+      max-width: 100%;
     }
   
     .proof-item {
@@ -453,31 +568,20 @@
     .proof-value {
       display: block;
       color: var(--li-acid-lime);
-      font-size: 1.28rem;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
       font-weight: 800;
       letter-spacing: -0.04em;
+      font-variant-numeric: tabular-nums;
     }
-  
+
     .proof-label {
       display: block;
-      margin-top: 2px;
+      margin-top: 4px;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.72rem;
       line-height: 1.35;
-    }
-  
-    .analytics-card {
-      position: relative;
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--li-card-navy);
-      box-shadow: var(--shadow);
-    }
-  
-    .portrait-card {
-      display: grid;
-      gap: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
   
     .portrait-frame {
@@ -494,85 +598,6 @@
       display: block;
       object-fit: cover;
       object-position: center top;
-    }
-  
-    .analytics-card::before {
-      content: "";
-      position: absolute;
-      inset: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 6px;
-      pointer-events: none;
-    }
-  
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--line);
-    }
-  
-    .card-top div {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .card-kicker {
-      margin-bottom: 2px;
-      color: var(--muted);
-      font-size: 0.76rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-  
-    .card-title {
-      margin: 0;
-      color: var(--green);
-      font-size: 1rem;
-      font-weight: 800;
-    }
-  
-    .status {
-      align-self: flex-start;
-      padding: 6px 12px;
-      color: var(--green);
-      background: var(--paper-3);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 999px;
-      font-size: 0.74rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-  
-    .card-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 22px;
-    }
-  
-    .mini-metric {
-      padding: 13px;
-      background: var(--paper-3);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-  
-    .mini-metric strong {
-      display: block;
-      color: var(--li-electric-cyan);
-      font-size: 1rem;
-      letter-spacing: -0.03em;
-    }
-  
-    .mini-metric span {
-      display: block;
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: 0.75rem;
-      line-height: 1.25;
     }
   
     .section-head {
@@ -634,15 +659,15 @@
     .bento-card {
       position: relative;
       display: grid;
-      grid-template-rows: auto 1fr auto;
-      gap: 14px;
-      padding: 24px;
+      grid-template-rows: auto auto auto 1fr auto;
+      gap: 6px;
+      padding: 28px 24px 24px;
       background: rgba(255,255,255,0.04);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       transition: all 280ms ease;
       cursor: pointer;
-      min-height: 340px;
+      min-height: 300px;
     }
 
     .bento-card:hover {
@@ -652,34 +677,21 @@
       background: rgba(255,255,255,0.08);
     }
 
-    .bento-card:hover .bento-card-num {
-      text-shadow: 0 0 40px rgba(157, 78, 221, 0.4);
-    }
-
-    .bento-card-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .bento-card-num {
-      font-size: 2rem;
+    .bento-stat {
+      font-size: 2.2rem;
       font-weight: 800;
-      color: var(--ai-purple);
+      color: var(--li-acid-lime);
+      letter-spacing: -0.03em;
       line-height: 1;
     }
 
-    .bento-card-icon {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      background: rgba(255, 215, 0, 0.1);
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      font-size: 1.2rem;
+    .bento-stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 6px;
     }
 
     .bento-card h3 {
@@ -695,79 +707,11 @@
       color: var(--ai-yellow);
     }
 
-    .bento-content {
-      display: grid;
-      gap: 12px;
-    }
-
-    .bento-section {
-      display: grid;
-      gap: 6px;
-    }
-
-    .bento-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+    .bento-desc {
+      font-size: 0.92rem;
       color: var(--muted);
-    }
-
-    .bento-text {
-      font-size: 0.90rem;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.35;
-    }
-
-    .bento-highlight {
-      padding: 12px;
-      border-radius: 6px;
-      border-left: 3px solid var(--ai-purple);
-      background: rgba(157, 78, 221, 0.08);
-      transition: all 240ms ease;
-    }
-
-    .bento-card:hover .bento-highlight {
-      border-left-width: 4px;
-      background: rgba(157, 78, 221, 0.12);
-    }
-
-    .bento-highlight p {
-      font-size: 0.90rem;
-      color: var(--ink);
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.35;
-    }
-
-    .bento-result {
-      padding: 12px;
-      border-radius: 6px;
-      border-left: 3px solid var(--ai-yellow);
-      background: rgba(255, 215, 0, 0.08);
-      transition: all 240ms ease;
-    }
-
-    .bento-card:hover .bento-result {
-      border-left-width: 4px;
-      background: rgba(255, 215, 0, 0.12);
-    }
-
-    .bento-result-value {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--ai-yellow);
-      letter-spacing: -0.02em;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .bento-result p {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.3;
+      margin: 4px 0 0;
+      line-height: 1.5;
     }
 
     .bento-cta {
@@ -783,10 +727,62 @@
 
     .bento-card:hover .bento-cta {
       gap: 8px;
-      color: var(--ai-acid-lime);
+      color: var(--li-acid-lime);
       text-decoration: underline;
       text-decoration-thickness: 2px;
       text-underline-offset: 4px;
+    }
+
+    .diff-col h3 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .diff-rows {
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .diff-row {
+      display: grid;
+      gap: 3px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .diff-row:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .diff-row dt {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .diff-row dd {
+      font-size: 0.92rem;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .diff-col-featured {
+      border-color: var(--ai-purple);
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 1023px) {
+      .diff-col-featured { transform: none; }
     }
 
     .services-grid,
@@ -794,6 +790,56 @@
     .tech-grid {
       display: grid;
       gap: 14px;
+    }
+
+    .services-compact-list {
+      list-style: none;
+      margin: 28px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .services-compact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--paper-2);
+    }
+
+    .services-compact-icon {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: var(--ai-purple);
+      background: rgba(157, 78, 221, 0.12);
+      border-radius: 8px;
+      font-weight: 800;
+    }
+
+    .services-compact-item strong {
+      color: var(--ink);
+      font-size: 0.96rem;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .services-compact-item span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 640px) {
+      .services-compact-item {
+        flex-wrap: wrap;
+      }
     }
   
     .service-card,
@@ -828,8 +874,12 @@
       font-size: 1.12rem;
       line-height: 1.25;
       letter-spacing: -0.03em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
-  
+
     .service-card p,
     .case-card p,
     .about-copy p {
@@ -837,18 +887,80 @@
       color: var(--muted);
       font-size: 0.95rem;
     }
+
+    .case-card-body p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   
     .band {
       background: rgba(17, 21, 34, 0.6);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
-  
+
+    .steps-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    @media (min-width: 720px) {
+      .steps-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    .step-card {
+      position: relative;
+      padding: 30px 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.03);
+      overflow: hidden;
+    }
+
+    .step-num {
+      position: absolute;
+      top: -16px;
+      right: 8px;
+      font-size: 5rem;
+      font-weight: 800;
+      line-height: 1;
+      color: rgba(157, 78, 221, 0.14);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .step-title {
+      position: relative;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+
+    .step-desc {
+      position: relative;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0 0 18px;
+    }
+
+    .step-image {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      border-radius: 6px;
+      border: 1px dashed var(--line);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
     .case-card {
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      min-height: 100%;
+      min-height: 480px;
       color: inherit;
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
     }
@@ -858,7 +970,90 @@
       border-color: rgba(0, 51, 255, 0.4);
       box-shadow: 0 18px 48px rgba(0, 51, 255, 0.18);
     }
-  
+
+    .case-carousel {
+      position: relative;
+      margin-top: 28px;
+    }
+
+    .case-track {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-block: 8px;
+      padding-inline: max(16px, calc(50% - 280px));
+    }
+
+    .case-track::-webkit-scrollbar { display: none; }
+
+    .case-track .case-card {
+      flex: 0 0 auto;
+      width: min(560px, 78vw);
+      scroll-snap-align: center;
+      transform: scale(0.86);
+      opacity: 0.5;
+      filter: saturate(0.7);
+      cursor: pointer;
+      transition: transform 400ms ease, opacity 400ms ease, filter 400ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .case-track .case-card:hover {
+      transform: scale(0.9);
+    }
+
+    .case-track .case-card.is-active {
+      transform: scale(1);
+      opacity: 1;
+      filter: none;
+      cursor: default;
+      z-index: 2;
+    }
+
+    .case-track .case-card.is-active:hover {
+      transform: scale(1);
+    }
+
+    .case-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: rgba(8, 11, 20, 0.7);
+      backdrop-filter: blur(8px);
+      color: var(--ink);
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 3;
+      transition: border-color 200ms ease, box-shadow 200ms ease;
+    }
+
+    .case-nav-btn:hover {
+      border-color: var(--ai-purple);
+      box-shadow: 0 0 20px rgba(157, 78, 221, 0.35);
+    }
+
+    .case-nav-prev { left: 4px; }
+    .case-nav-next { right: 4px; }
+
+    @media (min-width: 720px) {
+      .case-nav-prev { left: -4px; }
+      .case-nav-next { right: -4px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .case-track { scroll-behavior: auto; }
+      .case-track .case-card { transition: none; }
+    }
+
     .case-image {
       position: relative;
       overflow: hidden;
@@ -875,10 +1070,16 @@
     }
   
     .case-action {
+      display: block;
       margin-top: 18px;
       color: var(--green);
       font-size: 0.86rem;
       font-weight: 800;
+      text-decoration: none;
+    }
+
+    a.case-action:hover {
+      text-decoration: underline;
     }
   
     .case-card-body {
@@ -919,6 +1120,11 @@
     }
   
     .case-metric:last-child {
+      border-right: 0;
+    }
+
+    .case-metric:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
       border-right: 0;
     }
   
@@ -1444,9 +1650,9 @@
 
     @media (min-width: 720px) {
       .container { width: min(1120px, calc(100% - 64px)); }
-      .nav-links, .nav-actions { display: flex; }
-      .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.72fr); }
+      .nav-links { display: flex; }
       .hero-proof { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .gru-frame { width: 280px; height: 280px; max-width: 280px; }
       .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .case-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .tech-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -1463,9 +1669,7 @@
     @media (max-width: 520px) {
       .container { width: min(100% - 28px, 1120px); }
       .hero { padding-top: 42px; }
-      .nav-actions .btn-secondary { display: none; }
-      .nav-actions .btn-primary { min-height: 40px; padding: 0 12px; font-size: 0.82rem; }
-      .hero-proof, .card-metrics, .case-metrics { grid-template-columns: 1fr; }
+      .case-metrics { grid-template-columns: 1fr; }
       .case-metric { border-right: 0; border-bottom: 1px solid var(--line); }
       .case-metric:last-child { border-bottom: 0; }
       .contact-list a { flex-direction: column; gap: 2px; }
@@ -1475,32 +1679,65 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio de DanielPixelStudio">
-        <span class="brand-mark">DP</span>
-        <span>DanielPixelStudio</span>
+      <a class="brand" href="#inicio" aria-label="DanielPixelStudio — inicio">
+        <img class="brand-avatar" src="assets/avatar-gru.png" alt="" width="34" height="34" />
+        <span class="brand-name">DanielPixelStudio</span>
       </a>
-      <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#servicios">SERVICES</a>
+      <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
         <a href="#faq">FAQ</a>
-        <a href="#contacto">CONTACT</a>
+        <a href="#contacto">Contacto</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agenda tu llamada</a>
+        <a class="btn-nav-cta" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
+  <script>
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      var links = document.getElementById('nav-links');
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          var isOpen = links.classList.toggle('is-open');
+          toggle.classList.toggle('is-active', isOpen);
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        links.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            links.classList.remove('is-open');
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      var nav = document.querySelector('.nav');
+      if (nav) {
+        var onScroll = function () {
+          nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+    })();
+  </script>
   
   <main id="inicio">
     <canvas id="neural-canvas"></canvas>
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow eyebrow-status">Disponible para roles full-time · híbrido · remoto · y proyectos freelance</p>
+        <div class="hero-col">
           <h1 class="hero-title">THE MARKETING SYSTEM OF <span class="title-shift">TOMORROW</span></h1>
+          <div class="gru-frame">
+            <canvas id="gru-canvas" aria-label="Modelo 3D de mascota DanielPixelStudio"></canvas>
+          </div>
           <p class="hero-copy hero-lead">Ai-powered performance marketing built to learn, adapt and grow.</p>
           <div class="hero-ctas">
-            <a class="btn btn-cta-shift" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agenda tu llamada</a>
-            <a class="btn btn-secondary" href="#servicios">SERVICES</a>
+            <a class="btn btn-cta-shift" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Contáctanos</a>
           </div>
           <div class="hero-proof" aria-label="Indicadores de experiencia">
             <div class="proof-item">
@@ -1521,36 +1758,37 @@
             </div>
           </div>
         </div>
-  
-        <aside class="analytics-card portrait-card" aria-label="Perfil profesional de Daniel Aldana">
-          <div class="portrait-frame gru-frame">
-            <canvas id="gru-canvas" aria-label="Modelo 3D de mascota DanielPixelStudio"></canvas>
-          </div>
-          <div class="card-top">
-            <div>
-              <p class="card-kicker">Daniel Aldana</p>
-              <p class="card-title">GA4 · GTM · Google Ads · Meta Ads</p>
-            </div>
-            <span class="status">Open to Work</span>
-          </div>
-          <div class="card-metrics">
-            <div class="mini-metric">
-              <strong>Paid Media</strong>
-              <span>Meta Ads y Google Ads</span>
-            </div>
-            <div class="mini-metric">
-              <strong>Data Layer</strong>
-              <span>GA4, GTM y dashboards</span>
-            </div>
-            <div class="mini-metric">
-              <strong>AI Ops</strong>
-              <span>Auditoría y automatización</span>
-            </div>
-          </div>
-        </aside>
       </div>
     </section>
-  
+
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">EL PROBLEMA</p>
+          <h2 class="section-title">Cada día sin sistema es presupuesto que se va.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card">
+            <span class="bento-stat">Presupuesto disperso</span>
+            <h3>Gastas sin saber qué funciona</h3>
+            <p class="bento-desc">Campañas sin estructura clara reparten tu inversión entre canales y audiencias sin criterio.</p>
+          </article>
+
+          <article class="bento-card">
+            <span class="bento-stat">Fugas ocultas</span>
+            <h3>Pagas por clics que no venden</h3>
+            <p class="bento-desc">CPC anómalos y pujas mal calibradas se acumulan mes a mes sin que nadie los detecte a tiempo.</p>
+          </article>
+
+          <article class="bento-card">
+            <span class="bento-stat">Datos rotos</span>
+            <h3>Decides a ciegas</h3>
+            <p class="bento-desc">Sin tracking confiable, cada decisión de inversión es una apuesta, no una estrategia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="servicios">
       <div class="container">
@@ -1563,142 +1801,56 @@
         <div class="bento-grid">
           <!-- Servicio 1: Gestión de Google Ads / Meta Ads -->
           <article class="bento-card">
-            <div class="bento-card-header">
-              <span class="bento-card-num">01</span>
-            </div>
+            <span class="bento-stat">+30%</span>
+            <p class="bento-stat-label">Incremento en ROAS promedio</p>
             <h3>Gestión de Google Ads / Meta Ads</h3>
-            <div class="bento-content">
-              <div class="bento-section">
-                <div class="bento-label">Problema</div>
-                <p class="bento-text">Bajo ROAS, presupuesto disperso, audiencias ineficientes.</p>
-              </div>
-              <div class="bento-highlight">
-                <div class="bento-label">Solución IA</div>
-                <p>Estructura inteligente de campañas + testing automático + segmentación de audiencias con machine learning.</p>
-              </div>
-              <div class="bento-result">
-                <span class="bento-result-value">+30%</span>
-                <p>incremento en ROAS promedio</p>
-              </div>
-            </div>
-            <a href="https://cal.com/danielpixelstudiocall" target="_blank" class="bento-cta">Agendar →</a>
+            <p class="bento-desc">Bajo ROAS, presupuesto disperso y audiencias ineficientes se resuelven con estructura inteligente de campañas, testing automático y segmentación con machine learning.</p>
+            <a href="https://cal.com/danielpixelstudiocall" target="_blank" class="bento-cta">Ver solución →</a>
           </article>
 
           <!-- Servicio 2: Auditoría Inteligente -->
           <article class="bento-card">
-            <div class="bento-card-header">
-              <span class="bento-card-num">02</span>
-            </div>
+            <span class="bento-stat">$50K-200K</span>
+            <p class="bento-stat-label">COP recuperables por mes</p>
             <h3>Auditoría Inteligente de Campañas</h3>
-            <div class="bento-content">
-              <div class="bento-section">
-                <div class="bento-label">Problema</div>
-                <p class="bento-text">Fugas de presupuesto ocultas, keywords sin rentabilidad.</p>
-              </div>
-              <div class="bento-highlight">
-                <div class="bento-label">Solución IA</div>
-                <p>Análisis profundo de estructura, CPC anómalos, pujas ineficientes. Identifica $$$  a recuperar en 2 horas.</p>
-              </div>
-              <div class="bento-result">
-                <span class="bento-result-value">$50K-200K</span>
-                <p>COP recuperables por mesidentificados</p>
-              </div>
-            </div>
-            <a href="https://wa.me/573214169100" class="bento-cta">Auditoría 20min →</a>
+            <p class="bento-desc">Fugas de presupuesto ocultas y keywords sin rentabilidad se detectan con un análisis profundo de estructura, CPC anómalos y pujas ineficientes en solo 2 horas.</p>
+            <a href="https://wa.me/573214169100" class="bento-cta">Ver solución →</a>
           </article>
 
           <!-- Servicio 3: GA4/GTM -->
           <article class="bento-card">
-            <div class="bento-card-header">
-              <span class="bento-card-num">03</span>
-            </div>
+            <span class="bento-stat">100%</span>
+            <p class="bento-stat-label">Eventos críticos validados</p>
             <h3>Implementación GA4/GTM</h3>
-            <div class="bento-content">
-              <div class="bento-section">
-                <div class="bento-label">Problema</div>
-                <p class="bento-text">Tracking incompleto, conversiones mal atribuidas.</p>
-              </div>
-              <div class="bento-highlight">
-                <div class="bento-label">Solución IA</div>
-                <p>Setup end-to-end con data layer, eventos críticos + validación automática con IA. Diagnóstico de funnel.</p>
-              </div>
-              <div class="bento-result">
-                <span class="bento-result-value">100%</span>
-                <p>eventos críticos validados y funcionando</p>
-              </div>
-            </div>
-            <a href="https://wa.me/573214169100" class="bento-cta">Implementar →</a>
+            <p class="bento-desc">Tracking incompleto y conversiones mal atribuidas se corrigen con un setup end-to-end de data layer, eventos críticos y validación automática con IA.</p>
+            <a href="https://wa.me/573214169100" class="bento-cta">Ver solución →</a>
           </article>
 
-          <!-- Servicio 4: Agentes de Prospección -->
-          <article class="bento-card">
-            <div class="bento-card-header">
-              <span class="bento-card-num">04</span>
-            </div>
-            <h3>Agentes de Prospección IA</h3>
-            <div class="bento-content">
-              <div class="bento-section">
-                <div class="bento-label">Problema</div>
-                <p class="bento-text">Prospección manual lenta, leads sin calificar.</p>
-              </div>
-              <div class="bento-highlight">
-                <div class="bento-label">Solución IA</div>
-                <p>Agentes autónomos que encuentran, califican y contactan leads 24/7. Integración con CRM automática.</p>
-              </div>
-              <div class="bento-result">
-                <span class="bento-result-value">+300%</span>
-                <p>leads generados + clasificados por semana</p>
-              </div>
-            </div>
-            <a href="https://wa.me/573214169100" class="bento-cta">Configurar agente →</a>
-          </article>
-
-          <!-- Servicio 5: Automatización de Operaciones -->
-          <article class="bento-card">
-            <div class="bento-card-header">
-              <span class="bento-card-num">05</span>
-            </div>
-            <h3>Automatización de Operaciones</h3>
-            <div class="bento-content">
-              <div class="bento-section">
-                <div class="bento-label">Problema</div>
-                <p class="bento-text">Procesos manuales, errores operativos, lentitud.</p>
-              </div>
-              <div class="bento-highlight">
-                <div class="bento-label">Solución IA</div>
-                <p>Workflows inteligentes en N8N: sincronización de datos, reportes automáticos, alertas en tiempo real.</p>
-              </div>
-              <div class="bento-result">
-                <span class="bento-result-value">-20h</span>
-                <p>horas de trabajo manual por semana</p>
-              </div>
-            </div>
-            <a href="https://wa.me/573214169100" class="bento-cta">Automatizar →</a>
-          </article>
-
-          <!-- Servicio 6: Análisis Predictivo -->
-          <article class="bento-card">
-            <div class="bento-card-header">
-              <span class="bento-card-num">06</span>
-            </div>
-            <h3>Análisis Predictivo + ML</h3>
-            <div class="bento-content">
-              <div class="bento-section">
-                <div class="bento-label">Problema</div>
-                <p class="bento-text">No predices comportamiento, decisiones basadas en intuición.</p>
-              </div>
-              <div class="bento-highlight">
-                <div class="bento-label">Solución IA</div>
-                <p>Modelos de ML que predicen conversiones, churn, LTV. Decisiones data-driven con confianza estadística.</p>
-              </div>
-              <div class="bento-result">
-                <span class="bento-result-value">0.92</span>
-                <p>R² en predicción de conversiones</p>
-              </div>
-            </div>
-            <a href="https://wa.me/573214169100" class="bento-cta">Implementar modelo →</a>
-          </article>
         </div>
+
+        <ul class="services-compact-list" aria-label="Otros servicios">
+          <li class="services-compact-item">
+            <span class="services-compact-icon" aria-hidden="true">+</span>
+            <div>
+              <strong>Agentes de Prospección IA</strong>
+              <span>Agentes autónomos que encuentran, califican y contactan leads 24/7, integrados con tu CRM.</span>
+            </div>
+          </li>
+          <li class="services-compact-item">
+            <span class="services-compact-icon" aria-hidden="true">+</span>
+            <div>
+              <strong>Automatización de Operaciones</strong>
+              <span>Workflows inteligentes en N8N: sincronización de datos, reportes automáticos y alertas en tiempo real.</span>
+            </div>
+          </li>
+          <li class="services-compact-item">
+            <span class="services-compact-icon" aria-hidden="true">+</span>
+            <div>
+              <strong>Análisis Predictivo + ML</strong>
+              <span>Modelos de ML que predicen conversiones, churn y LTV con confianza estadística.</span>
+            </div>
+          </li>
+        </ul>
 
         <div class="audit-cta-panel" style="margin-top: 40px;">
           <div>
@@ -1713,331 +1865,362 @@
       </div>
     </section>
 
-  
+    <section class="section band" id="como-trabajo">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">CÓMO TRABAJO</p>
+          <h2 class="section-title">Un proceso simple, sin fricción, pensado para resultados rápidos.</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">01</span>
+            <h3 class="step-title">Diagnóstico gratis en 20 minutos</h3>
+            <p class="step-desc">Reviso tus campañas y tu tracking, y te doy 3 focos de mejora — sin costo, sin compromiso.</p>
+            <div class="step-image" data-todo="captura-paso-1"></div>
+          </div>
+          <div class="step-card">
+            <span class="step-num">02</span>
+            <h3 class="step-title">Plan de acción claro</h3>
+            <p class="step-desc">Qué se optimiza primero, qué se automatiza y qué resultado esperar en cada etapa.</p>
+            <div class="step-image" data-todo="captura-paso-2"></div>
+          </div>
+          <div class="step-card">
+            <span class="step-num">03</span>
+            <h3 class="step-title">Ejecución con datos, no con suposiciones</h3>
+            <p class="step-desc">Implemento los cambios, mido el impacto real y ajusto hasta escalar los resultados.</p>
+            <div class="step-image" data-todo="captura-paso-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section band" id="casos">
+    <section class="section" id="diferenciacion">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">POR QUÉ ELEGIRME</p>
+          <h2 class="section-title">Por qué elegirme en vez de la alternativa obvia.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card diff-col">
+            <h3>Freelance/agencia tradicional</h3>
+            <dl class="diff-rows">
+              <div class="diff-row">
+                <dt>Transparencia en resultados</dt>
+                <dd>Reportes genéricos, difíciles de auditar.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Propiedad de las cuentas publicitarias</dt>
+                <dd>Muchas veces la agencia es dueña de la cuenta.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Velocidad de implementación</dt>
+                <dd>Procesos lentos, aprobaciones en cadena.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Costo mensual</dt>
+                <dd>Fee fijo alto + % de pauta.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Criterio humano en las decisiones</dt>
+                <dd>Depende de la rotación del equipo asignado.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="bento-card diff-col">
+            <h3>Herramienta automática de IA</h3>
+            <dl class="diff-rows">
+              <div class="diff-row">
+                <dt>Transparencia en resultados</dt>
+                <dd>Dashboards automáticos sin contexto humano.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Propiedad de las cuentas publicitarias</dt>
+                <dd>La cuenta queda atada a la plataforma.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Velocidad de implementación</dt>
+                <dd>Instantáneo, pero sin criterio estratégico.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Costo mensual</dt>
+                <dd>Suscripción baja, resultados limitados.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Criterio humano en las decisiones</dt>
+                <dd>Cero — todo es automático.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="bento-card diff-col diff-col-featured">
+            <h3>DanielPixelStudio</h3>
+            <dl class="diff-rows">
+              <div class="diff-row">
+                <dt>Transparencia en resultados</dt>
+                <dd>Acceso directo a tus cuentas y reportes explicados en cada decisión.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Propiedad de las cuentas publicitarias</dt>
+                <dd>Las cuentas son 100% tuyas, siempre.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Velocidad de implementación</dt>
+                <dd>Cambios ejecutados en horas, con criterio y datos.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Costo mensual</dt>
+                <dd>Tarifa flexible según alcance, sin letra pequeña.</dd>
+              </div>
+              <div class="diff-row">
+                <dt>Criterio humano en las decisiones</dt>
+                <dd>100% — la IA optimiza, yo decido la estrategia.</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="casos">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Portafolio técnico</p>
-          <h2 class="section-title">Casos aplicados que demuestran capacidad para un rol interno.</h2>
-          <p class="section-copy">Los proyectos están presentados como evidencia profesional para reclutadores: algunos corresponden a experiencia laboral, otros son demostrativos o personales. La intención es mostrar criterio técnico, no vender servicios freelance.</p>
+          <h2 class="section-title">Resultados que ya están pasando, no promesas.</h2>
+          <p class="section-copy">Clientes reales, cuentas reales, números que puedes verificar.</p>
         </div>
-        <div class="case-grid">
-          <a class="case-card" href="docs/diagnostico-meta-ads-ecommerce.pptx" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-auditoria-meta-ads.png" alt="Auditoría de Performance y Diagnóstico de Meta Ads para E-commerce" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Facebook Ads</span>
-                <span class="pill">Google Analytics</span>
-                <span class="pill">Comercio Electrónico</span>
-                <span class="pill">Publicidad en Google y Facebook</span>
-              </div>
-              <h3>Auditoría de Performance y Diagnóstico de Meta Ads para E-commerce</h3>
-              <p>Realicé una auditoría integral de una cuenta de Meta Ads para e-commerce, evaluando 5 campañas activas (TOFU y BOFU) para diagnosticar salud de cuenta, fatiga creativa y oportunidades de escalamiento. Detecté una campaña con saturación crítica de audiencia (ROAS 0.00x, +290% de frecuencia y caída de -79% en CTR) y diseñé un plan de acción en 3 fases: remediación inmediata de creativos agotados, escalamiento rentable de retargeting con ROAS de 32.6x, y automatización de reglas de alerta y rebalanceo de presupuesto vía n8n conectado a Shopify y Meta API. El resultado fue una hoja de ruta clara para frenar la fuga de presupuesto y priorizar la inversión en las campañas de mejor desempeño.</p>
-              <div class="case-action">Ver diagnóstico completo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>32.6x</strong>
-                <span>ROAS en retargeting escalable</span>
-              </div>
-              <div class="case-metric">
-                <strong>5</strong>
-                <span>campañas auditadas (TOFU y BOFU)</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="docs/automatizacion-n8n-hubspot.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-n8n-hubspot.png" alt="Automatización de captura de leads con n8n y HubSpot CRM" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">n8n</span>
-                <span class="pill">HubSpot CRM</span>
-                <span class="pill">Automatización</span>
-                <span class="pill">Webhooks</span>
-              </div>
-              <h3>Automatización de captura de leads con n8n y HubSpot CRM</h3>
-              <p>Diseñé y construí un flujo de automatización en n8n que conecta formularios web con HubSpot CRM en tiempo real. El sistema captura cada lead mediante un webhook, valida y normaliza los datos, y crea o actualiza el contacto y el deal correspondiente en HubSpot sin duplicados. Cuando un caso requiere revisión o se gana un deal, dispara una alerta automática a Telegram/Slack, así el equipo se entera sin abrir el CRM. La autenticación se maneja con Private App Token (sin claves compartidas) y el cliente se queda con el workflow exportado en JSON, portable a cualquier instancia de n8n, más documentación de cada nodo. Resultado: cero captura manual, pipeline siempre sincronizado y respuesta inmediata a cada lead.</p>
-              <div class="case-action">Ver presentación del flujo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>Cero</strong>
-                <span>captura manual de leads</span>
-              </div>
-              <div class="case-metric">
-                <strong>Tiempo real</strong>
-                <span>pipeline siempre sincronizado</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="performance-marketing-engineering-ia-datos.html" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-performance-engineering.png" alt="Performance Marketing Engineering: IA, datos y crecimiento" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Data Integration</span>
-                <span class="pill">AI & Automation</span>
-                <span class="pill">Growth</span>
-              </div>
-              <h3>Performance Marketing Engineering: IA, datos y crecimiento</h3>
-              <p>Integración de datos de publicidad, analítica, CRM y ventas. Automatización de reportes, monitoreo y modelos predictivos.</p>
-              <div class="case-action">Leer artículo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>5 capacidades</strong>
-                <span>Integración, automatización, predictivos</span>
-              </div>
-              <div class="case-metric">
-                <strong>ROI+</strong>
-                <span>Crecimiento escalable y medible</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="google-marketing-live-2026-novedades-publicidad-digital.html" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-google-marketing-live.png" alt="Google Marketing Live 2026: tendencias en publicidad digital" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Google Ads</span>
-                <span class="pill">IA en Publicidad</span>
-                <span class="pill">2026</span>
-              </div>
-              <h3>Google Marketing Live 2026: tendencias en publicidad digital</h3>
-              <p>IA en creación de anuncios, automatización predictiva y énfasis en calidad de conversiones sobre volumen.</p>
-              <div class="case-action">Leer artículo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>IA Generativa</strong>
-                <span>Creación y optimización de activos</span>
-              </div>
-              <div class="case-metric">
-                <strong>Automatización</strong>
-                <span>Campañas, ofertas y creativos</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="por-que-meta-suspende-cuentas-publicitarias.html" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/caso-meta-suspensiones.png" alt="Meta Ads: por qué se suspenden cuentas y cómo prevenirlo" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Meta Ads</span>
-                <span class="pill">Compliance</span>
-                <span class="pill">Prevención</span>
-              </div>
-              <h3>Meta Ads: por qué se suspenden cuentas y cómo prevenirlo</h3>
-              <p>7 motivos principales de suspensión en Meta Ads y guía de prevención con mejores prácticas.</p>
-              <div class="case-action">Leer artículo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>7 riesgos</strong>
-                <span>Identificados y prevenibles</span>
-              </div>
-              <div class="case-metric">
-                <strong>100%</strong>
-                <span>Evitar suspensión de cuenta</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/portfolio-cover.png" alt="Portafolio digital de DanielPixelStudio" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Meta Ads</span>
-                <span class="pill">Remarketing</span>
-                <span class="pill">Nases Colombia</span>
-              </div>
-              <h3>Optimización de CPL y recuperación de leads — Nases Colombia</h3>
-              <p>Proyecto laboral enfocado en testing de audiencias, creativos, copies y remarketing sobre bases de leads no convertidos.</p>
-              <div class="case-action">Ver portafolio en Behance</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>$15M</strong>
-                <span>COP mensuales gestionados</span>
-              </div>
-              <div class="case-metric">
-                <strong>8K+</strong>
-                <span>leads en audiencias</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/tracking-ga4-gtm.png" alt="Caso de tracking con Google Analytics 4 y Google Tag Manager" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">GA4</span>
-                <span class="pill">GTM</span>
-                <span class="pill">Proyecto laboral</span>
-              </div>
-              <h3>Diagnóstico de funnel y tracking — GA4/GTM</h3>
-              <p>Auditoría de medición para detectar fricciones, eventos mal configurados y puntos críticos de abandono en el embudo.</p>
-              <div class="case-action">Ver caso en portafolio</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>55%</strong>
-                <span>abandono identificado</span>
-              </div>
-              <div class="case-metric">
-                <strong>100%</strong>
-                <span>eventos críticos validados</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/turning-data-revenue.png" alt="Dashboard de performance Turning Data into Revenue" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">E-commerce</span>
-                <span class="pill">IA</span>
-                <span class="pill">Naturevital-Style</span>
-              </div>
-              <h3>Reducción de CAC y escalamiento comercial — E-commerce</h3>
-              <p>Proyecto vinculado a e-commerce, automatización CRM, campañas digitales y mejora de mensajes para captación.</p>
-              <div class="case-action">Ver evidencia visual</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>-35%</strong>
-                <span>costo de adquisición</span>
-              </div>
-              <div class="case-metric">
-                <strong>+30%</strong>
-                <span>leads calificados</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="assets/dashboard_meta_ads.html" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/2.PNG" alt="Sistema de advertising analytics para auditoría de campañas" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Proyecto 7</span>
-                <span class="pill">IA + Data</span>
-                <span class="pill">Proyecto personal</span>
-              </div>
-              <h3>Marketing Intelligence Engine para Meta Ads</h3>
-              <p>Proyecto demostrativo de automatización con datos: calcula CPA, ROAS simulado, score de campaña y recomendaciones para pausar, revisar, escalar o mantener.</p>
-              <div class="case-action">Abrir dashboard interactivo</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>5</strong>
-                <span>campañas auditadas</span>
-              </div>
-              <div class="case-metric">
-                <strong>4</strong>
-                <span>decisiones automatizadas</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/informe-rendimiento-semanal.png" alt="Diagnóstico de caída de CTR en Home — Nases Colombia" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">GA4</span>
-                <span class="pill">Priorización</span>
-                <span class="pill">Nases Colombia</span>
-              </div>
-              <h3>Diagnóstico de caída de CTR en Home y priorización de respuesta</h3>
-              <p>Con tráfico estable, el CTR de Home cayó de 17% a 8.37%, arrastrando conversiones (-30%) e ingresos (-$54,720 COP/semana). Prioricé la respuesta con una matriz propia de Impacto/Confianza/Facilidad.</p>
-              <div class="case-action">Validar trayectoria en LinkedIn</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>-50.7%</strong>
-                <span>caída de CTR</span>
-              </div>
-              <div class="case-metric">
-                <strong>-$54,720</strong>
-                <span>COP/semana en riesgo</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/3.PNG" alt="EcoClean Google Ads: ML Predictive Analytics Dashboard" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Google Ads</span>
-                <span class="pill">ML Predictions</span>
-                <span class="pill">EcoClean Hogar</span>
-              </div>
-              <h3>Machine Learning para Predicción de Conversiones — EcoClean Hogar</h3>
-              <p>Modelo de ML (scikit-learn) que predice conversiones en Google Ads con R² de 0.92. Utiliza features de campañas reales (1M+ registros) para optimizar puja y presupuesto.</p>
-              <div class="case-action">Ver portfolio técnico</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>0.92</strong>
-                <span>R² en predicción</span>
-              </div>
-              <div class="case-metric">
-                <strong>1M+</strong>
-                <span>datos de entrenamiento</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="case-card" href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">
-            <div class="case-image">
-              <img src="assets/advertising-analytics.png" alt="Meta Ads E-commerce: Campaign Scaling + ROAS Optimization" />
-            </div>
-            <div class="case-card-body">
-              <div class="case-meta">
-                <span class="pill">Meta Ads</span>
-                <span class="pill">E-commerce</span>
-                <span class="pill">Casos reales</span>
-              </div>
-              <h3>Optimización de E-commerce: Scaling ROAS + Reducción CAC</h3>
-              <p>Gestión de múltiples cuentas Meta Ads de e-commerce con enfoque en ROAS sostenible. Testing de audiencias, creativos, copies y pixel tracking para máxima eficiencia.</p>
-              <div class="case-action">Validar en portafolio</div>
-            </div>
-            <div class="case-metrics">
-              <div class="case-metric">
-                <strong>+156%</strong>
-                <span>ROAS promedio en cuentas</span>
-              </div>
-              <div class="case-metric">
-                <strong>-42%</strong>
-                <span>CAC en 90 días</span>
-              </div>
-            </div>
-          </a>
-
+        <div class="case-carousel" id="case-carousel">
+          <div class="case-track" id="case-grid"></div>
+          <button type="button" class="case-nav-btn case-nav-prev" id="case-prev" aria-label="Caso anterior">←</button>
+          <button type="button" class="case-nav-btn case-nav-next" id="case-next" aria-label="Caso siguiente">→</button>
         </div>
+
+        <script>
+          // Estructura de datos de Casos de Estudio.
+          // Cada caso usa: id, title, description, tags, metrics, image, y opcionalmente cta (texto de acción).
+          // Reemplazar/agregar objetos aquí a medida que lleguen los casos reales (uno por uno).
+          var casesData = [
+            {
+              id: "pauta-corporativa-multicuenta",
+              title: "De $15M a $40M COP/mes: estructura y optimización de pauta corporativa",
+              description: "Auditoría 360°, embudos B2B/B2C y integración con CRM para cuentas de alto presupuesto con medición rota y fugas de capital silenciosas.",
+              tags: ["Google Ads", "Meta Ads", "GA4/GTM", "CRM"],
+              metrics: [
+                { value: "ROAS 5X", label: "Escalado desde 2.5X con Paid Media + CRM" },
+                { value: "-22% CPA", label: "Con estrategia 360° (Meta + Google)" },
+                { value: "$218,880 USD/mes", label: "Fuga de presupuesto detectada y corregida" }
+              ],
+              image: "assets/portfolio-cover.png",
+              href: "caso-pauta-corporativa-multicuenta.html",
+              cta: "Ver caso completo →"
+            },
+            {
+              id: "ga4-gtm-atribucion-confiable",
+              title: "Arquitectura de medición GA4 + GTM: de datos rotos a atribución confiable",
+              description: "Auditoría y reconstrucción del tracking (7 eventos clave, validación técnica con Tag Assistant/DebugView y dashboard en Looker Studio) para eliminar decisiones a ciegas por datos poco confiables.",
+              tags: ["GA4", "GTM", "Looker Studio"],
+              metrics: [
+                { value: "+34.1%", label: "Aumento en conversiones efectivas (186)" },
+                { value: "8,517 eventos", label: "Registrados correctamente (+21.3%)" },
+                { value: "4,730 sesiones", label: "+8.7% vs. periodo anterior" }
+              ],
+              image: "assets/tracking-ga4-gtm.png",
+              href: "caso-ga4-gtm-atribucion-confiable.html",
+              cta: "Ver caso completo →"
+            },
+            {
+              id: "meta-ads-calidad-leads",
+              title: "De muchos leads a leads que sí compran: optimización de calidad en Meta Ads",
+              description: "Segmentación, eventos de conversión y remarketing en Meta Ads para priorizar leads con potencial real de compra y reducir el costo por lead.",
+              tags: ["Meta Ads", "Facebook Ads", "Instagram Ads", "Remarketing"],
+              metrics: [
+                { value: "Más leads calificados", label: "Priorizando audiencias con mayor probabilidad de conversión" },
+                { value: "CPL más bajo", label: "Ajuste continuo de segmentación y creatividades" },
+                { value: "Remarketing activo", label: "Recuperación de usuarios que no completaron el registro" }
+              ],
+              image: "assets/caso-auditoria-meta-ads.png",
+              href: "caso-meta-ads-calidad-leads.html",
+              cta: "Ver caso completo →"
+            },
+            {
+              id: "roas-google-ads-predictivo",
+              title: "ROAS estancado en Google Ads: auditoría predictiva para invertir mejor, no más",
+              description: "Auditoría completa y modelo de análisis predictivo en Google Ads para redistribuir presupuesto hacia los segmentos con mejor desempeño real.",
+              tags: ["Google Ads", "Análisis predictivo", "Optimización de pujas"],
+              metrics: [
+                { value: "ROAS en aumento", label: "Redistribución hacia segmentos de mejor desempeño" },
+                { value: "CPA más bajo", label: "Reducción gradual en áreas de bajo retorno" },
+                { value: "Mismo presupuesto", label: "Cada peso invertido rinde más, sin gastar más" }
+              ],
+              image: "assets/caso-performance-engineering.png",
+              href: "caso-roas-google-ads-predictivo.html",
+              cta: "Ver caso completo →"
+            },
+            {
+              id: "meta-ads-ecommerce-diagnostico",
+              title: "Auditoría de Performance y Diagnóstico de Meta Ads para E-commerce",
+              description: "Diagnóstico de fatiga creativa y mapa de eficiencia por campaña en una cuenta de e-commerce con Meta Ads, con plan de escalamiento basado en datos reales.",
+              tags: ["Meta Ads", "E-commerce", "Retargeting", "n8n"],
+              metrics: [
+                { value: "35.2x ROAS", label: "Retargeting (DPA), solo 9.6% del presupuesto" },
+                { value: "10.43x → 12.25x", label: "ROAS proyectado de cuenta (+17.5%)" },
+                { value: "+$28,387", label: "Ingresos incrementales estimados, sin invertir más" }
+              ],
+              image: "assets/caso-auditoria-meta-ads.png",
+              href: "caso-meta-ads-ecommerce-diagnostico.html",
+              cta: "Ver caso completo →"
+            },
+            {
+              id: "automatizacion-n8n-hubspot",
+              title: "Cada lead entra a tu CRM solo, sin que nadie lo escriba a mano",
+              description: "Automatización de captura de leads y sincronización de pipeline entre tu web y HubSpot, construida sobre n8n: captura, pipeline y alertas en un solo flujo.",
+              tags: ["n8n", "HubSpot", "Automatización", "CRM"],
+              metrics: [
+                { value: "0 intervención manual", label: "Captura, pipeline y alertas en un solo flujo" },
+                { value: "80% de la fuga", label: "Resuelta con 3 piezas: captura, pipeline y alertas" },
+                { value: "Workflow exportado", label: "Te queda en JSON, es tuyo, sin caja negra" }
+              ],
+              image: "assets/caso-n8n-hubspot.png",
+              href: "caso-automatizacion-n8n-hubspot.html",
+              cta: "Ver caso completo →"
+            },
+            {
+              id: "ecoclean-google-ads-ia",
+              title: "Analítica y predicción con IA para Google Ads",
+              description: "Proyecto de portafolio (datos ficticios): plataforma en Python + Machine Learning que mide, visualiza y predice conversiones de Google Ads — mismo tipo de trabajo que aplico a cuentas reales.",
+              tags: ["Portafolio técnico", "Python", "Machine Learning", "Google Ads"],
+              metrics: [
+                { value: "R² 0.64", label: "Modelo predictivo entrenado con 300 filas" },
+                { value: "3 escalas", label: "Probado con 300, 10K y 1M de filas" },
+                { value: "100% local", label: "Sin nube, sin API externa, sin base de datos" }
+              ],
+              image: "assets/caso-google-marketing-live.png",
+              href: "caso-ecoclean-google-ads-ia.html",
+              cta: "Ver caso completo →"
+            }
+          ];
+
+          function renderCases() {
+            var grid = document.getElementById("case-grid");
+            if (!grid) return;
+
+            grid.innerHTML = casesData.map(function (c) {
+              var tagsHtml = (c.tags || []).map(function (t) {
+                return "<span class=\"pill\">" + t + "</span>";
+              }).join("");
+
+              var metricsHtml = (c.metrics || []).map(function (m) {
+                return "<div class=\"case-metric\"><strong>" + m.value + "</strong><span>" + m.label + "</span></div>";
+              }).join("");
+
+              var ctaHtml = c.cta
+                ? (c.href
+                    ? "<a class=\"case-action\" href=\"" + c.href + "\">" + c.cta + "</a>"
+                    : "<div class=\"case-action\">" + c.cta + "</div>")
+                : "";
+
+              return (
+                "<article class=\"case-card\" data-case-id=\"" + c.id + "\">" +
+                  "<div class=\"case-image\"><img src=\"" + c.image + "\" alt=\"" + c.title + "\" loading=\"lazy\" /></div>" +
+                  "<div class=\"case-card-body\">" +
+                    "<div class=\"case-meta\">" + tagsHtml + "</div>" +
+                    "<h3>" + c.title + "</h3>" +
+                    "<p>" + c.description + "</p>" +
+                    ctaHtml +
+                  "</div>" +
+                  "<div class=\"case-metrics\">" + metricsHtml + "</div>" +
+                "</article>"
+              );
+            }).join("");
+          }
+
+          function initCaseCarousel() {
+            var track = document.getElementById("case-grid");
+            var carousel = document.getElementById("case-carousel");
+            if (!track || !carousel) return;
+
+            var cards = Array.prototype.slice.call(track.querySelectorAll(".case-card"));
+            if (!cards.length) return;
+
+            var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            var activeIndex = 0;
+            var autoplayTimer = null;
+            var resumeTimer = null;
+            var AUTOPLAY_MS = 4200;
+            var RESUME_DELAY_MS = 5000;
+
+            function markActive(index) {
+              activeIndex = (index + cards.length) % cards.length;
+              cards.forEach(function (card, i) {
+                card.classList.toggle("is-active", i === activeIndex);
+              });
+            }
+
+            function goTo(index, behavior) {
+              markActive(index);
+              cards[activeIndex].scrollIntoView({
+                behavior: prefersReducedMotion ? "auto" : (behavior || "smooth"),
+                inline: "center",
+                block: "nearest"
+              });
+            }
+
+            function next() { goTo(activeIndex + 1); }
+            function prev() { goTo(activeIndex - 1); }
+
+            function stopAutoplay() {
+              if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+            }
+
+            function startAutoplay() {
+              if (prefersReducedMotion) return;
+              stopAutoplay();
+              autoplayTimer = setInterval(next, AUTOPLAY_MS);
+            }
+
+            function pauseAndScheduleResume() {
+              stopAutoplay();
+              if (resumeTimer) clearTimeout(resumeTimer);
+              resumeTimer = setTimeout(startAutoplay, RESUME_DELAY_MS);
+            }
+
+            var prevBtn = document.getElementById("case-prev");
+            var nextBtn = document.getElementById("case-next");
+            if (prevBtn) prevBtn.addEventListener("click", function () { prev(); pauseAndScheduleResume(); });
+            if (nextBtn) nextBtn.addEventListener("click", function () { next(); pauseAndScheduleResume(); });
+
+            carousel.addEventListener("mouseenter", pauseAndScheduleResume);
+            carousel.addEventListener("touchstart", pauseAndScheduleResume, { passive: true });
+            track.addEventListener("click", pauseAndScheduleResume);
+
+            var scrollTimeout = null;
+            track.addEventListener("scroll", function () {
+              if (scrollTimeout) clearTimeout(scrollTimeout);
+              scrollTimeout = setTimeout(function () {
+                var trackRect = track.getBoundingClientRect();
+                var center = trackRect.left + trackRect.width / 2;
+                var closest = 0;
+                var closestDist = Infinity;
+                cards.forEach(function (card, i) {
+                  var r = card.getBoundingClientRect();
+                  var cardCenter = r.left + r.width / 2;
+                  var dist = Math.abs(cardCenter - center);
+                  if (dist < closestDist) { closestDist = dist; closest = i; }
+                });
+                markActive(closest);
+              }, 120);
+            }, { passive: true });
+
+            goTo(0, "auto");
+            startAutoplay();
+          }
+
+          document.addEventListener("DOMContentLoaded", function () {
+            renderCases();
+            initCaseCarousel();
+          });
+        </script>
   
         <div class="company-strip" aria-label="Empresas con las que he trabajado">
           <p>Empresas con las que he trabajado</p>
@@ -2120,32 +2303,6 @@
     </section>
   
   
-    <section class="section">
-      <div class="container strategy-panel">
-        <div>
-          <p class="eyebrow">Visión de rol</p>
-          <h2 class="section-title">Cómo estructuraría un área de marketing analítico dentro de una empresa.</h2>
-          <p class="section-copy">Mi enfoque para aportar valor en un equipo interno es operar marketing como un sistema medible: datos limpios, reglas de negocio, alertas inteligentes y decisiones comerciales más rápidas.</p>
-        </div>
-        <div class="strategy-steps">
-          <div class="strategy-step">
-            <strong>1. Captura y medición</strong>
-            <span>Meta Ads, Google Ads, GA4, GTM y CRM conectados a eventos reales del negocio.</span>
-          </div>
-          <div class="strategy-step">
-            <strong>2. Auditoría automática</strong>
-            <span>Scores de campaña, alertas de desperdicio, lectura de CPA y recomendaciones accionables.</span>
-          </div>
-          <div class="strategy-step">
-            <strong>3. Acción comercial</strong>
-            <span>Automatizaciones para priorizar leads, activar remarketing y escalar lo que ya demuestra tracción.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-  
     <section class="section" id="faq">
       <div class="container">
         <div class="section-head">
@@ -2171,12 +2328,8 @@
             <p class="faq-answer">Auditoría: en 20 minutos tienes 3 focos de mejora. Setup de IA: primeros cambios en 7 días (pausar keywords, adjustar pujas, nuevas audiencias). Impacto medible en ROAS: 30-60 días. Automatización full: 90-120 días de implementación y optimización.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">¿Qué rol busco para trabajar en una empresa?</h3>
-            <p class="faq-answer">Growth Marketing, Performance Marketing, Marketing Analytics o cualquier rol donde pauta, datos y automatización trabajen juntos. Idealmente full-time, híbrido o remoto. Mi aporte: auditoría de eficiencia, optimización con IA, dashboards accionables y decisiones más rápidas.</p>
-          </div>
-          <div class="faq-item">
-            <h3 class="faq-question">¿Qué herramientas y lenguajes domino?</h3>
-            <p class="faq-answer">Plataformas: Meta Ads, Google Ads, GA4, GTM, HubSpot, Kommo, Bitrix24, N8N. Técnico: Python, SQL, GSheets APIs, webhooks, machine learning (scikit-learn). IA: Claude, Gemini. Especialidad: integración de sistemas, automatización end-to-end, análisis predictivo.</p>
+            <h3 class="faq-question">¿Con qué plataformas y tecnología trabajas?</h3>
+            <p class="faq-answer">Integro las plataformas donde ya vive tu negocio (Meta Ads, Google Ads, GA4, GTM, HubSpot, Kommo, Bitrix24, N8N) con automatización a medida en Python, SQL y modelos de machine learning — para que todo hable el mismo idioma y tomes decisiones con datos, no con intuición.</p>
           </div>
         </div>
       </div>
@@ -2189,36 +2342,62 @@
             <img src="assets/daniel-murcia.png" alt="Daniel Aldana" />
           </div>
           <p class="profile-name">Daniel Aldana</p>
-          <p class="profile-role">Performance Marketing Specialist | Disponible para roles full-time, híbridos o remotos.</p>
-          <ul class="profile-list">
-            <li>Enfoque de analítica avanzada: diagnóstico, ejecución y mejora continua.</li>
-            <li>Experiencia en pauta, medición, CRM e IA aplicada.</li>
-            <li>Trabajo orientado a indicadores de negocio, no solo a métricas de plataforma.</li>
-          </ul>
         </div>
         <div class="about-copy">
           <p class="eyebrow">Sobre mí</p>
-          <h2 class="section-title">DanielPixelStudio es mi portafolio profesional para mostrar experiencia real en <span>performance, datos y automatización.</span></h2>
-          <p>Soy Daniel Aldana, Performance Marketing Specialist con experiencia en la planificación, ejecución y optimización de campañas en Google Ads y Meta Ads para contextos B2B y B2C. He trabajado con presupuestos de $15M COP mensuales, ecosistemas de medición con GA4/GTM y automatizaciones que ayudan a mejorar decisiones comerciales.</p>
-          <div class="workana-panel">
-            <h3>Objetivo profesional actual</h3>
-            <p>Busco sumarme a un equipo de marketing, growth o analytics con foco en resultados medibles — y en paralelo, ofrezco gestión de pauta y auditorías a empresas que necesiten un especialista externo mientras defino ese siguiente paso.</p>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">Ver trayectoria completa en LinkedIn</a>
+          <p>Detrás de DanielPixelStudio hay un solo operador: yo, sin capas ni intermediarios.</p>
+          <p>Uso los mismos datos e IA que uso con mis clientes para decidir cada peso en pauta.</p>
+          <p>Si hablas conmigo, hablas con quien ejecuta — no con un account manager.</p>
+          <!-- Fila de herramientas: no hay logos de marca en el proyecto (assets/logos/ está vacío) y no se generaron nuevos por instrucción explícita. Se usan como tags de texto (clase .pill ya existente) en su lugar. -->
+          <div class="case-meta">
+            <span class="pill">Google Ads</span>
+            <span class="pill">Meta Ads</span>
+            <span class="pill">GA4</span>
+            <span class="pill">GTM</span>
           </div>
         </div>
       </div>
     </section>
-  
+
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Blog</p>
+          <h2 class="section-title">Ideas y estrategias sobre Performance Marketing e IA.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card">
+            <h3>Google Marketing Live 2026: novedades y tendencias en publicidad</h3>
+            <p class="bento-desc">Descubre las principales novedades de Google Marketing Live 2026 y cómo la inteligencia artificial, la automatización y los datos transformarán el Performance Marketing.</p>
+            <a href="google-marketing-live-2026-novedades-publicidad-digital.html" class="bento-cta">Leer artículo →</a>
+          </article>
+
+          <article class="bento-card">
+            <h3>Performance Marketing Engineering: IA, datos y crecimiento</h3>
+            <p class="bento-desc">Descubre qué es Performance Marketing Engineering y cómo conectar datos, inteligencia artificial y automatización para escalar campañas rentables.</p>
+            <a href="performance-marketing-engineering-ia-datos.html" class="bento-cta">Leer artículo →</a>
+          </article>
+
+          <article class="bento-card">
+            <h3>¿Por qué Meta suspende cuentas? 7 motivos y prevención</h3>
+            <p class="bento-desc">Conoce por qué Meta suspende cuentas publicitarias, los 7 motivos más frecuentes y las mejores prácticas para prevenir bloqueos en Facebook e Instagram Ads.</p>
+            <a href="por-que-meta-suspende-cuentas-publicitarias.html" class="bento-cta">Leer artículo →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact" id="contacto">
       <div class="container contact-panel">
         <div>
           <p class="eyebrow">Contacto Directo</p>
-          <h2 class="section-title">¿Quieres hablar de tu reto de marketing o una oportunidad de rol?</h2>
-          <p class="section-copy">Estoy disponible para consultoría estratégica, auditorías de campañas, o conversaciones sobre oportunidades de crecimiento profesional.</p>
+          <h2 class="section-title">¿Cuál es el reto que quieres resolver esta semana?</h2>
+          <p class="section-copy">Estoy disponible para consultoría estratégica, auditorías de campañas o conversaciones sobre cómo escalar tu marketing con IA.</p>
           <div class="chat-picker" role="group" aria-label="Elige cómo quieres hablar">
             <p class="chat-picker-label">Elige cómo quieres hablar</p>
             <div class="chat-picker-options">
-              <a class="chat-option" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20..." target="_blank" rel="noopener noreferrer">
+              <a class="chat-option" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20hablar%20sobre%20..." target="_blank" rel="noopener noreferrer">
                 <span class="chat-option-title">WhatsApp</span>
                 <span class="chat-option-copy">Hablas directo conmigo. Respondo en menos de 2 horas en horario laboral.</span>
               </a>
@@ -2231,7 +2410,7 @@
           <div class="contact-actions">
             <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Agenda tu llamada</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Consultoría o propuesta de rol">Enviar correo</a>
+            <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Consultoría de Performance Marketing">Enviar correo</a>
           </div>
         </div>
         <ul class="contact-list">
@@ -2247,7 +2426,7 @@
   
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© 2026 DanielPixelStudio. Portafolio profesional de Daniel Aldana.</div>
+      <div>© 2026 DanielPixelStudio — Performance Marketing & Automatización con IA.</div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer">Behance</a>
@@ -2274,7 +2453,7 @@
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
         this.radius = Math.random() * 2 + 1;
-        this.color = Math.random() > 0.5 ? '#FFD700' : '#9D4EDD';
+        this.color = '#9D4EDD';
         this.pulse = Math.random() * 2 * Math.PI;
         this.pulseSpeed = 0.02;
       }
@@ -2342,7 +2521,7 @@
           const dist = particles[i].distanceTo(mouse.x, mouse.y);
           if (dist < 200) {
             const alpha = 1 - dist / 200;
-            ctx.strokeStyle = `rgba(255, 215, 0, ${alpha * 0.5})`;
+            ctx.strokeStyle = `rgba(157, 78, 221, ${alpha * 0.5})`;
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -2382,73 +2561,127 @@
       canvas.height = window.innerHeight;
     });
 
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     initParticles();
-    animate();
+    if (prefersReducedMotion) {
+      ctx.fillStyle = 'rgba(10, 14, 39, 1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => p.draw());
+      drawConnections();
+    } else {
+      animate();
+    }
   </script>
 
   <!-- Modelo 3D del muñeco (gru.glb) -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- Se omite en mobile (<768px) y con "reducir movimiento" para no gastar ~1.7MB de datos/batería
+       en pantallas donde el modelo se ve pequeño y aporta poco. -->
   <script>
-    window.addEventListener('load', function () {
+    (function () {
       var canvas = document.getElementById('gru-canvas');
-      if (!canvas || typeof THREE === 'undefined' || !THREE.GLTFLoader) return;
+      if (!canvas) return;
 
-      var w = canvas.clientWidth || 400;
-      var h = canvas.clientHeight || 320;
+      var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (window.innerWidth < 768 || prefersReducedMotion) {
+        canvas.closest('.gru-frame') && canvas.closest('.gru-frame').setAttribute('data-3d-skipped', 'true');
+        return;
+      }
 
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
-      camera.position.set(0, 0.6, 3.2);
+      function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+          var s = document.createElement('script');
+          s.src = src;
+          s.onload = resolve;
+          s.onerror = reject;
+          document.head.appendChild(s);
+        });
+      }
 
-      var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-      renderer.setSize(w, h, false);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-      scene.add(new THREE.AmbientLight(0xffffff, 0.85));
-      var key = new THREE.DirectionalLight(0xffffff, 1.1);
-      key.position.set(3, 5, 4);
-      scene.add(key);
-      var rim = new THREE.PointLight(0x9D4EDD, 1.4, 20);
-      rim.position.set(-4, 1, 3);
-      scene.add(rim);
-
-      var model = null;
-      var pointerX = 0;
-
-      new THREE.GLTFLoader().load('gru.glb', function (gltf) {
-        model = gltf.scene;
-
-        var box = new THREE.Box3().setFromObject(model);
-        var size = box.getSize(new THREE.Vector3());
-        var center = box.getCenter(new THREE.Vector3());
-        var scale = 2.1 / Math.max(size.x, size.y, size.z);
-
-        model.scale.setScalar(scale);
-        model.position.sub(center.multiplyScalar(scale));
-        scene.add(model);
+      window.addEventListener('load', function () {
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js')
+          .then(function () {
+            return loadScript('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js');
+          })
+          .then(initGru)
+          .catch(function (err) {
+            console.warn('No se pudo cargar el modelo 3D (gru.glb):', err);
+          });
       });
 
-      window.addEventListener('mousemove', function (e) {
-        pointerX = (e.clientX / window.innerWidth) * 2 - 1;
-      });
+      function initGru() {
+        if (typeof THREE === 'undefined' || !THREE.GLTFLoader) return;
 
-      (function loop() {
-        requestAnimationFrame(loop);
-        if (model) {
-          model.rotation.y += (pointerX * 0.6 - model.rotation.y) * 0.05 + 0.003;
+        var w = canvas.clientWidth || 400;
+        var h = canvas.clientHeight || 320;
+
+        var renderer;
+        try {
+          renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+        } catch (err) {
+          console.warn('WebGL no disponible, se omite el modelo 3D:', err);
+          return;
         }
-        renderer.render(scene, camera);
-      })();
 
-      window.addEventListener('resize', function () {
-        var nw = canvas.clientWidth || 400;
-        var nh = canvas.clientHeight || 320;
-        camera.aspect = nw / nh;
-        camera.updateProjectionMatrix();
-        renderer.setSize(nw, nh, false);
-      });
-    });
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
+        camera.position.set(0, 0.6, 3.2);
+
+        renderer.setSize(w, h, false);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        scene.add(new THREE.AmbientLight(0xffffff, 0.85));
+        var key = new THREE.DirectionalLight(0xffffff, 1.1);
+        key.position.set(3, 5, 4);
+        scene.add(key);
+        var rim = new THREE.PointLight(0x9D4EDD, 1.4, 20);
+        rim.position.set(-4, 1, 3);
+        scene.add(rim);
+
+        var model = null;
+        var pointerX = 0;
+
+        new THREE.GLTFLoader().load(
+          'gru.glb',
+          function (gltf) {
+            model = gltf.scene;
+
+            var box = new THREE.Box3().setFromObject(model);
+            var size = box.getSize(new THREE.Vector3());
+            var center = box.getCenter(new THREE.Vector3());
+            var scale = 2.1 / Math.max(size.x, size.y, size.z);
+
+            model.scale.setScalar(scale);
+            model.position.sub(center.multiplyScalar(scale));
+            scene.add(model);
+          },
+          undefined,
+          function (err) {
+            console.warn('No se pudo cargar gru.glb:', err);
+          }
+        );
+
+        window.addEventListener('mousemove', function (e) {
+          pointerX = (e.clientX / window.innerWidth) * 2 - 1;
+        });
+
+        (function loop() {
+          requestAnimationFrame(loop);
+          if (model) {
+            model.rotation.y += (pointerX * 0.6 - model.rotation.y) * 0.05 + 0.003;
+          }
+          renderer.render(scene, camera);
+        })();
+
+        window.addEventListener('resize', function () {
+          var nw = canvas.clientWidth || 400;
+          var nh = canvas.clientHeight || 320;
+          camera.aspect = nw / nh;
+          camera.updateProjectionMatrix();
+          renderer.setSize(nw, nh, false);
+        });
+      }
+    })();
 
     // Boton "Talk to AI" -> abre el chat de Voiceflow
     (function () {

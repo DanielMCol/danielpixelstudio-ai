@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Caso de estudio: implementación y validación de tracking con Google Analytics 4 y Google Tag Manager, de datos rotos a un dashboard con atribución confiable en Looker Studio." />
+  <meta name="keywords" content="Google Analytics 4, Google Tag Manager, atribución, tracking, Looker Studio, Meta Conversions API" />
+  <link rel="canonical" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+  <title>Arquitectura de medición GA4 + GTM: de datos rotos a atribución confiable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <nav class="blog-nav">
+    <div class="wrap">
+      <a href="index.html">← Volver al portafolio</a>
+      <a href="index.html#casos">Todos los casos</a>
+    </div>
+  </nav>
+
+  <article class="blog-article">
+    <p class="blog-kicker">Caso de estudio · Analítica digital</p>
+    <h1>Arquitectura de medición GA4 + GTM: de "datos rotos" a dashboards con atribución confiable</h1>
+    <p class="blog-lead">¿Sabías que una mala configuración del tracking puede hacerte desperdiciar de forma silenciosa el presupuesto de tus campañas digitales? Sin datos confiables, cada decisión de marketing se toma a ciegas.</p>
+
+    <p>Este caso de estudio demostrativo detalla cómo audito, estructuro y valido la infraestructura de analítica digital para transformar datos crudos y poco confiables en información 100% útil para la toma de decisiones.</p>
+
+    <h2>El problema que este sistema resuelve</h2>
+    <p>Muchas empresas sufren de eventos clave que no se registran en GA4 (como formularios o clics de contacto), conversiones mal configuradas sin disparadores correctos, y una falta total de atribución que impide saber qué canal genera realmente los resultados de negocio.</p>
+
+    <h2>La arquitectura de medición implementada (fase a fase)</h2>
+
+    <h3>1. Estructuración del data layer</h3>
+    <p>Diseñé e implementé un pipeline de medición estructurado para capturar el comportamiento del usuario con total precisión. Configuré 7 eventos esenciales bajo la taxonomía de GA4:</p>
+    <ul>
+      <li><code>page_view</code> — Alcance</li>
+      <li><code>scroll</code> — Interacción a profundidad</li>
+      <li><code>form_start</code> y <code>form_submit</code> — Captura de leads en formulario</li>
+      <li><code>click_whatsapp</code> — Contacto directo</li>
+      <li><code>purchase</code> — Transacciones de comercio electrónico</li>
+      <li><code>video_play</code> — Engagement de contenido embebido</li>
+    </ul>
+
+    <h3>2. Configuración y atribución en GA4</h3>
+    <p>Marqué como conversión estratégica 3 eventos críticos de negocio en Google Analytics 4, definiendo umbrales precisos de disparo: <code>form_submit</code>, <code>click_whatsapp</code> y <code>purchase</code>.</p>
+
+    <h3>3. Validación técnica rigurosa (QA)</h3>
+    <p>Para asegurar la confiabilidad del tracking antes de ir a producción, utilicé Preview Mode, Tag Assistant y GA4 DebugView. Validé el correcto disparo de 4 de 5 etiquetas críticas en la sesión de prueba (GA4 Configuration, GA4-Form Submit, GA4-Whatsapp Click y Conversion Linker).</p>
+
+    <h3>4. Visualización de datos (Looker Studio)</h3>
+    <p>Creé un dashboard analítico interactivo conectado directamente a GA4. Este reporte centraliza el rendimiento del tráfico permitiendo rastrear el crecimiento real:</p>
+    <ul>
+      <li><strong>Usuarios:</strong> 3,940 (+12.4%)</li>
+      <li><strong>Sesiones:</strong> 4,730 (+8.7%)</li>
+      <li><strong>Eventos registrados:</strong> 8,517 (+21.3%)</li>
+      <li><strong>Conversiones efectivas:</strong> 186 (+34.1%), con desglose preciso por canal de procedencia</li>
+    </ul>
+
+    <div class="blog-cta">
+      <h3>¿Tu ecosistema de analítica web es verdaderamente confiable?</h3>
+      <p>Si sientes que estás perdiendo datos, duplicando conversiones o invirtiendo sin tener claridad de tu ROI, hablemos. Construiré una arquitectura de medición robusta que respalde tus decisiones de negocio con datos reales y precisos.</p>
+      <a class="btn-cta" href="https://wa.me/573214169100?text=Hola%20Daniel%2C%20le%C3%AD%20tu%20caso%20de%20GA4%2FGTM%20y%20quiero%20conversar%20sobre%20mi%20tracking" target="_blank" rel="noopener noreferrer">Hablar con Daniel por WhatsApp</a>
+    </div>
+
+    <div class="blog-footer-nav">
+      <a href="index.html#casos">← Ver todos los casos</a>
+    </div>
+  </article>
+</body>
+</html>
