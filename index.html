@@ -1140,6 +1140,27 @@
       line-height: 1.25;
     }
   
+    .big-stat-callout {
+      text-align: center;
+      padding: 48px 24px 8px;
+    }
+
+    .big-stat-value {
+      display: block;
+      font-size: clamp(3.5rem, 10vw, 6rem);
+      font-weight: 800;
+      color: var(--ai-purple);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .big-stat-caption {
+      margin: 14px auto 0;
+      max-width: 480px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
     .company-strip {
       margin-top: 22px;
       padding: 42px 28px;
@@ -2265,6 +2286,11 @@
           });
         </script>
   
+        <div class="big-stat-callout">
+          <span class="big-stat-value">2.87X</span>
+          <p class="big-stat-caption">ROAS global actual — cifra real de una auditoría de Google Ads, no una proyección.</p>
+        </div>
+
         <div class="company-strip" aria-label="Empresas con las que he trabajado">
           <p>Empresas con las que he trabajado</p>
           <div class="marquee-container">
