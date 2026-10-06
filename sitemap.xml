@@ -1,68 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://danielpixelstudio.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/" />
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://danielpixelstudio.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/" />
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://danielpixelstudio.com/performance-marketing-engineering-ia-datos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/performance-marketing-engineering-ia-datos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/performance-marketing-engineering-ia-datos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/performance-marketing-engineering-ia-datos.html" />
     <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/performance-marketing-engineering-ia-datos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/performance-marketing-engineering-ia-datos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/performance-marketing-engineering-ia-datos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/performance-marketing-engineering-ia-datos.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://danielpixelstudio.com/google-marketing-live-2026-novedades-publicidad-digital.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/google-marketing-live-2026-novedades-publicidad-digital.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/google-marketing-live-2026-novedades-publicidad-digital.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/google-marketing-live-2026-novedades-publicidad-digital.html" />
     <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/google-marketing-live-2026-novedades-publicidad-digital.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/google-marketing-live-2026-novedades-publicidad-digital.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/google-marketing-live-2026-novedades-publicidad-digital.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/google-marketing-live-2026-novedades-publicidad-digital.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://danielpixelstudio.com/por-que-meta-suspende-cuentas-publicitarias.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/por-que-meta-suspende-cuentas-publicitarias.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/por-que-meta-suspende-cuentas-publicitarias.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/por-que-meta-suspende-cuentas-publicitarias.html" />
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://danielpixelstudio.com/en/por-que-meta-suspende-cuentas-publicitarias.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/por-que-meta-suspende-cuentas-publicitarias.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/por-que-meta-suspende-cuentas-publicitarias.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/por-que-meta-suspende-cuentas-publicitarias.html" />
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://danielpixelstudio.com/caso-pauta-corporativa-multicuenta.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-pauta-corporativa-multicuenta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-pauta-corporativa-multicuenta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-pauta-corporativa-multicuenta.html" />
     <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/caso-pauta-corporativa-multicuenta.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-pauta-corporativa-multicuenta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-pauta-corporativa-multicuenta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-pauta-corporativa-multicuenta.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-ga4-gtm-atribucion-confiable.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
     <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/caso-ga4-gtm-atribucion-confiable.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-ga4-gtm-atribucion-confiable.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://danielpixelstudio.com/caso-meta-ads-calidad-leads.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-meta-ads-calidad-leads.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-meta-ads-calidad-leads.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-meta-ads-calidad-leads.html" />
     <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/caso-meta-ads-calidad-leads.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-meta-ads-calidad-leads.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-meta-ads-calidad-leads.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-meta-ads-calidad-leads.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://danielpixelstudio.com/caso-roas-google-ads-predictivo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-roas-google-ads-predictivo.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-roas-google-ads-predictivo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-roas-google-ads-predictivo.html" />
     <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/caso-roas-google-ads-predictivo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-roas-google-ads-predictivo.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-roas-google-ads-predictivo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-roas-google-ads-predictivo.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://danielpixelstudio.com/caso-meta-ads-ecommerce-diagnostico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-meta-ads-ecommerce-diagnostico.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-meta-ads-ecommerce-diagnostico.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-meta-ads-ecommerce-diagnostico.html" />
     <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/caso-meta-ads-ecommerce-diagnostico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-meta-ads-ecommerce-diagnostico.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-meta-ads-ecommerce-diagnostico.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-meta-ads-ecommerce-diagnostico.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://danielpixelstudio.com/caso-automatizacion-n8n-hubspot.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-automatizacion-n8n-hubspot.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-automatizacion-n8n-hubspot.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-automatizacion-n8n-hubspot.html" />
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://danielpixelstudio.com/en/caso-automatizacion-n8n-hubspot.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-automatizacion-n8n-hubspot.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-automatizacion-n8n-hubspot.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-automatizacion-n8n-hubspot.html" />
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://danielpixelstudio.com/caso-ecoclean-google-ads-ia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-ecoclean-google-ads-ia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-ecoclean-google-ads-ia.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-ecoclean-google-ads-ia.html" />
     <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danielpixelstudio.com/en/caso-ecoclean-google-ads-ia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-ecoclean-google-ads-ia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-ecoclean-google-ads-ia.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-ecoclean-google-ads-ia.html" />
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

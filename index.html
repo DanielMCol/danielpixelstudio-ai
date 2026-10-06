@@ -6,6 +6,9 @@
   <meta name="description" content="DanielPixelStudio: Performance Marketing y automatización con IA para escalar campañas, recuperar presupuesto y tomar decisiones con datos reales." />
   <meta name="keywords" content="Google Ads, Meta Ads, GA4, Google Tag Manager, Marketing Analytics, Marketing Automation, Colombia" />
   <link rel="canonical" href="https://danielpixelstudio.com/" />
+  <link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/" />
+  <link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png" />
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
@@ -14,6 +17,8 @@
   <meta property="og:description" content="Performance Marketing y automatización con IA: campañas que escalan con datos reales, no con suposiciones." />
   <meta property="og:image" content="https://danielpixelstudio.com/assets/portfolio-cover.png" />
   <meta property="og:url" content="https://danielpixelstudio.com/" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="DanielPixelStudio | Performance Marketing + IA" />
   <meta name="twitter:description" content="Performance Marketing y automatización con IA: campañas que escalan con datos reales, no con suposiciones." />
@@ -49,6 +54,7 @@
         "url": "https://danielpixelstudio.com/",
         "image": "https://danielpixelstudio.com/assets/portfolio-cover.png",
         "description": "DanielPixelStudio: Performance Marketing y automatización con IA para escalar campañas, recuperar presupuesto y tomar decisiones con datos reales.",
+        "inLanguage": "es",
         "areaServed": "Colombia",
         "serviceType": ["Google Ads", "Meta Ads", "GA4", "Google Tag Manager", "Marketing Automation", "IA para Marketing"]
       }
@@ -193,6 +199,33 @@
       align-items: center;
       gap: 12px;
       justify-self: end;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.6);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-switch a {
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      line-height: 1.2;
+    }
+
+    .lang-switch a:hover { color: var(--ai-purple); }
+
+    .lang-switch a[aria-current="page"] {
+      background: var(--ai-purple);
+      color: #fff;
     }
 
     .btn-nav-cta {
@@ -1760,6 +1793,7 @@
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="nav-actions">
+        <div class="lang-switch" role="navigation" aria-label="Idioma"><a aria-current="page" lang="es">ES</a><a href="en/" hreflang="en" lang="en" title="View this page in English">EN</a></div>
         <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
           <span></span><span></span><span></span>
         </button>
@@ -1871,7 +1905,7 @@
     <section class="section" id="servicios">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">SERVICES</p>
+          <p class="eyebrow">SERVICIOS</p>
           <h2 class="section-title">Soluciones de Performance Marketing y Automatización inteligente.</h2>
           <p class="section-copy">Desde gestión de pauta hasta automatización de operaciones — cada servicio usa IA para resultados medibles.</p>
         </div>
