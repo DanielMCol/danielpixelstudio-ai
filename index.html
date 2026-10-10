@@ -1888,6 +1888,20 @@
       .case-metric:last-child { border-bottom: 0; }
       .contact-list a { flex-direction: column; gap: 2px; }
     }
+    /* ---- Formulario de contacto (Netlify Forms) ---- */
+    .contact-side { display: grid; gap: 22px; align-content: start; }
+    .contact-form { display: grid; gap: 12px; padding: 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.28); border-radius: var(--radius); }
+    .contact-form .form-row { display: grid; gap: 12px; }
+    .contact-form label { display: grid; gap: 6px; font-size: 0.86rem; font-weight: 700; color: #fff; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 11px 12px; font: inherit; font-weight: 500; color: var(--ink); background: #fff; border: 1px solid transparent; border-radius: 6px; }
+    .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid #fff; outline-offset: 2px; }
+    .contact-form textarea { min-height: 110px; resize: vertical; }
+    .contact-form .btn { justify-self: start; border: 0; cursor: pointer; }
+    .contact-form .form-hp { position: absolute; left: -9999px; }
+    .contact-form .form-note { margin: 0; font-size: 0.82rem; color: rgba(255, 255, 255, 0.86); }
+    .contact-form .form-status { margin: 0; font-weight: 700; }
+    @media (min-width: 640px) { .contact-form .form-row { grid-template-columns: 1fr 1fr; } }
+
   </style>
 
   <!-- Visor 3D (model-viewer) para el modelo gru.glb del hero -->
@@ -2691,12 +2705,31 @@
             <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Consultoría de Performance Marketing">Enviar correo</a>
           </div>
         </div>
-        <ul class="contact-list">
+        <div class="contact-side">
+          <form class="contact-form" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Formulario de contacto" data-ok="Gracias, recibí tu mensaje. Te escribo muy pronto." data-err="No se pudo enviar. Escríbeme por WhatsApp al +57 321 416 9100." data-sending="Enviando…">
+            <input type="hidden" name="form-name" value="contacto" />
+            <input type="hidden" name="idioma" value="es" />
+            <p class="form-hp"><label>No llenar este campo <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <div class="form-row">
+              <label>Nombre<input type="text" name="nombre" autocomplete="name" required /></label>
+              <label>Correo<input type="email" name="correo" autocomplete="email" required /></label>
+            </div>
+            <div class="form-row">
+              <label>Empresa<input type="text" name="empresa" autocomplete="organization" /></label>
+              <label>Teléfono / WhatsApp<input type="tel" name="telefono" autocomplete="tel" /></label>
+            </div>
+            <label>¿Cuál es el reto que quieres resolver?<textarea name="reto" required></textarea></label>
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+            <p class="form-note">Te respondo en menos de 24 horas hábiles.</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <ul class="contact-list">
           <li><a href="https://wa.me/573214169100" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span> +57 321 416 9100</a></li>
           <li><a href="mailto:marketingdanielm@gmail.com"><span>Correo</span> marketingdanielm@gmail.com</a></li>
           <li><a href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span> /in/ddanielmurcia</a></li>
           <li><a href="https://www.behance.net/gallery/247316557/PORTFOLIO" target="_blank" rel="noopener noreferrer"><span>Portafolio</span> Ver proyectos técnicos</a></li>
         </ul>
+        </div>
       </div>
     </section>
   </main>

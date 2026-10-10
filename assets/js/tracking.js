@@ -48,4 +48,38 @@
       page_lang: document.documentElement.lang || ""
     });
   }, true);
+  /*
+   * Formulario de contacto (Netlify Forms). Se envía sin recargar la página y,
+   * si Netlify lo acepta, empuja "generate_lead" al dataLayer. Sin JavaScript
+   * el formulario sigue funcionando con un envío normal.
+   */
+  document.addEventListener("submit", function (e) {
+    var form = e.target;
+    if (!form.classList || !form.classList.contains("contact-form") || !window.fetch) return;
+    e.preventDefault();
+    var status = form.querySelector(".form-status");
+    var button = form.querySelector("button[type=submit]");
+    if (status) status.textContent = form.getAttribute("data-sending") || "";
+    if (button) button.disabled = true;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      window.dataLayer.push({
+        event: "generate_lead",
+        lead_source: "form",
+        form_name: form.getAttribute("name") || "",
+        cta_location: location(form),
+        page_lang: document.documentElement.lang || ""
+      });
+      form.reset();
+      if (status) status.textContent = form.getAttribute("data-ok") || "";
+    }).catch(function () {
+      if (status) status.textContent = form.getAttribute("data-err") || "";
+    }).then(function () {
+      if (button) button.disabled = false;
+    });
+  });
 })();

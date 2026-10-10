@@ -128,3 +128,14 @@ Con esto se puede importar `generate_lead` a Google Ads y Meta (vía CAPI/GTM) y
 - 20 páginas internas: Open Graph + Twitter Card, schema Article/BlogPosting + BreadcrumbList, "Volver al inicio".
 - CTA del hero "Agenda tu diagnóstico gratis" / "Book your free diagnosis"; "Habla con la IA" en español.
 - HTML: footer duplicado corregido; errata "adjustar".
+
+## Actualización 2026-10-10: listo para publicar desde GitHub
+
+- **Formulario de contacto en el repositorio** (portada ES y EN), con los mismos campos que el sitio publicado: nombre, correo, empresa, teléfono/WhatsApp y reto. Usa Netlify Forms (`name="contacto"`, campo `idioma`, honeypot antispam). Se envía sin recargar y empuja `generate_lead` al dataLayer. Con esto, publicar el repositorio ya no borra el formulario.
+- **`netlify.toml`**: publica la raíz tal cual, oculta archivos internos (`server.js`, `package.json`, `docs/`, notas de despliegue) y añade cabeceras de seguridad y caché.
+- **`docs/gtm/gtm-medicion-contactos.json`**: configuración de GTM para importar (Administrar → Importar contenedor → Fusionar → Cambiar nombre de los conflictos). Crea 7 variables de capa de datos, 3 activadores y 3 etiquetas de evento GA4 (`cta_click`, `generate_lead` por WhatsApp/agenda/correo y `generate_lead` por formulario). No crea la etiqueta de Google para no duplicar páginas vistas. Antes de publicar, cambiar la constante `GA4 - Measurement ID` (G-XXXXXXXXXX) por el ID real. El archivo no se ha probado contra GTM; revisar la vista previa al importarlo.
+
+Pasos en Netlify, una sola vez:
+1. Sitio → Site configuration → Build & deploy → Link repository → GitHub → `DanielMCol/danielpixelstudio-ai`, rama `main`. Sin comando de compilación; directorio de publicación `.` (lo toma de `netlify.toml`).
+2. Forms → activar la detección de formularios. Forms → Notifications → correo a marketingdanielm@gmail.com.
+3. Fusionar PR #1 y PR #2 en `main`: Netlify publica solo.
