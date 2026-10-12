@@ -33,10 +33,10 @@ Experiencia aplicada (background técnico detrás del servicio):
 - Aluminios y Acabados (2022): comunicaciones y marketing digital.
 - AMP (2021): marketing y comunicaciones.
 
-Presupuesto gestionado: $15M-40M COP mensuales. Métricas reales documentadas
-en la sección Casos del sitio (clientes anónimos): ROAS 5X (escalado desde
-2.5X), -22% CPA, ROAS 35.2x en retargeting, entre otros. El caso GA4 + GTM
-(+34.1% en conversiones) es una demo técnica, no un resultado de cliente.
+Presupuesto gestionado: $15M-40M COP mensuales (sep 2025 - ene 2026), con
+remarketing sobre una base de más de 8.000 leads. No cites porcentajes de
+mejora (ROAS, CPA, CTR, leads) de clientes: no están verificados. El caso
+GA4 + GTM es una demo técnica, no un resultado de cliente.
 Cualquier meta de ROAS depende del diagnóstico de cada cuenta; no prometas
 cifras ni plazos garantizados.
 
