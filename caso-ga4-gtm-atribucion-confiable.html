@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MLFHNDG5');</script>
   <!-- End Google Tag Manager -->
-  <meta name="description" content="Caso de estudio: implementación y validación de tracking con Google Analytics 4 y Google Tag Manager, de datos rotos a un dashboard con atribución confiable en Looker Studio." />
-  <meta name="keywords" content="Google Analytics 4, Google Tag Manager, atribución, tracking, Looker Studio, Meta Conversions API" />
+  <meta name="description" content="Case study: implementing and validating tracking with Google Analytics 4 and Google Tag Manager, from broken data to a Looker Studio dashboard with reliable attribution." />
+  <meta name="keywords" content="Google Analytics 4, Google Tag Manager, attribution, tracking, Looker Studio, Meta Conversions API" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
   <link rel="canonical" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
-  <link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
-  <link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/en/caso-ga4-gtm-atribucion-confiable.html" />
+  <link rel="alternate" hreflang="es" href="https://danielpixelstudio.com/es/caso-ga4-gtm-atribucion-confiable.html" />
+  <link rel="alternate" hreflang="en" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
   <link rel="alternate" hreflang="x-default" href="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
-  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="DanielPixelStudio" />
-  <meta property="og:title" content="Arquitectura de medición GA4 + GTM: de datos rotos a atribución confiable" />
-  <meta property="og:description" content="Caso de estudio: implementación y validación de tracking con Google Analytics 4 y Google Tag Manager, de datos rotos a un dashboard con atribución confiable en Looker Studio." />
+  <meta property="og:title" content="GA4 + GTM measurement architecture: from broken data to reliable attribution" />
+  <meta property="og:description" content="Case study: implementing and validating tracking with Google Analytics 4 and Google Tag Manager, from broken data to a Looker Studio dashboard with reliable attribution." />
   <meta property="og:image" content="https://danielpixelstudio.com/assets/portfolio-cover.png" />
   <meta property="og:url" content="https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html" />
-  <meta property="og:locale" content="es_CO" />
+  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Arquitectura de medición GA4 + GTM: de datos rotos a atribución confiable" />
-  <meta name="twitter:description" content="Caso de estudio: implementación y validación de tracking con Google Analytics 4 y Google Tag Manager, de datos rotos a un dashboard con atribución confiable en Looker Studio." />
+  <meta name="twitter:title" content="GA4 + GTM measurement architecture: from broken data to reliable attribution" />
+  <meta name="twitter:description" content="Case study: implementing and validating tracking with Google Analytics 4 and Google Tag Manager, from broken data to a Looker Studio dashboard with reliable attribution." />
   <meta name="twitter:image" content="https://danielpixelstudio.com/assets/portfolio-cover.png" />
-  <title>Arquitectura de medición GA4 + GTM: de datos rotos a atribución confiable</title>
+  <title>GA4 + GTM measurement architecture: from broken data to reliable attribution</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="blog.css" />
@@ -36,16 +35,16 @@
     {
       "@type": "Article",
       "@id": "https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html#article",
-      "headline": "Arquitectura de medición GA4 + GTM: de \"datos rotos\" a dashboards con atribución confiable",
-      "description": "Caso de estudio: implementación y validación de tracking con Google Analytics 4 y Google Tag Manager, de datos rotos a un dashboard con atribución confiable en Looker Studio.",
+      "headline": "GA4 + GTM measurement architecture: from \"broken data\" to dashboards with reliable attribution",
+      "description": "Case study: implementing and validating tracking with Google Analytics 4 and Google Tag Manager, from broken data to a Looker Studio dashboard with reliable attribution.",
       "image": "https://danielpixelstudio.com/assets/portfolio-cover.png",
-      "inLanguage": "es",
+      "inLanguage": "en",
       "mainEntityOfPage": "https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html",
       "author": {
         "@type": "Person",
         "@id": "https://danielpixelstudio.com/#daniel",
         "name": "Daniel Aldana",
-        "url": "https://danielpixelstudio.com/"
+        "url": "https://danielpixelstudio.com/es/"
       },
       "publisher": {
         "@type": "Organization",
@@ -53,7 +52,7 @@
         "name": "DanielPixelStudio",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://danielpixelstudio.com/assets/favicon/favicon-192.png"
+          "url": "https://danielpixelstudio.com/assets/favicon/favicon.svg"
         }
       }
     },
@@ -69,13 +68,13 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Casos de estudio",
+          "name": "Case studies",
           "item": "https://danielpixelstudio.com/#casos"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Arquitectura de medición GA4 + GTM: de datos rotos a atribución confiable",
+          "name": "GA4 + GTM measurement architecture: from broken data to reliable attribution",
           "item": "https://danielpixelstudio.com/caso-ga4-gtm-atribucion-confiable.html"
         }
       ]
@@ -90,60 +89,60 @@
   <!-- End Google Tag Manager (noscript) -->
   <nav class="blog-nav">
     <div class="wrap">
-      <a href="index.html">← Volver al inicio</a>
+      <a href="index.html">← Back to home</a>
       <div class="blog-nav-right">
-        <a href="index.html#casos">Todos los casos</a>
-        <div class="lang-switch" role="navigation" aria-label="Idioma"><a aria-current="page" lang="es">ES</a><a href="en/caso-ga4-gtm-atribucion-confiable.html" hreflang="en" lang="en" title="View this page in English">EN</a></div>
+        <a href="index.html#casos">All case studies</a>
+        <div class="lang-switch" role="navigation" aria-label="Language"><a href="es/caso-ga4-gtm-atribucion-confiable.html" hreflang="es" lang="es" title="Ver esta página en español">ES</a><a aria-current="page" lang="en">EN</a></div>
       </div>
     </div>
   </nav>
 
   <article class="blog-article">
-    <p class="blog-kicker">Caso de estudio · Analítica digital</p>
-    <h1>Arquitectura de medición GA4 + GTM: de "datos rotos" a dashboards con atribución confiable</h1>
-    <p class="blog-lead">¿Sabías que una mala configuración del tracking puede hacerte desperdiciar de forma silenciosa el presupuesto de tus campañas digitales? Sin datos confiables, cada decisión de marketing se toma a ciegas.</p>
+    <p class="blog-kicker">Case study · Digital analytics</p>
+    <h1>GA4 + GTM measurement architecture: from "broken data" to dashboards with reliable attribution</h1>
+    <p class="blog-lead">Did you know that a poor tracking setup can silently waste your digital campaign budget? Without reliable data, every marketing decision is made blind.</p>
 
-    <p>Este caso de estudio demostrativo detalla cómo audito, estructuro y valido la infraestructura de analítica digital para transformar datos crudos y poco confiables en información 100% útil para la toma de decisiones.</p>
+    <p>This demonstration case study shows how I audit, structure and validate digital analytics infrastructure to turn raw, unreliable data into information that is 100% useful for decision-making.</p>
 
-    <h2>El problema que este sistema resuelve</h2>
-    <p>Muchas empresas sufren de eventos clave que no se registran en GA4 (como formularios o clics de contacto), conversiones mal configuradas sin disparadores correctos, y una falta total de atribución que impide saber qué canal genera realmente los resultados de negocio.</p>
+    <h2>The problem this system solves</h2>
+    <p>Many companies have key events that are never recorded in GA4 (such as forms or contact clicks), conversions configured without the right triggers, and a complete lack of attribution that makes it impossible to know which channel actually drives business results.</p>
 
-    <h2>La arquitectura de medición implementada (fase a fase)</h2>
+    <h2>The measurement architecture, step by step</h2>
 
-    <h3>1. Estructuración del data layer</h3>
-    <p>Diseñé e implementé un pipeline de medición estructurado para capturar el comportamiento del usuario con total precisión. Configuré 7 eventos esenciales bajo la taxonomía de GA4:</p>
+    <h3>1. Structuring the data layer</h3>
+    <p>I designed and implemented a structured measurement pipeline to capture user behavior with full precision. I configured 7 essential events following the GA4 taxonomy:</p>
     <ul>
-      <li><code>page_view</code> — Alcance</li>
-      <li><code>scroll</code> — Interacción a profundidad</li>
-      <li><code>form_start</code> y <code>form_submit</code> — Captura de leads en formulario</li>
-      <li><code>click_whatsapp</code> — Contacto directo</li>
-      <li><code>purchase</code> — Transacciones de comercio electrónico</li>
-      <li><code>video_play</code> — Engagement de contenido embebido</li>
+      <li><code>page_view</code> — Reach</li>
+      <li><code>scroll</code> — Depth of engagement</li>
+      <li><code>form_start</code> and <code>form_submit</code> — Form lead capture</li>
+      <li><code>click_whatsapp</code> — Direct contact</li>
+      <li><code>purchase</code> — E-commerce transactions</li>
+      <li><code>video_play</code> — Embedded content engagement</li>
     </ul>
 
-    <h3>2. Configuración y atribución en GA4</h3>
-    <p>Marqué como conversión estratégica 3 eventos críticos de negocio en Google Analytics 4, definiendo umbrales precisos de disparo: <code>form_submit</code>, <code>click_whatsapp</code> y <code>purchase</code>.</p>
+    <h3>2. GA4 configuration and attribution</h3>
+    <p>I marked 3 business-critical events as strategic conversions in Google Analytics 4, with precise firing thresholds: <code>form_submit</code>, <code>click_whatsapp</code> and <code>purchase</code>.</p>
 
-    <h3>3. Validación técnica rigurosa (QA)</h3>
-    <p>Para asegurar la confiabilidad del tracking antes de ir a producción, utilicé Preview Mode, Tag Assistant y GA4 DebugView. Validé el correcto disparo de 4 de 5 etiquetas críticas en la sesión de prueba (GA4 Configuration, GA4-Form Submit, GA4-Whatsapp Click y Conversion Linker).</p>
+    <h3>3. Rigorous technical validation (QA)</h3>
+    <p>To make sure tracking was reliable before going live, I used Preview Mode, Tag Assistant and GA4 DebugView. I validated that 4 of 5 critical tags fired correctly in the test session (GA4 Configuration, GA4-Form Submit, GA4-Whatsapp Click and Conversion Linker).</p>
 
-    <h3>4. Visualización de datos (Looker Studio)</h3>
-    <p>Creé un dashboard analítico interactivo conectado directamente a GA4. Este reporte centraliza el rendimiento del tráfico permitiendo rastrear el crecimiento real:</p>
+    <h3>4. Data visualization (Looker Studio)</h3>
+    <p>I built an interactive analytics dashboard connected directly to GA4. The report centralizes traffic performance so real growth can be tracked:</p>
     <ul>
-      <li><strong>Usuarios:</strong> 3,940 (+12.4%)</li>
-      <li><strong>Sesiones:</strong> 4,730 (+8.7%)</li>
-      <li><strong>Eventos registrados:</strong> 8,517 (+21.3%)</li>
-      <li><strong>Conversiones efectivas:</strong> 186 (+34.1%), con desglose preciso por canal de procedencia</li>
+      <li><strong>Users:</strong> 3,940 (+12.4%)</li>
+      <li><strong>Sessions:</strong> 4,730 (+8.7%)</li>
+      <li><strong>Events recorded:</strong> 8,517 (+21.3%)</li>
+      <li><strong>Effective conversions:</strong> 186 (+34.1%), with an accurate breakdown by source channel</li>
     </ul>
 
     <div class="blog-cta">
-      <h3>¿Tu ecosistema de analítica web es verdaderamente confiable?</h3>
-      <p>Si sientes que estás perdiendo datos, duplicando conversiones o invirtiendo sin tener claridad de tu ROI, hablemos. Construiré una arquitectura de medición robusta que respalde tus decisiones de negocio con datos reales y precisos.</p>
-      <a class="btn-cta" href="https://wa.me/17868400430?text=Hola%20Daniel%2C%20le%C3%AD%20tu%20caso%20de%20GA4%2FGTM%20y%20quiero%20conversar%20sobre%20mi%20tracking" target="_blank" rel="noopener noreferrer">Hablar con Daniel por WhatsApp</a>
+      <h3>Is your web analytics ecosystem truly reliable?</h3>
+      <p>If you feel you are losing data, double-counting conversions or investing without a clear view of your ROI, let's talk. I will build a robust measurement architecture that backs your business decisions with real, accurate data.</p>
+      <a class="btn-cta" href="https://wa.me/17868400430?text=Hi%20Daniel%2C%20I%20read%20your%20GA4%2FGTM%20case%20study%20and%20would%20like%20to%20talk%20about%20my%20tracking" target="_blank" rel="noopener noreferrer">Talk to Daniel on WhatsApp</a>
     </div>
 
     <div class="blog-footer-nav">
-      <a href="index.html#casos">← Ver todos los casos</a>
+      <a href="index.html#casos">← See all case studies</a>
     </div>
   </article>
   <script src="assets/js/tracking.js" defer></script>
