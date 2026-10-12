@@ -148,7 +148,16 @@ async function handleChat(req, res) {
 
 function serveStatic(req, res) {
   const requestUrl = new URL(req.url, `http://${req.headers.host}`);
-  const requestedPath = requestUrl.pathname === "/" ? "/index.html" : decodeURIComponent(requestUrl.pathname);
+
+  // Versión en inglés: /en -> /en/ para que las rutas relativas (../assets) resuelvan bien.
+  if (requestUrl.pathname === "/en") {
+    res.writeHead(301, { Location: "/en/" + requestUrl.search });
+    res.end();
+    return;
+  }
+
+  let requestedPath = decodeURIComponent(requestUrl.pathname);
+  if (requestedPath.endsWith("/")) requestedPath += "index.html";
   const filePath = path.normalize(path.join(SITE_ROOT, requestedPath));
 
   if (!filePath.startsWith(SITE_ROOT)) {
