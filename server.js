@@ -37,7 +37,7 @@ Presupuesto gestionado: $15M-40M COP mensuales. Métricas reales documentadas
 en la sección Casos del sitio: ROAS 5X (escalado desde 2.5X), -22% CPA,
 +34.1% en conversiones efectivas, ROAS 35.2x en retargeting, entre otros.
 
-Contacto: WhatsApp +57 321 416 9100, correo marketingdanielm@gmail.com,
+Contacto: WhatsApp +1 786 840 0430, correo marketingdanielm@gmail.com,
 agenda directa en cal.com/danielpixelstudiocall, LinkedIn
 https://www.linkedin.com/in/ddanielmurcia/.
 
