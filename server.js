@@ -41,7 +41,8 @@ Cualquier meta de ROAS depende del diagnóstico de cada cuenta; no prometas
 cifras ni plazos garantizados.
 
 Contacto: WhatsApp +1 786 840 0430, correo marketingdanielm@gmail.com
-(para agendar el diagnóstico gratis de 20 minutos, escribir por WhatsApp), LinkedIn
+(para agendar el diagnóstico gratis de 20 minutos: llenar el formulario de
+contacto del sitio; al enviarlo aparece el calendario para elegir la hora), LinkedIn
 https://www.linkedin.com/in/ddanielmurcia/.
 
 Reglas:

@@ -5,7 +5,7 @@
  * social. En GTM basta un activador "Evento personalizado = cta_click" y una
  * etiqueta de evento GA4 que lea las variables de la capa de datos.
  *
- *   cta_type     whatsapp | calendar | email | ai_chat | social | language
+ *   cta_type     whatsapp | calendar | form | email | ai_chat | social | language
  *   cta_text     texto visible del botón o enlace
  *   cta_location id de la sección donde está (hero, servicios, contacto...)
  *   link_url     destino del enlace
@@ -19,6 +19,7 @@
     var href = el.getAttribute("href") || "";
     if (/wa\.me|whatsapp\.com/i.test(href)) return "whatsapp";
     if (/cal\.com|calendly\.com/i.test(href)) return "calendar";
+    if (href === "#form-contacto") return "form";
     if (/^mailto:/i.test(href)) return "email";
     if (/linkedin\.com|behance\.net|workana\.com|instagram\.com|facebook\.com|youtube\.com|tiktok\.com|x\.com|twitter\.com/i.test(href)) return "social";
     if (el.closest(".lang-switch")) return "language";
@@ -47,7 +48,32 @@
       link_url: el.getAttribute("href") || "",
       page_lang: document.documentElement.lang || ""
     });
+    if (type === "form") {
+      var field = document.querySelector("#form-contacto input[name=nombre]");
+      if (field) setTimeout(function () { field.focus({ preventScroll: true }); }, 400);
+    }
   }, true);
+
+  /*
+   * Después de un envío aceptado se muestra la agenda (data-calendar del
+   * formulario) con el nombre y el correo ya rellenados.
+   */
+  function showCalendar(form, name, email) {
+    var url = form.getAttribute("data-calendar");
+    if (!url || form.parentNode.querySelector(".form-calendar")) return;
+    var box = document.createElement("div");
+    box.className = "form-calendar";
+    var title = document.createElement("p");
+    title.textContent = form.getAttribute("data-calendar-title") || "";
+    var frame = document.createElement("iframe");
+    frame.src = url + "?embed=true&name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email);
+    frame.title = title.textContent;
+    frame.loading = "lazy";
+    box.appendChild(title);
+    box.appendChild(frame);
+    form.parentNode.insertBefore(box, form.nextSibling);
+    box.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
   /*
    * Formulario de contacto (Netlify Forms). Se envía sin recargar la página y,
    * si Netlify lo acepta, empuja "generate_lead" al dataLayer. Sin JavaScript
@@ -61,6 +87,8 @@
     var button = form.querySelector("button[type=submit]");
     if (status) status.textContent = form.getAttribute("data-sending") || "";
     if (button) button.disabled = true;
+    var name = (form.elements.nombre && form.elements.nombre.value) || "";
+    var email = (form.elements.correo && form.elements.correo.value) || "";
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -76,6 +104,7 @@
       });
       form.reset();
       if (status) status.textContent = form.getAttribute("data-ok") || "";
+      showCalendar(form, name, email);
     }).catch(function () {
       if (status) status.textContent = form.getAttribute("data-err") || "";
     }).then(function () {

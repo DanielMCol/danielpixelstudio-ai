@@ -1915,6 +1915,9 @@
     .contact-form .form-hp { position: absolute; left: -9999px; }
     .contact-form .form-note { margin: 0; font-size: 0.82rem; color: rgba(255, 255, 255, 0.86); }
     .contact-form .form-status { margin: 0; font-weight: 700; }
+    .form-calendar { margin-top: 16px; padding: 16px; background: #fff; border-radius: 16px; }
+    .form-calendar p { margin: 0 0 12px; font-weight: 700; color: var(--ink); }
+    .form-calendar iframe { display: block; width: 100%; height: 640px; border: 0; }
     @media (min-width: 640px) { .contact-form .form-row { grid-template-columns: 1fr 1fr; } }
 
 
@@ -2049,7 +2052,7 @@
           </div>
           <p class="hero-copy hero-lead">Campañas en Google Ads y Meta Ads optimizadas con datos medidos, no con intuición.</p>
           <div class="hero-ctas">
-            <a class="btn btn-cta-shift" href="https://wa.me/17868400430?text=Hola%20Daniel%2C%20quiero%20agendar%20el%20diagn%C3%B3stico%20gratis%20de%2020%20minutos" target="_blank" rel="noopener noreferrer">Agenda tu diagnóstico gratis</a>
+            <a class="btn btn-cta-shift" href="#form-contacto">Agenda tu diagnóstico gratis</a>
           </div>
           <div class="hero-proof" aria-label="Indicadores de experiencia">
             <div class="proof-item">
@@ -2117,7 +2120,7 @@
             <p class="bento-stat-label">Con el mismo presupuesto</p>
             <h3>Gestión de Google Ads / Meta Ads</h3>
             <p class="bento-desc">Bajo ROAS, presupuesto disperso y audiencias ineficientes se resuelven con estructura inteligente de campañas, testing automático y segmentación con machine learning.</p>
-            <a href="https://wa.me/17868400430?text=Hola%20Daniel%2C%20quiero%20agendar%20el%20diagn%C3%B3stico%20gratis%20de%2020%20minutos" target="_blank" class="bento-cta">Ver solución →</a>
+            <a href="#form-contacto" class="bento-cta">Ver solución →</a>
           </article>
 
           <!-- Servicio 2: Auditoría Inteligente -->
@@ -2170,7 +2173,7 @@
             <h3 style="font-size:1.3rem; font-weight:800; color:var(--ink); margin:0 0 8px;">Consultoría de 20 minutos GRATIS</h3>
             <p style="color:var(--muted); font-size:0.94rem; margin:0;">Conversamos sobre tu reto actual, identifico rápido las oportunidades y te doy 3 acciones inmediatas. Sin costo, sin compromiso.</p>
           </div>
-          <a class="btn btn-primary" href="https://wa.me/17868400430?text=Hola%20Daniel%2C%20quiero%20agendar%20el%20diagn%C3%B3stico%20gratis%20de%2020%20minutos" target="_blank" rel="noopener noreferrer">Agendar consultoría</a>
+          <a class="btn btn-primary" href="#form-contacto">Agendar consultoría</a>
         </div>
 
         <p style="color:var(--muted); font-size:0.9rem; margin-top:20px; text-align:center;">Tarifas personalizadas según alcance y complejidad del proyecto. Escribeme directamente por WhatsApp para una propuesta sin presión.</p>
@@ -2809,13 +2812,13 @@
             </div>
           </div>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="https://wa.me/17868400430?text=Hola%20Daniel%2C%20quiero%20agendar%20el%20diagn%C3%B3stico%20gratis%20de%2020%20minutos" target="_blank" rel="noopener noreferrer">Agenda tu llamada</a>
+            <a class="btn btn-primary" href="#form-contacto">Agenda tu llamada</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Consultoría de Performance Marketing">Enviar correo</a>
           </div>
         </div>
         <div class="contact-side">
-          <form class="contact-form" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Formulario de contacto" data-ok="Gracias, recibí tu mensaje. Te escribo muy pronto." data-err="No se pudo enviar. Escríbeme por WhatsApp al +1 786 840 0430." data-sending="Enviando…">
+          <form class="contact-form" id="form-contacto" name="contacto" data-calendar="https://cal.com/danielpixelstudiocall" data-calendar-title="Ahora elige el día y la hora de tu llamada:" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Formulario de contacto" data-ok="Gracias, recibí tu mensaje. Te escribo muy pronto." data-err="No se pudo enviar. Escríbeme por WhatsApp al +1 786 840 0430." data-sending="Enviando…">
             <input type="hidden" name="form-name" value="contacto" />
             <input type="hidden" name="idioma" value="es" />
             <p class="form-hp"><label>No llenar este campo <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>

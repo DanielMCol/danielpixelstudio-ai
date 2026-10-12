@@ -1916,6 +1916,9 @@
     .contact-form .form-hp { position: absolute; left: -9999px; }
     .contact-form .form-note { margin: 0; font-size: 0.82rem; color: rgba(255, 255, 255, 0.86); }
     .contact-form .form-status { margin: 0; font-weight: 700; }
+    .form-calendar { margin-top: 16px; padding: 16px; background: #fff; border-radius: 16px; }
+    .form-calendar p { margin: 0 0 12px; font-weight: 700; color: var(--ink); }
+    .form-calendar iframe { display: block; width: 100%; height: 640px; border: 0; }
     @media (min-width: 640px) { .contact-form .form-row { grid-template-columns: 1fr 1fr; } }
 
 
@@ -2050,7 +2053,7 @@
           </div>
           <p class="hero-copy hero-lead">Google Ads and Meta Ads campaigns optimized with measured data, not gut feeling.</p>
           <div class="hero-ctas">
-            <a class="btn btn-cta-shift" href="https://wa.me/17868400430?text=Hi%20Daniel%2C%20I%27d%20like%20to%20book%20the%20free%2020-minute%20diagnosis" target="_blank" rel="noopener noreferrer">Book your free diagnosis</a>
+            <a class="btn btn-cta-shift" href="#form-contacto">Book your free diagnosis</a>
           </div>
           <div class="hero-proof" aria-label="Track record">
             <div class="proof-item">
@@ -2118,7 +2121,7 @@
             <p class="bento-stat-label">With the same budget</p>
             <h3>Google Ads / Meta Ads Management</h3>
             <p class="bento-desc">Low ROAS, scattered budgets, weak audiences? I fix them with a smarter campaign structure, automated testing and machine-learning targeting.</p>
-            <a href="https://wa.me/17868400430?text=Hi%20Daniel%2C%20I%27d%20like%20to%20book%20the%20free%2020-minute%20diagnosis" target="_blank" class="bento-cta">Let's talk →</a>
+            <a href="#form-contacto" class="bento-cta">Let's talk →</a>
           </article>
 
           <!-- Servicio 2: Auditoría Inteligente -->
@@ -2171,7 +2174,7 @@
             <h3 style="font-size:1.3rem; font-weight:800; color:var(--ink); margin:0 0 8px;">FREE 20-minute consultation</h3>
             <p style="color:var(--muted); font-size:0.94rem; margin:0;">We talk through your biggest challenge, I spot the quick wins, and you walk away with 3 actions you can take right away. Free, no commitment.</p>
           </div>
-          <a class="btn btn-primary" href="https://wa.me/17868400430?text=Hi%20Daniel%2C%20I%27d%20like%20to%20book%20the%20free%2020-minute%20diagnosis" target="_blank" rel="noopener noreferrer">Book a consultation</a>
+          <a class="btn btn-primary" href="#form-contacto">Book a consultation</a>
         </div>
 
         <p style="color:var(--muted); font-size:0.9rem; margin-top:20px; text-align:center;">Custom pricing based on project scope and complexity. Message me directly on WhatsApp for a no-pressure proposal.</p>
@@ -2810,13 +2813,13 @@
             </div>
           </div>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="https://wa.me/17868400430?text=Hi%20Daniel%2C%20I%27d%20like%20to%20book%20the%20free%2020-minute%20diagnosis" target="_blank" rel="noopener noreferrer">Book your call</a>
+            <a class="btn btn-primary" href="#form-contacto">Book your call</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Performance Marketing Consultation">Send an email</a>
           </div>
         </div>
         <div class="contact-side">
-          <form class="contact-form" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact form" data-ok="Thanks, I got your message. I'll get back to you soon." data-err="It couldn't be sent. Message me on WhatsApp at +1 786 840 0430." data-sending="Sending…">
+          <form class="contact-form" id="form-contacto" name="contacto" data-calendar="https://cal.com/danielpixelstudiocall" data-calendar-title="Now pick the day and time for your call:" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact form" data-ok="Thanks, I got your message. I'll get back to you soon." data-err="It couldn't be sent. Message me on WhatsApp at +1 786 840 0430." data-sending="Sending…">
             <input type="hidden" name="form-name" value="contacto" />
             <input type="hidden" name="idioma" value="en" />
             <p class="form-hp"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
