@@ -112,8 +112,7 @@
         "availableLanguage": [
           "es",
           "en"
-        ],
-        "url": "https://cal.com/danielpixelstudiocall"
+        ]
       },
       "sameAs": [
         "https://www.linkedin.com/in/ddanielmurcia/",
@@ -133,7 +132,7 @@
           "name": "How does AI improve my business ROAS?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AI optimizes on 3 fronts: (1) smart audience segmentation reduces waste, (2) automated creative testing identifies what sells, (3) dynamic bidding and predictive scaling put budget only where it converts. Goal: a measurable ROAS improvement in 60-90 days; how much depends on each account's starting point."
+            "text": "AI optimizes on 3 fronts: (1) smart audience segmentation reduces waste, (2) automated creative testing identifies what sells, (3) dynamic bidding and predictive scaling put budget only where it converts. This is a goal, not a guarantee: after the diagnosis I set a ROAS target and timeline for your account. Results also depend on your product, budget, market and sales process."
           }
         },
         {
@@ -141,7 +140,7 @@
           "name": "Does AI replace my current marketing team?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. AI empowers your team. It automates the repetitive work (reports, follow-ups, alerts), frees up time for strategic analysis and brings together data that used to take hours to connect. Your team goes from \"executor\" to \"strategist\": more value, less noise."
+            "text": "No. AI empowers your team. It automates the repetitive work (reports, follow-ups, alerts), frees up time for strategic analysis and brings together data that used to take hours to connect. Your team spends less time executing and more time on strategy."
           }
         },
         {
@@ -157,7 +156,7 @@
           "name": "When will I see the first results?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Audit: 3 areas to improve within 20 minutes. AI setup: first changes within 7 days (pausing keywords, adjusting bids, new audiences). Measurable ROAS impact: 30-60 days. Full automation: 90-120 days of implementation and optimization."
+            "text": "Audit: 3 areas to improve within 20 minutes. AI setup: first changes within 7 days (pausing keywords, adjusting bids, new audiences). First measurable ROAS signals: usually 30-90 days, as long as tracking works and there is enough budget and conversion volume. Full automation: 90-120 days of implementation and optimization."
           }
         },
         {
@@ -1236,6 +1235,20 @@
       margin-bottom: 18px;
     }
   
+    .case-kind {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      color: var(--ink);
+      background: transparent;
+      border: 1px dashed var(--line);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
     .pill {
       display: inline-flex;
       align-items: center;
@@ -1903,6 +1916,9 @@
     .contact-form .form-hp { position: absolute; left: -9999px; }
     .contact-form .form-note { margin: 0; font-size: 0.82rem; color: rgba(255, 255, 255, 0.86); }
     .contact-form .form-status { margin: 0; font-weight: 700; }
+    .form-calendar { margin-top: 16px; padding: 16px; background: #fff; border-radius: 16px; }
+    .form-calendar p { margin: 0 0 12px; font-weight: 700; color: var(--ink); }
+    .form-calendar iframe { display: block; width: 100%; height: 640px; border: 0; }
     @media (min-width: 640px) { .contact-form .form-row { grid-template-columns: 1fr 1fr; } }
 
 
@@ -2035,9 +2051,9 @@
               shadow-intensity="1">
             </model-viewer>
           </div>
-          <p class="hero-copy hero-lead">Google Ads and Meta Ads campaigns optimized with real data, not promises.</p>
+          <p class="hero-copy hero-lead">Google Ads and Meta Ads campaigns optimized with measured data, not gut feeling.</p>
           <div class="hero-ctas">
-            <a class="btn btn-cta-shift" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Book your free diagnosis</a>
+            <a class="btn btn-cta-shift" href="#form-contacto">Book your free diagnosis</a>
           </div>
           <div class="hero-proof" aria-label="Track record">
             <div class="proof-item">
@@ -2105,7 +2121,7 @@
             <p class="bento-stat-label">With the same budget</p>
             <h3>Google Ads / Meta Ads Management</h3>
             <p class="bento-desc">Low ROAS, scattered budgets, weak audiences? I fix them with a smarter campaign structure, automated testing and machine-learning targeting.</p>
-            <a href="https://cal.com/danielpixelstudiocall" target="_blank" class="bento-cta">Let's talk →</a>
+            <a href="#form-contacto" class="bento-cta">Let's talk →</a>
           </article>
 
           <!-- Servicio 2: Auditoría Inteligente -->
@@ -2158,7 +2174,7 @@
             <h3 style="font-size:1.3rem; font-weight:800; color:var(--ink); margin:0 0 8px;">FREE 20-minute consultation</h3>
             <p style="color:var(--muted); font-size:0.94rem; margin:0;">We talk through your biggest challenge, I spot the quick wins, and you walk away with 3 actions you can take right away. Free, no commitment.</p>
           </div>
-          <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Book a consultation</a>
+          <a class="btn btn-primary" href="#form-contacto">Book a consultation</a>
         </div>
 
         <p style="color:var(--muted); font-size:0.9rem; margin-top:20px; text-align:center;">Custom pricing based on project scope and complexity. Message me directly on WhatsApp for a no-pressure proposal.</p>
@@ -2284,8 +2300,8 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Technical portfolio</p>
-          <h2 class="section-title">Real results, not promises.</h2>
-          <p class="section-copy">Real clients, real accounts, numbers you can verify.</p>
+          <h2 class="section-title">Client work and technical demos, clearly labeled.</h2>
+          <p class="section-copy">Each case says whether it comes from a client account (anonymized), is a projection or is a demo. Client figures come from each account's ad platforms or GA4. Ask me for the period and source behind any number.</p>
         </div>
         <div class="case-carousel" id="case-carousel">
           <div class="case-track" id="case-grid"></div>
@@ -2300,6 +2316,7 @@
           var casesData = [
             {
               id: "pauta-corporativa-multicuenta",
+              kind: "Client work · anonymized",
               title: "From $15M to $40M COP/month: structuring and optimizing corporate paid media",
               description: "360° audit, B2B/B2C funnels and CRM integration for high-budget accounts with broken measurement and silent budget leaks.",
               tags: ["Google Ads", "Meta Ads", "GA4/GTM", "CRM"],
@@ -2314,8 +2331,9 @@
             },
             {
               id: "ga4-gtm-atribucion-confiable",
+              kind: "Technical demo",
               title: "GA4 + GTM measurement architecture: from broken data to reliable attribution",
-              description: "Tracking audit and rebuild (7 key events, technical validation with Tag Assistant/DebugView and a Looker Studio dashboard) to end blind decisions based on unreliable data.",
+              description: "Tracking audit and rebuild (7 key events, technical validation with Tag Assistant/DebugView and a Looker Studio dashboard) to end blind decisions based on unreliable data. Demonstration case: the figures illustrate the method.",
               tags: ["GA4", "GTM", "Looker Studio"],
               metrics: [
                 { value: "+34.1%", label: "Increase in effective conversions (186)" },
@@ -2328,6 +2346,7 @@
             },
             {
               id: "meta-ads-calidad-leads",
+              kind: "Client work · anonymized",
               title: "From lots of leads to leads that actually buy: lead quality optimization in Meta Ads",
               description: "Targeting, conversion events and remarketing in Meta Ads to prioritize leads with real purchase potential and lower cost per lead.",
               tags: ["Meta Ads", "Facebook Ads", "Instagram Ads", "Remarketing"],
@@ -2342,11 +2361,12 @@
             },
             {
               id: "roas-google-ads-predictivo",
+              kind: "Client audit · anonymized",
               title: "Stalled ROAS in Google Ads: a predictive audit to invest smarter, not more",
               description: "Full audit and predictive analytics model in Google Ads to reallocate budget toward the segments with the best real performance.",
               tags: ["Google Ads", "Predictive analytics", "Bid optimization"],
               metrics: [
-                { value: "2.87X", label: "Current overall ROAS (real audit)" },
+                { value: "2.87X", label: "Starting ROAS found in the audit (before changes)" },
                 { value: "Lower CPA", label: "Gradual cuts in low-return areas" },
                 { value: "Same budget", label: "Every peso works harder without spending more" }
               ],
@@ -2356,6 +2376,7 @@
             },
             {
               id: "meta-ads-ecommerce-diagnostico",
+              kind: "Client data · includes projections",
               title: "Performance Audit and Meta Ads Diagnosis for E-commerce",
               description: "Creative fatigue diagnosis and per-campaign efficiency map for an e-commerce Meta Ads account, with a scaling plan based on real data.",
               tags: ["Meta Ads", "E-commerce", "Retargeting", "n8n"],
@@ -2370,6 +2391,7 @@
             },
             {
               id: "automatizacion-n8n-hubspot",
+              kind: "Solution design",
               title: "Every lead lands in your CRM automatically, with no manual typing",
               description: "Lead capture automation and pipeline sync between your website and HubSpot, built on n8n: capture, pipeline and alerts in a single flow.",
               tags: ["n8n", "HubSpot", "Automation", "CRM"],
@@ -2384,6 +2406,7 @@
             },
             {
               id: "ecoclean-google-ads-ia",
+              kind: "Portfolio · sample data",
               title: "AI analytics and prediction for Google Ads",
               description: "Portfolio project (sample data): a Python + Machine Learning platform that measures, visualizes and predicts Google Ads conversions, the same kind of work I apply to real accounts.",
               tags: ["Technical portfolio", "Python", "Machine Learning", "Google Ads"],
@@ -2421,7 +2444,7 @@
                 "<article class=\"case-card\" data-case-id=\"" + c.id + "\">" +
                   "<div class=\"case-image\"><img src=\"" + c.image + "\" alt=\"" + c.title + "\" loading=\"lazy\" /></div>" +
                   "<div class=\"case-card-body\">" +
-                    "<div class=\"case-meta\">" + tagsHtml + "</div>" +
+                    "<div class=\"case-meta\">" + (c.kind ? "<span class=\"case-kind\">" + c.kind + "</span>" : "") + tagsHtml + "</div>" +
                     "<h3>" + c.title + "</h3>" +
                     "<p>" + c.description + "</p>" +
                     ctaHtml +
@@ -2522,7 +2545,7 @@
   
         <div class="big-stat-callout">
           <span class="big-stat-value">2.87X</span>
-          <p class="big-stat-caption">Current overall ROAS, a real figure from a Google Ads audit, not a projection.</p>
+          <p class="big-stat-caption">Starting ROAS found in a real Google Ads audit, before any changes. It is a diagnosis, not a result.</p>
         </div>
 
         <div class="company-strip" aria-label="Companies I have worked with">
@@ -2622,7 +2645,7 @@
         <div class="faq-grid">
           <div class="faq-item">
             <h3 class="faq-question">How does AI improve my business ROAS?</h3>
-            <p class="faq-answer">AI optimizes on 3 fronts: (1) smart audience segmentation reduces waste, (2) automated creative testing identifies what sells, (3) dynamic bidding and predictive scaling put budget only where it converts. Goal: a measurable ROAS improvement in 60-90 days; how much depends on each account's starting point.</p>
+            <p class="faq-answer">AI optimizes on 3 fronts: (1) smart audience segmentation reduces waste, (2) automated creative testing identifies what sells, (3) dynamic bidding and predictive scaling put budget only where it converts. This is a goal, not a guarantee: after the diagnosis I set a ROAS target and timeline for your account. Results also depend on your product, budget, market and sales process.</p>
           </div>
           <div class="faq-item">
             <h3 class="faq-question">Does AI replace my current marketing team?</h3>
@@ -2634,7 +2657,7 @@
           </div>
           <div class="faq-item">
             <h3 class="faq-question">When will I see the first results?</h3>
-            <p class="faq-answer">Audit: 3 areas to improve within 20 minutes. AI setup: first changes within 7 days (pausing keywords, adjusting bids, new audiences). Measurable ROAS impact: 30-60 days. Full automation: 90-120 days of implementation and optimization.</p>
+            <p class="faq-answer">Audit: 3 areas to improve within 20 minutes. AI setup: first changes within 7 days (pausing keywords, adjusting bids, new audiences). First measurable ROAS signals: usually 30-90 days, as long as tracking works and there is enough budget and conversion volume. Full automation: 90-120 days of implementation and optimization.</p>
           </div>
           <div class="faq-item">
             <h3 class="faq-question">Which platforms and technology do you work with?</h3>
@@ -2790,13 +2813,13 @@
             </div>
           </div>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="https://cal.com/danielpixelstudiocall" target="_blank" rel="noopener noreferrer">Book your call</a>
+            <a class="btn btn-primary" href="#form-contacto">Book your call</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/ddanielmurcia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="btn btn-secondary" href="mailto:marketingdanielm@gmail.com?subject=Performance Marketing Consultation">Send an email</a>
           </div>
         </div>
         <div class="contact-side">
-          <form class="contact-form" name="contacto" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact form" data-ok="Thanks, I got your message. I'll get back to you soon." data-err="It couldn't be sent. Message me on WhatsApp at +1 786 840 0430." data-sending="Sending…">
+          <form class="contact-form" id="form-contacto" name="contacto" data-calendar="https://cal.com/daniel-m-ulig87/agenda-tu-llamada-aqui" data-calendar-title="Now pick the day and time for your call:" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact form" data-ok="Thanks, I got your message. I'll get back to you soon." data-err="It couldn't be sent. Message me on WhatsApp at +1 786 840 0430." data-sending="Sending…">
             <input type="hidden" name="form-name" value="contacto" />
             <input type="hidden" name="idioma" value="en" />
             <p class="form-hp"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
