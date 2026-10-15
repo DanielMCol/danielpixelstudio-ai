@@ -53,3 +53,9 @@
   to = "/:splat"
   status = 301
   force = true
+
+# Página 404 en español para rutas /es/ que no existen (solo aplica si el archivo no existe).
+[[redirects]]
+  from = "/es/*"
+  to = "/es/404.html"
+  status = 404
